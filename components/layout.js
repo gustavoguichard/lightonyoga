@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Layout({ title, subtitle, children }) {
   return (
@@ -21,7 +22,9 @@ export default function Layout({ title, subtitle, children }) {
         {children}
       </article>
       <footer className="py-4 px-6 bg-gray-100 border-gray-300 border-t-2">
-        Light On Yoga App
+        <Link href="/">
+          <a>Light On Yoga App</a>
+        </Link>
       </footer>
     </>
   )

@@ -6,8 +6,11 @@ import filter from 'lodash/filter'
 import find from 'lodash/find'
 
 import Layout from 'components/layout'
+import HealthyVariations from 'components/healthy-variations'
+import VariationPage from 'components/variation-page'
 
 import asanas from 'data/asanas.js'
+import variations from 'data/variations.js'
 import anatomy from 'data/anatomy.js'
 import families from 'data/families.js'
 
@@ -18,10 +21,11 @@ export default function Asana() {
     return <h1>Carregando...</h1>
   }
   const mainAsana = slug[0]
-  const variation = slug.length > 1
-  const asana = variation
-    ? null
-    : find(asanas, (posture) => kebabCase(posture.name) === mainAsana)
+  const asana = find(asanas, (posture) => kebabCase(posture.name) === mainAsana)
+  const variation =
+    slug.length > 1
+      ? find(variations, (posture) => kebabCase(posture.title) === slug[1])
+      : null
 
   if (!asana) {
     return <h1>Não encontrado</h1>
@@ -31,7 +35,9 @@ export default function Asana() {
   const movements = filter(anatomy, (mov) =>
     asana.anatomyMovements.includes(mov.id),
   )
-  return (
+  return variation ? (
+    <VariationPage variation={variation} />
+  ) : (
     <Layout title={asana.name} subtitle={asana.meaning}>
       <div className="md:flex justify-between items-start">
         <div className="md:order-2 md:w-5/12 block bg-gray-200 border-gray-300 border-2 py-2 px-3">
@@ -86,6 +92,12 @@ export default function Asana() {
           />
         </main>
       </div>
+      <hr />
+      <h2>Saúde da postura</h2>
+      <List title="Benefícios" items={asana.benefits} />
+      <List title="Cuidados" items={asana.caution} />
+      <List title="Contra-indicações" items={asana.contraindications} />
+      <HealthyVariations asana={asana} />
       {asana.curiosities && (
         <>
           <hr />
@@ -99,6 +111,18 @@ export default function Asana() {
     </Layout>
   )
 }
+
+const List = ({ items, title }) =>
+  items?.length ? (
+    <div>
+      <h3>{title}</h3>
+      <ul className="list-disc">
+        {items.map((item, i) => (
+          <li key={`item-${title}-${i}`}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  ) : null
 
 const Movement = ({ description, id }) => (
   <Link href="/anatomy/[slug]" as={`/anatomy/${id}`}>
