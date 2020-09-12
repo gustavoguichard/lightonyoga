@@ -1,13 +1,13 @@
+import api from 'lib/api'
+
 import Layout from 'components/layout'
-import AsanaList from 'components/asana-list'
+import MainSearch from 'components/main-search'
 
-import asanas from 'data/asanas.js'
-
-export default function Home() {
+export default function Home({ asanas, tags }) {
   return (
     <Layout title="Light on Yoga">
-      <div className="md:flex">
-        <AsanaList asanas={asanas} />
+      <div className="md:flex flex-col items-center">
+        <MainSearch asanas={asanas} tags={tags} />
         <main className="md:w-7/12 md:ml-8">
           <h1>Manifesto</h1>
           <p>
@@ -30,4 +30,12 @@ export default function Home() {
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const asanas = api.listAsanas()
+  const tags = api.listTags()
+  return {
+    props: { asanas, tags },
+  }
 }

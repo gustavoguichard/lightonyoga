@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Layout from 'components/layout'
 import MainContent from 'components/main-content'
+import Tag from 'components/tag'
 
 export default function VariationPage({ variation }) {
   return (
@@ -28,11 +29,3 @@ export default function VariationPage({ variation }) {
     </Layout>
   )
 }
-
-const Tag = ({ tag }) => (
-  <Link href="/tag/[slug]" as={`/tag/${tag.slug}`}>
-    <a className="p-1 text-xs mr-1 font-semibold text-blue-800 bg-blue-200 rounded">
-      {tag.name}
-    </a>
-  </Link>
-)
