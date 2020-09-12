@@ -1,11 +1,12 @@
 export default [
   {
+    id: 1,
     name: 'Utthita Trikonasana',
+    slug: 'utthita-trikonasana',
     meaning: 'Postura do triângulo estendido',
-    family: 'Utthita sthiti',
-    translation:
-      '<i>utthita</i> = estendido / esticado; <i>tri</i> = três; <i>kona</i> = ângulo',
-    anatomyMovements: [1, 2, 3],
+    familyId: 1,
+    sanscritWords: [1, 2, 3],
+    movements: [1, 2, 3],
     actions: {
       entering:
         '<p>À partir de Tadasana (<i>Samasthiti</i>), inspira e salta* para utthita hasta padasana. Braços paralelos ao chão, palma das mãos voltada para baixo,punhos em linha com os tornozelos. Gira o pé esquerdo ligeiramente para dentro, perna e pé direito para fora 90º; alinha o calcanhar do pé direito com centro do arco do pé esquerdo (<i>Parsva Hasta Padasana</i>). Observa o alinhamento do tornozelo, joelho e centro do topo da coxa da perna direita; eleva as patelas. Resistindo com peso na borda externa do pé esquerdo e o braço esquerdo bem estendido, exala e flexiona o tronco a partir do quadril; mão direita no tornozelo; eleva o braço esquerdo em linha com o direito.</p>',
@@ -55,12 +56,13 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     `,
   },
   {
+    id: 2,
     name: 'Utthita Parsvakonasana',
+    slug: 'utthita-parsvakonasana',
     meaning: 'Postura do ângulo lateral estendido',
-    family: 'Utthita sthiti',
-    translation:
-      '<i>utthita</i> = estendido / esticado; <i>parsva</i> = lateral; <i>kona</i> = ângulo',
-    anatomyMovements: [1, 2, 7, 5, 6, 3, 4],
+    familyId: 1,
+    sanscritWords: [1, 4, 3],
+    movements: [1, 2, 7, 5, 6, 3, 4],
     actions: {
       entering:
         '<p>À partir de <i>Tadasana</i>, inspira e salta para utthita hasta padasana; gira pé esquerdo para dentro, perna e pé direito para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; resistindo com peso na borda externa do pé esquerdo e braço esquerdo estendido; flexiona a perna direita à partir da virilha interna que vai em direção ao joelho interno até que a coxa fique paralela e a canela perpendicular ao chão; mantendo a lateral direita do tronco longa, exala e flexiona o tronco levando a mão no chão por fora do pé direito; estende o braço esquerdo em direção ao teto e, à partir do ombro, gira o braço até que a palma da mão esteja virada na direção da cabeça; alonga ainda mais a parte interna do braço em direção ao teto; pressionando o pé esquerdo contra o chão exala e desce o braço por cima da orelha esquerda.</p>',

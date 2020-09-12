@@ -1,28 +1,31 @@
-import { useRouter } from 'next/router'
-import kebabCase from 'lodash/kebabCase'
-import filter from 'lodash/filter'
-import find from 'lodash/find'
+import api from 'lib/api'
 
 import Layout from 'components/layout'
 import AsanaList from 'components/asana-list'
 
-import allAsanas from 'data/asanas.js'
-import families from 'data/families.js'
-
-export default function Asana() {
-  const router = useRouter()
-  const { slug } = router.query
-  const family = find(families, (f) => kebabCase(f.name) === slug)
-  if (!family) {
-    return <h1>Não encontrado</h1>
-  }
-
-  const asanas = filter(allAsanas, (asana) => asana.family === family.name)
+export default function Asana({ family, asanas }) {
   return (
-    <Layout title={family.name} subtitle={family.meaning}>
+    <Layout title={family?.name} subtitle={family?.meaning}>
       <div className="md:flex">
         <AsanaList asanas={asanas} />
       </div>
     </Layout>
   )
+}
+
+export async function getStaticPaths() {
+  const families = await api.listFamilies()
+  return {
+    paths: families.map((f) => ({ params: { slug: f.slug } })),
+    fallback: false,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params
+  const family = api.getFamilyBySlug(slug)
+  const asanas = api.listAsanas({ family: family?.id })
+  return {
+    props: { family, asanas },
+  }
 }

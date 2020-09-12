@@ -2,7 +2,10 @@ import Layout from 'components/layout'
 
 export default function VariationPage({ variation }) {
   return (
-    <Layout title={variation.asana} subtitle={`Variação - ${variation.title}`}>
+    <Layout
+      title={variation.asana.name}
+      subtitle={`Variação - ${variation.title}`}
+    >
       <div className="md:flex justify-between items-start">
         <div className="md:order-2 md:w-5/12 block bg-gray-200 border-gray-300 border-2 py-2 px-3">
           <img

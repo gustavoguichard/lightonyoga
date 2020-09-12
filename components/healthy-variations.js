@@ -2,13 +2,7 @@ import filter from 'lodash/filter'
 
 import VariationCard from 'components/variation-card'
 
-import allVariations from 'data/variations.js'
-
-export default function HealthyVariations({ asana }) {
-  const variations = filter(
-    allVariations,
-    (posture) => posture.asana === asana.name,
-  )
+export default function HealthyVariations({ variations, asana }) {
   const beginnerVariations = filter(variations, (posture) =>
     posture.tags.includes('Iniciante'),
   )
@@ -23,7 +17,11 @@ export default function HealthyVariations({ asana }) {
           <h3>Tornando a postura acessível</h3>
           <div className="flex flex-wrap mb-6">
             {beginnerVariations.map((variation) => (
-              <VariationCard variation={variation} key={variation.title} />
+              <VariationCard
+                asana={asana}
+                variation={variation}
+                key={variation.slug}
+              />
             ))}
           </div>
         </>
@@ -33,7 +31,11 @@ export default function HealthyVariations({ asana }) {
           <h3>Variações para o período menstrual</h3>
           <div className="flex flex-wrap mb-6">
             {menstrualVariations.map((variation) => (
-              <VariationCard variation={variation} key={variation.title} />
+              <VariationCard
+                asana={asana}
+                variation={variation}
+                key={variation.slug}
+              />
             ))}
           </div>
         </>

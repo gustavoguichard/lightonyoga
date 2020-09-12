@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import kebabCase from 'lodash/kebabCase'
 
 export default function AsanaList({ asanas }) {
   return (
@@ -8,7 +7,7 @@ export default function AsanaList({ asanas }) {
       <ul className="list-disc">
         {asanas.map((asana) => (
           <li key={asana.name}>
-            <Link href="/asana/[slug]" as={`/asana/${kebabCase(asana.name)}`}>
+            <Link href="/asana/[slug]" as={`/asana/${asana.slug}`}>
               <a>{asana.name}</a>
             </Link>
           </li>

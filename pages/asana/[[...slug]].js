@@ -1,40 +1,24 @@
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 import kebabCase from 'lodash/kebabCase'
 import map from 'lodash/map'
-import filter from 'lodash/filter'
-import find from 'lodash/find'
+
+import api from 'lib/api'
 
 import Layout from 'components/layout'
 import HealthyVariations from 'components/healthy-variations'
 import VariationPage from 'components/variation-page'
 
-import asanas from 'data/asanas.js'
-import variations from 'data/variations.js'
-import anatomy from 'data/anatomy.js'
-import families from 'data/families.js'
-
-export default function Asana() {
-  const router = useRouter()
-  const { slug } = router.query
-  if (!slug) {
-    return <h1>Carregando...</h1>
-  }
-  const mainAsana = slug[0]
-  const asana = find(asanas, (posture) => kebabCase(posture.name) === mainAsana)
-  const variation =
-    slug.length > 1
-      ? find(variations, (posture) => kebabCase(posture.title) === slug[1])
-      : null
-
+export default function Asana({
+  asana,
+  variation,
+  variations,
+  family,
+  movements,
+  sanscritWords,
+}) {
   if (!asana) {
-    return <h1>Não encontrado</h1>
+    return 'Loading...'
   }
-
-  const family = find(families, (f) => f.name === asana.family)
-  const movements = filter(anatomy, (mov) =>
-    asana.anatomyMovements.includes(mov.id),
-  )
   return variation ? (
     <VariationPage variation={variation} />
   ) : (
@@ -48,7 +32,16 @@ export default function Asana() {
           />
           <dl>
             <dt>Tradução</dt>
-            <dd dangerouslySetInnerHTML={{ __html: asana.translation }}></dd>
+            <dd>
+              {map(sanscritWords, (item) => (
+                <CategoryLink
+                  key={item.id}
+                  prefix="glossary"
+                  id={item.id}
+                  description={`${item.word} = ${item.translation}`}
+                />
+              ))}
+            </dd>
             <dt>Classificação</dt>
             <dd>
               <Link
@@ -63,7 +56,7 @@ export default function Asana() {
             <dt>Principais movimentos articulares</dt>
             <dd>
               {map(movements, (mov) => (
-                <Movement key={mov.id} {...mov} />
+                <CategoryLink key={mov.id} prefix="movement" {...mov} />
               ))}
             </dd>
           </dl>
@@ -97,7 +90,7 @@ export default function Asana() {
       <List title="Benefícios" items={asana.benefits} />
       <List title="Cuidados" items={asana.caution} />
       <List title="Contra-indicações" items={asana.contraindications} />
-      <HealthyVariations asana={asana} />
+      <HealthyVariations variations={variations} asana={asana} />
       {asana.curiosities && (
         <>
           <hr />
@@ -124,8 +117,8 @@ const List = ({ items, title }) =>
     </div>
   ) : null
 
-const Movement = ({ description, id }) => (
-  <Link href="/anatomy/[slug]" as={`/anatomy/${id}`}>
+const CategoryLink = ({ description, prefix, id }) => (
+  <Link href={`/${prefix}/[slug]`} as={`/${prefix}/${id}`}>
     <a className="mr-2">{description};</a>
   </Link>
 )
@@ -137,3 +130,27 @@ const Actions = ({ name, big, actions }) =>
       <div dangerouslySetInnerHTML={{ __html: actions }} />
     </>
   ) : null
+
+export async function getStaticPaths() {
+  const asanas = await api.listAsanas()
+  return {
+    paths: asanas.map((asana) => ({ params: { slug: [asana.slug] } })),
+    fallback: true,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params
+  const [asanaSlug, variationSlug] = slug
+  const asana = await api.getAsanaBySlug(asanaSlug)
+  const variations = await api.listVariations({ asanaId: asana.id })
+  const variation = variationSlug
+    ? await api.getVariationBySlug(variationSlug)
+    : null
+  const family = api.getFamily(asana?.familyId)
+  const movements = api.listMovements(asana.movements)
+  const sanscritWords = api.listGlossary(asana.sanscritWords)
+  return {
+    props: { family, asana, variation, variations, movements, sanscritWords },
+  }
+}
