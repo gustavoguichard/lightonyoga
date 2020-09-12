@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-export default function VariationCard({ asana, variation }) {
-  const fullName = asana.name + ' - ' + variation.title
+export default function VariationCard({ variation }) {
+  const fullName = variation.asana.name + ' - ' + variation.title
   return (
-    <Link href={`/asana/${asana.slug}/${variation.slug}`}>
+    <Link href={`/asana/${variation.asana.slug}/${variation.slug}`}>
       <a>
         <div className="flex max-w-lg p-3 m-2 border-2 border-gray-300 bg-gray-200">
           <img

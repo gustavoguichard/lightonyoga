@@ -1,45 +1,26 @@
-import filter from 'lodash/filter'
+import api from 'lib/api'
 
-import VariationCard from 'components/variation-card'
+import VariationsList from 'components/variations-list'
 
-export default function HealthyVariations({ variations, asana }) {
-  const beginnerVariations = filter(variations, (posture) =>
-    posture.tags.includes('Iniciante'),
-  )
-  const menstrualVariations = filter(variations, (posture) =>
-    posture.tags.includes('Período'),
-  )
+export default function HealthyVariations({ variations }) {
   return (
-    <div>
+    <>
       <hr />
-      {!!beginnerVariations.length && (
-        <>
-          <h3>Tornando a postura acessível</h3>
-          <div className="flex flex-wrap mb-6">
-            {beginnerVariations.map((variation) => (
-              <VariationCard
-                asana={asana}
-                variation={variation}
-                key={`beginner-${variation.slug}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-      {!!menstrualVariations.length && (
-        <>
-          <h3>Variações para o período menstrual</h3>
-          <div className="flex flex-wrap mb-6">
-            {menstrualVariations.map((variation) => (
-              <VariationCard
-                asana={asana}
-                variation={variation}
-                key={`menstrual-${variation.slug}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
+      <ListVariationsFromTag tag={1} title="Tornando a postura acessível" />
+      <ListVariationsFromTag
+        tag={12}
+        title="Variações para o período menstrual"
+      />
+    </>
   )
+}
+
+const ListVariationsFromTag = ({ tag, title }) => {
+  const variations = api.listVariations({ tags: [tag] })
+  return variations.length ? (
+    <>
+      <h3>{title}</h3>
+      <VariationsList variations={variations} />
+    </>
+  ) : null
 }

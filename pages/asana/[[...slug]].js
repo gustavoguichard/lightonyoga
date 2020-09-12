@@ -84,7 +84,7 @@ export default function Asana({
       <List title="Benefícios" items={asana.benefits} />
       <List title="Cuidados" items={asana.caution} />
       <List title="Contra-indicações" items={asana.contraindications} />
-      <HealthyVariations variations={variations} asana={asana} />
+      <HealthyVariations variations={variations} />
       {asana.curiosities && (
         <>
           <hr />
