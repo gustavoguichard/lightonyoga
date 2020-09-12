@@ -20,7 +20,7 @@ export default function HealthyVariations({ variations, asana }) {
               <VariationCard
                 asana={asana}
                 variation={variation}
-                key={variation.slug}
+                key={`beginner-${variation.slug}`}
               />
             ))}
           </div>
@@ -34,7 +34,7 @@ export default function HealthyVariations({ variations, asana }) {
               <VariationCard
                 asana={asana}
                 variation={variation}
-                key={variation.slug}
+                key={`menstrual-${variation.slug}`}
               />
             ))}
           </div>

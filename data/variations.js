@@ -5,6 +5,7 @@ export default [
     title: 'Mão de baixo no bloco ou cadeira',
     slug: 'mao-de-baixo-no-bloco-ou-cadeira',
     tags: ['Iniciante', 'Período'],
+    videos: ['LyK7zmrRcwo'],
     tagline:
       'Quando há dificuldade de estender as pernas na postura final e/ou dificuldade em abrir o peito e alongar as laterais do tronco.',
     description: `<p>Posicione os bloco na parte posterior do mat, siga as as instruções acima e ao descer apoie a mão de baixo no bloco. Observe que o bloco deve estar em linha com o tornozelo externo da perna da frente. Palma da mão toda sobre o bloco e os dedos das mãos olhando para frente. Faça todas as ações da postura percebendo que com mais altura para mão é possível estender com mais facilidades as pernas e as laterais da coluna mantendo o alinhamento do quadril e tronco.<br />
@@ -16,7 +17,7 @@ export default [
     asanaId: 1,
     title: 'Com a mão de cima na cintura',
     slug: 'com-a-mao-de-cima-na-cintura',
-    tags: ['Iniciante'],
+    tags: ['Iniciante', 'Ombros'],
     tagline: 'Para trabalhar o giro do tronco.',
     description: `<p>Siga as orientações acima, ao entrar na postura traga a mão esquerda na cintura. Essa variação auxilia a trazer consciência para o giro na pelve e tronco ampliando a abertura da parte superior do peito. O foco no aluno iniciante deve ser a construção da base primeiro, a ação dos braços pode vir depois com mais aprofundamento. No início são muitas informações para o aluno assimilar ao mesmo tempo, assim nessa variação conseguimos manter a atenção mais focada nas pernas.</p>`,
   },

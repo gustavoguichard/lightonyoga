@@ -5,6 +5,7 @@ import map from 'lodash/map'
 import api from 'lib/api'
 
 import Layout from 'components/layout'
+import MainContent from 'components/main-content'
 import HealthyVariations from 'components/healthy-variations'
 import VariationPage from 'components/variation-page'
 
@@ -23,13 +24,9 @@ export default function Asana({
     <VariationPage variation={variation} />
   ) : (
     <Layout title={asana.name} subtitle={asana.meaning}>
-      <div className="md:flex justify-between items-start">
-        <div className="md:order-2 md:w-5/12 block bg-gray-200 border-gray-300 border-2 py-2 px-3">
-          <img
-            className="max-w-full border-2 border-gray-500"
-            src="/trikonasana.png"
-            alt="Trikonasana"
-          />
+      <MainContent
+        videos={asana.videos}
+        cardContent={
           <dl>
             <dt>Tradução</dt>
             <dd>
@@ -60,31 +57,28 @@ export default function Asana({
               ))}
             </dd>
           </dl>
-        </div>
-        <main className="md:w-7/12 md:mr-8">
-          <h2>Ações</h2>
-          <Actions
-            big
-            name="Entrando na postura"
-            actions={asana.actions?.entering}
-          />
-          <h3>Na postura</h3>
-          <Actions name="Pés e pernas" actions={asana.actions?.legs} />
-          <Actions name="Coxa, pelve e abdômen" actions={asana.actions?.core} />
-          <Actions
-            name="Costas, tronco e peito"
-            actions={asana.actions?.trunk}
-          />
-          <Actions name="Ombros, braços e mãos" actions={asana.actions?.arms} />
-          <Actions name="Pescoço e cabeça" actions={asana.actions?.head} />
-          <Actions name="Ações amplas" actions={asana.actions?.all} />
-          <Actions
-            big
-            name="Saindo da postura"
-            actions={asana.actions?.leaving}
-          />
-        </main>
-      </div>
+        }
+      >
+        {asana.introduction && <p className="text-xl">{asana.introduction}</p>}
+        <Actions big name="Preparação" actions={asana.actions?.setup} />
+        <Actions
+          big
+          name="Entrando na postura"
+          actions={asana.actions?.entering}
+        />
+        <h3>Na postura</h3>
+        <Actions name="Pés e pernas" actions={asana.actions?.legs} />
+        <Actions name="Coxa, pelve e abdômen" actions={asana.actions?.core} />
+        <Actions name="Costas, tronco e peito" actions={asana.actions?.trunk} />
+        <Actions name="Ombros, braços e mãos" actions={asana.actions?.arms} />
+        <Actions name="Pescoço e cabeça" actions={asana.actions?.head} />
+        <Actions name="Ações amplas" actions={asana.actions?.all} />
+        <Actions
+          big
+          name="Saindo da postura"
+          actions={asana.actions?.leaving}
+        />
+      </MainContent>
       <hr />
       <h2>Saúde da postura</h2>
       <List title="Benefícios" items={asana.benefits} />

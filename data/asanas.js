@@ -7,6 +7,7 @@ export default [
     familyId: 1,
     sanscritWords: [1, 2, 3],
     movements: [1, 2, 3],
+    videos: ['LyK7zmrRcwo', '1DB2ZV_5E-I'],
     actions: {
       entering:
         '<p>À partir de Tadasana (<i>Samasthiti</i>), inspira e salta* para utthita hasta padasana. Braços paralelos ao chão, palma das mãos voltada para baixo,punhos em linha com os tornozelos. Gira o pé esquerdo ligeiramente para dentro, perna e pé direito para fora 90º; alinha o calcanhar do pé direito com centro do arco do pé esquerdo (<i>Parsva Hasta Padasana</i>). Observa o alinhamento do tornozelo, joelho e centro do topo da coxa da perna direita; eleva as patelas. Resistindo com peso na borda externa do pé esquerdo e o braço esquerdo bem estendido, exala e flexiona o tronco a partir do quadril; mão direita no tornozelo; eleva o braço esquerdo em linha com o direito.</p>',
@@ -36,17 +37,15 @@ export default [
     ],
     contraindications: [],
     curiosities: `<p>Prashant Iyengar escreveu um livro inteiro sobre esta
-    postura, chamado The Alpha & Omega of Trikonasana.<br/>
-
-Video Geeta ensinando U.Trikonasa: <a target="_blank"  href="https://youtu.be/LyK7zmrRcwo">https://youtu.be/LyK7zmrRcwo</a>
-
-<p><strong>Sobre a questão da distância das pernas</strong>
-<ul class="list-disc"><li>&lt;1,20 – 1,30 (apostila da formação)</li>
-<li>LOY 90cm a 1m</li>
+    postura, chamado The Alpha & Omega of Trikonasana.</p>
+<p><strong>Sobre a questão da distância das pernas:</strong>
+<ul class="list-disc">
+<li>Segundo o livro "Light On Yoga": 90cm a 1m</li>
 <li>Preliminary Course - 4 pés (4 x 30,48 = aprox. 1,22 cm)</li>
-<li>GEM  3 pés de distância = aprox 91 cm</li>
-<li>Opinião pessoal: a orientação dos punhos com os tornozelos externos parece mais didática e fácil de entender para o aluno. Geralmente dá certo, pq a distância dos pés é relativa a altura, e comprimento das pernas e tronco. Salvo algumas exceções onde o alunos tem o tronco curto e pernas e braços longos.</li>
+<li>"Gem for women": 3 pés de distância = aprox 91 cm</li>
 </ul>
+<blockquote><strong>Opinião pessoal:</strong> a orientação dos punhos com os tornozelos externos parece mais didática e fácil de entender para o aluno. Geralmente dá certo, pq a distância dos pés é relativa a altura, e comprimento das pernas e tronco. Salvo algumas exceções onde o alunos tem o tronco curto e pernas e braços longos.</blockquote>
+
 <a target="_blank" href="https://www.youtube.com/watch?v=1DB2ZV_5E-I&list=PLlpDiEFsyycw0kqefODPptzf2r8YOwXBL&index=32&t=0s">Guruji explicando a distância das pernas</a>.</p>
 
 <p><strong>Diferenças (LoY e Gem)</strong><br />
