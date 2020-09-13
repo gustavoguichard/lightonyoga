@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import pickBy from 'lodash/pickBy'
 import some from 'lodash/some'
 import { useFormState } from 'react-use-form-state'
@@ -37,6 +38,9 @@ export default function MainSearch({ asanas, tags }) {
         <select {...select('asana')} className="w-full p-4 text-lg mt-2">
           <SelectOptions options={asanas} prefix="asana" />
         </select>
+        <span className="text-xs text-right">
+          <Link href="/lista-de-asanas">Ver lista de todos Asanas</Link>
+        </span>
         <div className="flex flex-wrap justify-center mt-6">
           <div className="flex flex-col items-center">
             <span className="text-md">Condição</span>

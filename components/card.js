@@ -14,7 +14,11 @@ export default function Card({ title, subtitle, tagline, link, picture }) {
             {subtitle && (
               <p className="m-0 text-xs font-semibold text-gray-700">{title}</p>
             )}
-            <p className="text-sm font-semibold text-gray-900 leading-tight">
+            <p
+              className={`text-sm font-semibold text-gray-900 leading-tight ${
+                subtitle ? '' : 'mb-0'
+              }`}
+            >
               {subtitle || title}
             </p>
             {tagline && <p className="text-sm mb-1 text-gray-700">{tagline}</p>}

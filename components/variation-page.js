@@ -25,7 +25,7 @@ export default function VariationPage({ variation }) {
             <a>{variation.asana.name}</a>
           </Link>
         </p>
-        <p className="text-xl">{variation.tagline}</p>
+        <p className="text-xl leading-tight">{variation.tagline}</p>
         <div className="-mt-2 mb-2">
           {variation.tags.map((tag) => (
             <Tag key={tag.id} tag={tag} />
