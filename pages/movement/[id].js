@@ -7,7 +7,10 @@ import AsanaList from 'components/asana-list'
 
 export default function AnatomyMovement({ movement, asanas }) {
   return (
-    <Layout title={upperFirst(movement?.description)}>
+    <Layout
+      title={upperFirst(movement?.description)}
+      subtitle="Movimento articular"
+    >
       <div className="md:flex">
         <AsanaList asanas={asanas} />
       </div>
