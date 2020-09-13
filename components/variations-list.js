@@ -1,9 +1,9 @@
-import session from 'lib/session'
+import { useLogged } from 'lib/session'
 
 import VariationCard from 'components/variation-card'
 
 export default function VariationsList({ variations }) {
-  const isLogged = session.isLogged()
+  const isLogged = useLogged()
   return (
     <div className="flex flex-wrap mb-6">
       {variations

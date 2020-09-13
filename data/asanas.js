@@ -18,9 +18,9 @@ export default [
       trunk:
         '<p>Alongue as laterais do tronco; leva as costelas da lateral esquerda do tronco em direção à direita e alongue a lateral direita. Alongue a coluna lombar em direção a coluna torácica e leve a coluna torácica em direção ao peito.</p>',
       arms:
-        'Estende bem os braços e gire os ombros para longe das orelhas. Palma da mão esquerda voltada para frente.',
+        '<p>Estende bem os braços e gire os ombros para longe das orelhas. Palma da mão esquerda voltada para frente.</p>',
       head:
-        'Alongar as laterais do pescoço; gira a cabeça a partir da base do crânio e olha para o polegar da mão esquerda, olhos e garganta suaves.',
+        '<p>Alongar as laterais do pescoço; gira a cabeça a partir da base do crânio e olha para o polegar da mão esquerda, olhos e garganta suaves.</p>',
       all: null,
       leaving:
         '<p>Resistindo com o peso no pé esquerdo e braço esquerdo bem estendido; inspira e retorna; gira os pés para o outro lado, repetindo a postura; exala e salta para <i>tadasana</i>.</p>',
@@ -104,16 +104,37 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
       leaving:
         '<p>Resistindo com o pé esquerdo firme contra o chão e braço esquerdo bem estendido; inspira e sobe; estende a perna devagar - mantendo joelho absorvido; gira os pés para o outro lado, repete; exala e salta para <i>tadasana</i>.</p>',
     },
-    benefits: [
-      'Reduz acúmulo de gordura na cintura e quadris',
-      'Alivia dores ciáticas e artríticas',
-      'Ajuda na digestão e evacuação',
-      'Corrige defeitos das panturrilhas e coxas',
-      'Desenvolve o tórax',
-    ],
-    caution: [
-      'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
-    ],
-    contraindications: [],
+    health: {
+      benefits: [
+        'Reduz acúmulo de gordura na cintura e quadris',
+        'Alivia dores ciáticas e artríticas',
+        'Ajuda na digestão e evacuação',
+        'Corrige defeitos das panturrilhas e coxas',
+        'Desenvolve o tórax',
+      ],
+      caution: [
+        'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
+      ],
+      contraindications: [],
+    },
+    krama: {
+      preparations: [
+        {
+          id: 1,
+          name: 'Utthita Trikonasana',
+          slug: 'utthita-trikonasana',
+          why: 'Prepara a perna de trás e as laterais do tronco.',
+        },
+      ],
+      connectedAsanas: [
+        {
+          id: 1,
+          name: 'Utthita Trikonasana',
+          slug: 'utthita-trikonasana',
+          why: 'Ação das costelas para dentro.',
+        },
+      ],
+      compensations: [],
+    },
   },
 ]

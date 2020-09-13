@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-import session from 'lib/session'
+import session, { useLogged } from 'lib/session'
 
 export default function Layout({ title, subtitle, children }) {
   const router = useRouter()
-  const isLogged = session.isLogged()
+  const isLogged = useLogged()
   return (
     <>
       <article className="max-w-screen-xl px-6 py-2">

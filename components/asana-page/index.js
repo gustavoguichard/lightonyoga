@@ -1,18 +1,17 @@
+import { useLogged } from 'lib/session'
+
 import ContentSection from 'components/content-section'
 import Layout from 'components/layout'
 import MainContent from 'components/main-content'
 
 import CardContent from './card-content'
 import HealthSection from './health-section'
+import KramaSection from './krama-section'
 import Information from './information'
+import VariationsFromTag from './variations-from-tag'
 
-export default function AsanaPage({
-  asana,
-  variations,
-  family,
-  movements,
-  sanscritWords,
-}) {
+export default function AsanaPage({ asana, family, movements, sanscritWords }) {
+  const isLogged = useLogged()
   return (
     <Layout
       title={asana.name}
@@ -38,11 +37,22 @@ export default function AsanaPage({
         {asana.introduction && <p className="text-xl">{asana.introduction}</p>}
         <Information asana={asana} />
       </MainContent>
-      <HealthSection asana={asana} />
+      {isLogged && (
+        <ContentSection>
+          <VariationsFromTag
+            asanaId={asana.id}
+            tag={18}
+            title="Variações didáticas"
+          />
+        </ContentSection>
+      )}
+      <HealthSection asana={asana} isLogged={isLogged} />
+      {isLogged && <KramaSection asana={asana} />}
       {asana.curiosities && (
         <ContentSection>
           <h2>Curiosidades</h2>
           <div
+            key="curiosities"
             className="max-w-screen-md"
             dangerouslySetInnerHTML={{ __html: asana.curiosities }}
           />

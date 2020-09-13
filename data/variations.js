@@ -35,7 +35,7 @@ export default [
     asanaId: 1,
     title: 'No cavalo',
     slug: 'no-cavalo',
-    tags: [12, 6, 7],
+    tags: [12, 13, 6, 7],
     tagline: 'Restaurativa.',
     description: `<p>Coloque 1 ou dois blocos deitados na lateral esquerda e um bloco e 1 quarter round do lado direito de forma que ao separar as pernas a borda externa do pé esquerdo encoste no bloco e o arco do pé direito esteja no quarter round com os dedos voltados para cima. De costas para o cavalo desça na postura seguindo as orientações citadas acima. Apoie a mão direita no bloco e leve o braço esquerdo para trás “abraçando o cavalo” e usando esse suporte para girar o tronco e abrir o peito. Mova quadril e tronco em direção ao cavalo, mantenha as pernas firmes e o ventre suave.</p>`,
   },
@@ -59,5 +59,44 @@ export default [
     tagline: 'Em caso de cólica menstrual ou indisposição fazer esta variação.',
     description: `<p>Tenha um cinto e um bolster ou cobertor enrolado. Deite-se de costas no chão pernas estendidas. Posicione o bolster ou um cobertor enrolado na lateral direita do quadril, flexione a perna direita passando o cinto no calcanhar anterior. Estenda-a para lateral segurando apenas com a mão direita o cinto, a coxa externa direita suportada pelo bolster. Alongue toda parte interna da perna desde a virilha interna direita ao calcanhar  interno. A borda externa do pé direito deve estar paralela ao chão.</p>
     <p>Se necessário utilize mais altura como suporte, é importante observar a resistência do quadril e perna esquerda em direção ao chão. O ventre gira da direita para esquerda. O braço esquerdo estendido em linha com o ombro. Para sair flexione a perna direita e retorne para supta tadasana, repita para o outro lado.</p>`,
+  },
+  {
+    id: 7,
+    asanaId: 1,
+    title: 'Borda externa do pé de trás na parede',
+    slug: 'borda-externa-do-pe-de-tras-na-parede',
+    tags: [4, 18],
+    tagline:
+      'Ensina ação de resistência da borda externa do pé de trás na direção do chão.',
+    description: `<p>...</p>`,
+  },
+  {
+    id: 8,
+    asanaId: 1,
+    title: 'De frente para parede ou cavalo',
+    slug: 'de-frente-para-parede-ou-cavalo',
+    tags: [4, 6, 16, 18],
+    tagline: 'Ênfase na rotação do tronco.',
+    description: `<p>...</p>`,
+  },
+  {
+    id: 9,
+    asanaId: 1,
+    title: 'Mão no aro da cadeira',
+    slug: 'mao-no-aro-da-cadeira',
+    tags: [20, 18],
+    tagline:
+      'Ênfase na extensão das laterais do tronco. Variação interessante para quem tem escoliose.',
+    description: `<p>É necessário saber para que lado é a curva da escoliose.</p>`,
+  },
+  {
+    id: 10,
+    asanaId: 1,
+    title: 'Pé direito em uma rampa, com o assento da cadeira invertida',
+    slug: 'pe-direito-em-uma-rampa-com-o-assento-da-cadeira-invertida',
+    tags: [20, 18],
+    tagline:
+      'Torna mais fácil a ação do centro do glúteo para dentro com a resistência do topo da perna de trás.',
+    description: `<p>...</p>`,
   },
 ]

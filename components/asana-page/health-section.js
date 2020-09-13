@@ -1,11 +1,13 @@
 import api from 'lib/api'
 
 import ContentSection from 'components/content-section'
-import VariationsList from 'components/variations-list'
 
 import List from './list'
+import VariationsFromTag from './variations-from-tag'
 
-export default function HealthSection({ asana }) {
+export default function HealthSection({ asana, isLogged }) {
+  const tags = api.listTags()
+  const excludedTags = [1, 12]
   return (
     <>
       <ContentSection>
@@ -18,27 +20,30 @@ export default function HealthSection({ asana }) {
         />
       </ContentSection>
       <ContentSection>
-        <ListVariationsFromTag
+        <VariationsFromTag
           asanaId={asana.id}
           tag={1}
           title="Tornando a postura acessível"
         />
-        <ListVariationsFromTag
+        <VariationsFromTag
           asanaId={asana.id}
           tag={12}
           title="Variações para o período menstrual"
         />
+        {isLogged &&
+          tags
+            .filter(
+              (tag) => !excludedTags.includes(tag.id) && tag.type === 'health',
+            )
+            .map((tag) => (
+              <VariationsFromTag
+                key={tag.id}
+                asanaId={asana.id}
+                tag={tag.id}
+                title={`Variações para ${tag.name}`}
+              />
+            ))}
       </ContentSection>
     </>
   )
-}
-
-const ListVariationsFromTag = ({ asanaId, tag, title }) => {
-  const variations = api.listVariations({ asanaId, tags: [tag] })
-  return variations.length ? (
-    <>
-      <h3>{title}</h3>
-      <VariationsList variations={variations} />
-    </>
-  ) : null
 }
