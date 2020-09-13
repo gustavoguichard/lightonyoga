@@ -27,7 +27,7 @@ export default function Asana({
       <MainContent
         videos={asana.videos}
         cardContent={
-          <dl>
+          <dl className="p-4 pb-0 mb-4">
             <dt>Tradução</dt>
             <dd>
               {map(sanscritWords, (item) => (

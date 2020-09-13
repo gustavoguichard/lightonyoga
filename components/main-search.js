@@ -35,7 +35,7 @@ export default function MainSearch({ asanas, tags }) {
         <select {...select('asana')} className="w-full p-4 text-lg mt-2">
           <SelectOptions options={asanas} prefix="asana" />
         </select>
-        <div className="flex flex-wrap mt-6">
+        <div className="flex flex-wrap justify-center mt-6">
           <div className="flex flex-col items-center">
             <span>Condição</span>
             <select {...select('health')} className="p-4 text-lg my-1 mx-2">
@@ -55,7 +55,7 @@ export default function MainSearch({ asanas, tags }) {
             </select>
           </div>
         </div>
-        <button className="self-strech p-4 text-xl mt-6 mx-8 text-center bg-blue-600">
+        <button className="self-stretch p-4 text-xl mt-6 mx-2 text-center bg-blue-600">
           Buscar
         </button>
       </form>
