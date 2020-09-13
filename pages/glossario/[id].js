@@ -1,4 +1,5 @@
 import upperFirst from 'lodash/upperFirst'
+import Link from 'next/link'
 
 import api from 'lib/api'
 
@@ -11,6 +12,12 @@ export default function GlossaryWord({ word, asanas }) {
       title={upperFirst(word?.word)}
       subtitle={upperFirst(word?.translation)}
     >
+      <p className="text-xs mb-0">
+        Ir para o{' '}
+        <Link href="/glossario">
+          <a>Glossário</a>
+        </Link>
+      </p>
       <div className="md:flex">
         <AsanaList asanas={asanas} />
       </div>

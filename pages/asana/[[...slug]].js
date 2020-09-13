@@ -34,7 +34,7 @@ export default function Asana({
               {map(sanscritWords, (item) => (
                 <CategoryLink
                   key={item.id}
-                  prefix="glossary"
+                  prefix="glossario"
                   id={item.id}
                   description={`${item.word} = ${item.translation}`}
                 />

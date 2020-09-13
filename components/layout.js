@@ -25,6 +25,10 @@ export default function Layout({ title, subtitle, children }) {
         <Link href="/">
           <a>Light On Yoga App</a>
         </Link>
+        {' • '}
+        <Link href="/glossario">
+          <a>Glossário</a>
+        </Link>
       </footer>
     </>
   )
