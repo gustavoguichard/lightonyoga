@@ -1,18 +1,20 @@
-import Link from 'next/link'
+import AsanaCard from 'components/asana-card'
 
 export default function AsanaList({ asanas }) {
   return (
-    <div className="md:w-5/12">
+    <div>
       <h3>Asanas</h3>
-      <ul className="list-disc">
+      <div className="flex flex-wrap">
         {asanas.map((asana) => (
-          <li key={asana.name}>
-            <Link href="/asana/[slug]" as={`/asana/${asana.slug}`}>
-              <a>{asana.name}</a>
-            </Link>
-          </li>
+          <AsanaCard
+            key={asana.name}
+            link={`/asana/${asana.slug}`}
+            picture={`/${asana.slug}.png`}
+            title={asana.name}
+            tagline={asana.meaning}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
