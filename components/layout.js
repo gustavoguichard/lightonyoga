@@ -14,7 +14,7 @@ export default function Layout({ title, subtitle, children }) {
             <h1>
               {title}
               {subtitle && (
-                <span className="block text-xl text-gray-600 mt-2">
+                <span className="block text-xl text-gray-600 mt-2 leading-snug">
                   {subtitle}
                 </span>
               )}
