@@ -25,7 +25,7 @@ export default [
     id: 3,
     asanaId: 1,
     title: 'Costas contra a parede',
-    title: 'costas-contra-a-parede',
+    slug: 'costas-contra-a-parede',
     tags: [12, 4],
     tagline: 'Trabalha o plano frontal a partir das costas.',
     description: `<p>Na variação usando a parede, posicione-se de costas para parede e siga as instruções acima. Ao entrar na postura coloque o calcanhar esquerdo encostado na parede e um bloco no tornozelo externo do pé direito para apoiar a mão. Use o apoio da parede para encontrar o alinhamento do quadril, tronco e cabeça. Caso tenha cordas segure com a mão de cima na corda para ganhar ainda mais espaço no centro do peito. O suporte da parede e das cordas auxilia a manter o ventre suave na postura.</p>`,

@@ -34,7 +34,7 @@ export default function PostureMainContent({
 
 const Video = ({ id }) => (
   <div className="w-full sm:w-1/2 md:w-1/3">
-    <div className="mr-3 embed-responsive aspect-ratio-4/3">
+    <div className="mr-3 mb-3 embed-responsive aspect-ratio-4/3">
       <iframe
         className="embed-responsive-item"
         src={`https://www.youtube.com/embed/${id}`}
