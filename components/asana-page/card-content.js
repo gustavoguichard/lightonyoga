@@ -20,7 +20,7 @@ export default function CardContent({ family, movements, sanscritWords }) {
       </dd>
       <dt>Classificação</dt>
       <dd>
-        <Link href="/family/[slug]" as={`/family/${kebabCase(family.name)}`}>
+        <Link href="/familia/[slug]" as={`/familia/${kebabCase(family.name)}`}>
           <a>
             {family.meaning} (<i>{family.name}</i>)
           </a>
@@ -29,7 +29,7 @@ export default function CardContent({ family, movements, sanscritWords }) {
       <dt>Principais movimentos articulares</dt>
       <dd>
         {map(movements, (mov) => (
-          <CategoryLink key={mov.id} prefix="movement" {...mov} />
+          <CategoryLink key={mov.id} prefix="anatomia" {...mov} />
         ))}
       </dd>
     </dl>

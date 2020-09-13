@@ -45,6 +45,7 @@ export default [
     title: 'Corda para a mão',
     slug: 'corda-para-a-mao',
     tags: [12, 8],
+    premium: true,
     tagline:
       'O suporte da corda também ajuda a descansar a parte superior do corpo.',
     description: `<p>Posicione-se com a lateral esquerda do tronco voltada para a parede. Siga as instruções citadas acima e ao separar as pernas posicione a borda externa do pé esquerdo contra a parede. Segure com a mão esquerda na corda de trás e desça na postura trazendo a mão direita no bloco. Use o apoio da mão esquerda na corda, braço esquerdo esticado para expandir o centro do peito na postura.</p>`,

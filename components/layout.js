@@ -30,7 +30,19 @@ export default function Layout({ title, subtitle, children }) {
       <footer className="flex justify-between py-4 px-6 bg-gray-100 border-gray-300 border-t-2">
         <p className="mb-0">
           <Link href="/">
-            <a>Light On Yoga App</a>
+            <a>Home</a>
+          </Link>
+          {' • '}
+          <Link href="/lista-de-asanas">
+            <a>
+              Lista de <em>Asanas</em>
+            </a>
+          </Link>
+          {' • '}
+          <Link href="/familias-dos-asanas">
+            <a>
+              Famílias dos <em>Asanas</em>
+            </a>
           </Link>
           {' • '}
           <Link href="/glossario">

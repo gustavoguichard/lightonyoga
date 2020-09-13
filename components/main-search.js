@@ -39,7 +39,9 @@ export default function MainSearch({ asanas, tags }) {
           <SelectOptions options={asanas} prefix="asana" />
         </select>
         <span className="text-xs text-right">
-          <Link href="/lista-de-asanas">Ver lista de todos Asanas</Link>
+          <Link href="/lista-de-asanas">
+            <a>Ver lista de todos Asanas</a>
+          </Link>
         </span>
         <div className="flex flex-wrap justify-center mt-6">
           <div className="flex flex-col items-center">
