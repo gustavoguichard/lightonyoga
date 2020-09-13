@@ -29,7 +29,7 @@ export default function MainSearch({ asanas, tags }) {
   }
 
   return (
-    <div className="flex flex-col py-6 px-8 mb-12 bg-gray-200 rounded-lg">
+    <div className="flex flex-col py-6 px-8 mb-12 bg-gray-200 border-2 border-gray-300 rounded-lg">
       <form className="flex flex-col" onSubmit={handleSubmit}>
         <h3 className="text-center">Asana</h3>
         <select {...select('asana')} className="w-full p-4 text-lg mt-2">
