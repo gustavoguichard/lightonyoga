@@ -8,14 +8,19 @@ export default function VariationPage({ variation }) {
   return (
     <Layout
       title={variation.asana.name}
-      subtitle={`Variação - ${variation.title}`}
+      subtitle={
+        <span className="font-semibold">
+          <span className="text-sm font-normal">Variação:</span>{' '}
+          {variation.title}
+        </span>
+      }
     >
       <MainContent
         videos={variation.videos}
         picture={`/variations/${variation.id}.png`}
       >
         <p className="text-xs">
-          Variação de:{' '}
+          Ir para:{' '}
           <Link href="/asana/[slug]" as={`/asana/${variation.asana.slug}`}>
             <a>{variation.asana.name}</a>
           </Link>

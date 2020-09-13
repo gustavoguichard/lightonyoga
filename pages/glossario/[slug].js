@@ -10,8 +10,16 @@ import AsanaList from 'components/asana-list'
 export default function GlossaryWord({ word, asanas }) {
   return (
     <Layout
-      title={upperFirst(word?.word)}
-      subtitle={`/ ${upperFirst(word?.translation)} /`}
+      title={
+        <>
+          {upperFirst(word?.word)}
+          <span className="ml-3 text-lg text-gray-600">
+            <span className="text-sm mr-2">/</span>
+            {upperFirst(word?.translation)}
+            <span className="text-sm ml-2">/</span>
+          </span>
+        </>
+      }
     >
       <p className="text-xs mb-0">
         Ir para o{' '}
