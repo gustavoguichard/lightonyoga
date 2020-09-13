@@ -11,7 +11,7 @@ export default function GlossaryWord({ word, asanas }) {
   return (
     <Layout
       title={upperFirst(word?.word)}
-      subtitle={upperFirst(word?.translation)}
+      subtitle={`/ ${upperFirst(word?.translation)} /`}
     >
       <p className="text-xs mb-0">
         Ir para o{' '}
