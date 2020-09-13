@@ -26,8 +26,10 @@ export default function Asana({
     <Layout
       title={asana.name}
       subtitle={
-        <span className="font-semibold">
-          <span className="text-sm font-normal">Tradução:</span> {asana.meaning}
+        <span className="ml-3 text-lg text-gray-600">
+          <span className="text-sm mr-2">/</span>
+          {asana.meaning}
+          <span className="text-sm ml-2">/</span>
         </span>
       }
     >
