@@ -7,7 +7,7 @@ export default function AllAsanas({ asanas }) {
   return (
     <Layout title="Lista de Asanas" subtitle="Por ordem alfabética">
       <div className="md:flex">
-        <AsanaList asanas={asanas} />
+        <AsanaList hideTitle asanas={asanas} />
       </div>
     </Layout>
   )

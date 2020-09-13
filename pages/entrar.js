@@ -5,11 +5,15 @@ import session from 'lib/session'
 
 export default function Login() {
   const router = useRouter()
-  const [, { email, password }] = useFormState()
+  const [{ values }, { email, password }] = useFormState()
 
   const handleSubmit = (ev) => {
     ev.preventDefault()
-    session.login(router)
+    if (values?.password === 'gurujibks') {
+      session.login(router)
+    } else {
+      router.push('/')
+    }
   }
 
   return (
