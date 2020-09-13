@@ -19,5 +19,5 @@ export default [
   { name: 'Pescoço e Ombros', slug: 'pescoco-ombros', type: 'health', id: 14 },
   { name: 'Didática', slug: 'didatica', type: 'study', id: 18 },
   { name: 'Preparatório', slug: 'preparatorio', type: 'study', id: 21 },
-  { name: 'Ajuste', slug: 'ajuste', type: 'study', id: 21, premium: true },
+  { name: 'Ajuste', slug: 'ajuste', type: 'study', id: 22, premium: true },
 ]

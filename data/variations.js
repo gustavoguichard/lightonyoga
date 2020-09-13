@@ -99,4 +99,14 @@ export default [
       'Torna mais fácil a ação do centro do glúteo para dentro com a resistência do topo da perna de trás.',
     description: `<p>...</p>`,
   },
+  {
+    id: 11,
+    asanaId: 2,
+    title: 'Segurar o braço estendido',
+    slug: 'segurar-o-braço-estendido',
+    tags: [22],
+    tagline:
+      'Além de servir de suporte, ajuda a corrigir o plano frontal do estudante.',
+    description: `<p>...</p>`,
+  },
 ]

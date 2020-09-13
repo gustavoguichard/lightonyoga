@@ -7,6 +7,7 @@ import MainContent from 'components/main-content'
 import CardContent from './card-content'
 import HealthSection from './health-section'
 import KramaSection from './krama-section'
+import TeacherSection from './teacher-section'
 import Information from './information'
 import VariationsFromTag from './variations-from-tag'
 
@@ -48,6 +49,7 @@ export default function AsanaPage({ asana, family, movements, sanscritWords }) {
       )}
       <HealthSection asana={asana} isLogged={isLogged} />
       {isLogged && <KramaSection asana={asana} />}
+      {isLogged && <TeacherSection asana={asana} />}
       {asana.curiosities && (
         <ContentSection>
           <h2>Curiosidades</h2>

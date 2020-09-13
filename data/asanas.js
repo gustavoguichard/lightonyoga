@@ -136,5 +136,14 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
       ],
       compensations: [],
     },
+    teachers: {
+      observe: [
+        'Extensão da perna de trás',
+        'Ângulo da perna da frente',
+        'Contato do braço com joelho',
+        'Cabeça que cai',
+        'Borda interna da perna de trás',
+      ],
+    },
   },
 ]
