@@ -1,8 +1,8 @@
-import AsanaCard from 'components/asana-card'
+import Card from 'components/card'
 
 export default function VariationCard({ variation }) {
   return (
-    <AsanaCard
+    <Card
       title={variation.asana.name}
       subtitle={variation.title}
       link={`/asana/${variation.asana.slug}/${variation.slug}`}

@@ -6,13 +6,7 @@ export default function AsanaList({ asanas }) {
       <h3>Asanas</h3>
       <div className="flex flex-wrap">
         {asanas.map((asana) => (
-          <AsanaCard
-            key={asana.name}
-            link={`/asana/${asana.slug}`}
-            picture={`/${asana.slug}.png`}
-            title={asana.name}
-            tagline={asana.meaning}
-          />
+          <AsanaCard key={asana.name} asana={asana} />
         ))}
       </div>
     </div>
