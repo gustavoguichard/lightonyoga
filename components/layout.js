@@ -23,14 +23,26 @@ export default function Layout({ title, subtitle, children }) {
         )}
         {children}
       </article>
-      <footer className="py-4 px-6 bg-gray-100 border-gray-300 border-t-2">
-        <Link href="/">
-          <a>Light On Yoga App</a>
-        </Link>
-        {' • '}
-        <Link href="/glossario">
-          <a>Glossário</a>
-        </Link>
+      <footer className="flex justify-between py-4 px-6 bg-gray-100 border-gray-300 border-t-2">
+        <p className="mb-0">
+          <Link href="/">
+            <a>Light On Yoga App</a>
+          </Link>
+          {' • '}
+          <Link href="/glossario">
+            <a>Glossário</a>
+          </Link>
+        </p>
+        <a
+          target="_blank"
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >
+          <img
+            className="mb-0"
+            src="/creative-commons.png"
+            alt="Creative Commons Attribution"
+          />
+        </a>
       </footer>
     </>
   )
