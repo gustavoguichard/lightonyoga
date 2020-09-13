@@ -23,8 +23,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const family = api.getFamilyBySlug(slug)
-  const asanas = api.listAsanas({ family: family?.id })
+  const family = await api.getFamilyBySlug(slug)
+  const asanas = await api.listAsanas({ family: family?.id })
   return {
     props: { family, asanas },
   }

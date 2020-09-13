@@ -14,12 +14,12 @@ export default function MainSearch({ asanas, tags }) {
 
   const [formState, { select }] = useFormState()
 
-  function handleSubmit(ev) {
+  async function handleSubmit(ev) {
     ev.preventDefault()
     const { asana, ...chosenTags } = formState.values
     const hasTags = some(chosenTags)
     if (asana && !hasTags) {
-      const chosenAsana = api.getAsana(asana)
+      const chosenAsana = await api.getAsana(asana)
       router.push('/asana/[slug]', `/asana/${chosenAsana.slug}`)
     } else {
       const values = pickBy(formState.values)

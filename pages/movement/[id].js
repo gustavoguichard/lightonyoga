@@ -25,8 +25,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { id } = params
-  const movement = api.getMovement(id)
-  const asanas = api.listAsanas({ movement: movement?.id })
+  const movement = await api.getMovement(id)
+  const asanas = await api.listAsanas({ movement: movement?.id })
   return {
     props: { movement, asanas },
   }

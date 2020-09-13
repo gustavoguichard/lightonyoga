@@ -35,7 +35,7 @@ export default function Asana({
                 <CategoryLink
                   key={item.id}
                   prefix="glossario"
-                  id={item.id}
+                  id={kebabCase(item.word)}
                   description={`${item.word} = ${item.translation}`}
                 />
               ))}
@@ -142,9 +142,9 @@ export async function getStaticProps({ params }) {
   const variation = variationSlug
     ? await api.getVariationBySlug(variationSlug)
     : null
-  const family = api.getFamily(asana?.familyId)
-  const movements = api.listMovements(asana.movements)
-  const sanscritWords = api.listGlossary(asana.sanscritWords)
+  const family = await api.getFamily(asana?.familyId)
+  const movements = await api.listMovements(asana.movements)
+  const sanscritWords = await api.listGlossary(asana.sanscritWords)
   return {
     props: { family, asana, variation, variations, movements, sanscritWords },
   }

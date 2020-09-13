@@ -25,8 +25,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const tag = api.getTagBySlug(slug)
-  const variations = api.listVariations({ tags: [tag.id] })
+  const tag = await api.getTagBySlug(slug)
+  const variations = await api.listVariations({ tags: [tag.id] })
   return {
     props: { tag, variations },
   }
