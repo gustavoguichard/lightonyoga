@@ -30,15 +30,15 @@ export default function Home({ asanas, tags }) {
           </blockquote>
           <p>
             Com isso em mente, resolvemos fazer esta plataforma que tem o
-            objetivo de ser um material complementar de estudos, também como uma
-            forma de democratizar o conhecimento do método.
+            objetivo de servir de material complementar dos estudos e como uma
+            forma de democratizar o conhecimento do método <em>Iyengar Yoga</em>
+            .
           </p>
           <p>
-            Como estudantes, praticantes e/ou professores do método{' '}
-            <em>Iyengar</em>, temos muitas anotações de cursos, aulas, workshops
-            e de nossas práticas pessoais. Para ter a possibilidade de pesquisar
-            esse material rapidamente, resolvemos desenvolver uma ferramenta que
-            nos ajude.
+            Como estudantes, praticantes e/ou professores do método, temos
+            muitas anotações de cursos, aulas, workshops e de nossas práticas
+            pessoais. Para ter a possibilidade de pesquisar esse material
+            rapidamente, resolvemos desenvolver uma ferramenta que nos ajude.
           </p>
           <p>
             Também queremos que esse conhecimento acessível e compartilhável, o
