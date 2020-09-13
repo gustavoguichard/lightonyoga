@@ -23,7 +23,14 @@ export default function Asana({
   return variation ? (
     <VariationPage variation={variation} />
   ) : (
-    <Layout title={asana.name} subtitle={asana.meaning}>
+    <Layout
+      title={asana.name}
+      subtitle={
+        <span className="font-semibold">
+          <span className="text-sm font-normal">Tradução:</span> {asana.meaning}
+        </span>
+      }
+    >
       <MainContent
         videos={asana.videos}
         picture={`/${asana.slug}.png`}
