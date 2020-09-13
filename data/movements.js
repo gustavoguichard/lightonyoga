@@ -6,4 +6,5 @@ export default [
   { id: 5, description: 'flexão do ombro' },
   { id: 6, description: 'rotação lateral do ombro' },
   { id: 7, description: 'flexão do joelho' },
+  { id: 8, description: 'retroposição dos ombros' },
 ]

@@ -15,7 +15,19 @@ export default function AsanaPage({ asana, family, movements, sanscritWords }) {
   const isLogged = useLogged()
   return (
     <Layout
-      title={asana.name}
+      title={
+        asana.alternateNames ? (
+          <span>
+            {asana.name}
+            <span className="text-lg text-gray-600">
+              {' '}
+              - {asana.alternateNames.join(', ')}
+            </span>
+          </span>
+        ) : (
+          asana.name
+        )
+      }
       subtitle={
         <span className="ml-3 text-lg text-gray-600">
           <span className="text-sm mr-2">/</span>
