@@ -10,7 +10,10 @@ export default function VariationPage({ variation }) {
       title={variation.asana.name}
       subtitle={`Variação - ${variation.title}`}
     >
-      <MainContent videos={variation.videos}>
+      <MainContent
+        videos={variation.videos}
+        picture={`/variations/${variation.id}.png`}
+      >
         <p className="text-xs">
           Variação de:{' '}
           <Link href="/asana/[slug]" as={`/asana/${variation.asana.slug}`}>

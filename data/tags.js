@@ -2,7 +2,6 @@ export default [
   { name: 'Iniciante', slug: 'iniciante', type: 'level', id: 1 },
   { name: 'Intermediário', slug: 'intermediario', type: 'level', id: 2 },
   { name: 'Avançado', slug: 'avancado', type: 'level', id: 3 },
-  { name: 'Didática', slug: 'didatica', type: 'study', id: 18 },
   { name: 'Bloquinho', slug: 'bloquinho', type: 'prop', id: 5 },
   { name: 'Bolster', slug: 'bolster', type: 'prop', id: 10 },
   { name: 'Cadeira', slug: 'cadeira', type: 'prop', id: 20 },
@@ -18,4 +17,7 @@ export default [
   { name: 'Lombar', slug: 'lombar', type: 'health', id: 16 },
   { name: 'Período', slug: 'periodo', type: 'health', id: 12 },
   { name: 'Pescoço e Ombros', slug: 'pescoco-ombros', type: 'health', id: 14 },
+  { name: 'Didática', slug: 'didatica', type: 'study', id: 18 },
+  { name: 'Preparatório', slug: 'preparatorio', type: 'study', id: 21 },
+  { name: 'Ajuste', slug: 'ajuste', type: 'study', id: 21 },
 ]

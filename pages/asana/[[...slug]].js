@@ -26,6 +26,7 @@ export default function Asana({
     <Layout title={asana.name} subtitle={asana.meaning}>
       <MainContent
         videos={asana.videos}
+        picture={`/${asana.slug}.png`}
         cardContent={
           <dl className="p-4 pb-0 mb-4">
             <dt>Tradução</dt>
@@ -81,10 +82,10 @@ export default function Asana({
       </MainContent>
       <hr />
       <h2>Saúde da postura</h2>
-      <List title="Benefícios" items={asana.benefits} />
-      <List title="Cuidados" items={asana.caution} />
-      <List title="Contra-indicações" items={asana.contraindications} />
-      <HealthyVariations variations={variations} />
+      <List title="Benefícios" items={asana.health?.benefits} />
+      <List title="Cuidados" items={asana.health?.caution} />
+      <List title="Contra-indicações" items={asana.health?.contraindications} />
+      <HealthyVariations asanaId={asana.id} variations={variations} />
       {asana.curiosities && (
         <>
           <hr />

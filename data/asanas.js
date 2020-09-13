@@ -25,17 +25,41 @@ export default [
       leaving:
         '<p>Resistindo com o peso no pé esquerdo e braço esquerdo bem estendido; inspira e retorna; gira os pés para o outro lado, repetindo a postura; exala e salta para <i>tadasana</i>.</p>',
     },
-    benefits: [
-      'Corrige deformidades nas pernas',
-      'Alivia dores nas costas e na cervical',
-      'Remove rigidez das pernas e quadril',
-      'Fortalece tornozelo',
-      'Desenvolve o tórax',
-    ],
-    caution: [
-      'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
-    ],
-    contraindications: [],
+    premium: {
+      advancedActions: [
+        'Absorve a parte interna da perna esquerda em direção a parte externa - borda externa do pé contra o chão',
+        'Femur in',
+      ],
+      connections: [
+        'Ao pressionar a borda externa e absorver a coxa interna da perna esquerda, há mais espaço para o movimento das costelas da esquerda para a direita que por sua vez gera espaço na cervical para o giro da cabeça',
+      ],
+    },
+    teachers: {
+      observe: [
+        'Alinhamento de utthita hasta padasana; parte posterior da cabeça em linha com o sacro.',
+        'Alinhamento da perna da frente (4 pontos): tornozelo frontal, joelho inferior, joelho superior e centro do topo da coxa.',
+        'Ação de parighasana: alongamento das laterais do tronco paralelas entre si.',
+        'Giro dos ombros para trás: parte frontal do tronco longa, absorver as escápulas em direção ao peito e alargar as clavículas.',
+      ],
+    },
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    health: {
+      benefits: [
+        'Corrige deformidades nas pernas',
+        'Alivia dores nas costas e na cervical',
+        'Remove rigidez das pernas e quadril',
+        'Fortalece tornozelo',
+        'Desenvolve o tórax',
+      ],
+      caution: [
+        'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
+      ],
+      contraindications: [],
+    },
     curiosities: `<p>Prashant Iyengar escreveu um livro inteiro sobre esta
     postura, chamado The Alpha & Omega of Trikonasana.</p>
 <p><strong>Sobre a questão da distância das pernas:</strong>
