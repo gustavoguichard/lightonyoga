@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import session from 'lib/session'
 
 export default function Layout({ title, subtitle, children }) {
+  const router = useRouter()
   return (
     <>
       <article className="max-w-screen-xl px-6 py-2">
@@ -32,6 +36,12 @@ export default function Layout({ title, subtitle, children }) {
           <Link href="/glossario">
             <a>Glossário</a>
           </Link>
+          {session.isLogged() && [
+            ' • ',
+            <a href="#" onClick={() => session.logout(router)}>
+              Sair
+            </a>,
+          ]}
         </p>
         <a
           target="_blank"
