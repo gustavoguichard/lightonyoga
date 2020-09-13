@@ -104,7 +104,14 @@ export default [
     krama: {
       preparations: [{ id: 3, name: 'Tadasana', slug: 'tadasana' }],
       connectedAsanas: [],
-      compensations: [{ id: 3, name: 'Tadasana', slug: 'tadasana' }],
+      compensations: [
+        {
+          id: 3,
+          name: 'Tadasana',
+          slug: 'tadasana',
+          why: 'Ajuda a restaurar a energia entre as posturas em pé.',
+        },
+      ],
     },
     health: {
       benefits: [
@@ -193,7 +200,14 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
           why: 'Ação das costelas para dentro.',
         },
       ],
-      compensations: [],
+      compensations: [
+        {
+          id: 3,
+          name: 'Tadasana',
+          slug: 'tadasana',
+          why: 'Ajuda a restaurar a energia entre as posturas em pé.',
+        },
+      ],
     },
     teachers: {
       observe: [
