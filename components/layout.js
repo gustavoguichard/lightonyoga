@@ -14,7 +14,7 @@ export default function Layout({ title, subtitle, children }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {title && (
-          <header className="mt-0">
+          <header className="mt-0 bg-gray-100 border-b-2">
             <h1>
               {title}
               {subtitle && (

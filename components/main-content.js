@@ -1,3 +1,5 @@
+import ContentSection from 'components/content-section'
+
 export default function PostureMainContent({
   children,
   cardContent,
@@ -14,15 +16,14 @@ export default function PostureMainContent({
         <main className="md:w-7/12 md:mr-8">{children}</main>
       </div>
       {!!videos?.length && (
-        <div>
-          <hr />
+        <ContentSection>
           <h2>Vídeos</h2>
           <div className="flex flex-wrap">
             {videos.map((video) => (
               <Video key={video} id={video} />
             ))}
           </div>
-        </div>
+        </ContentSection>
       )}
     </div>
   )

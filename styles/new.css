@@ -157,8 +157,8 @@ blockquote :last-child {
   margin-bottom: 0;
 }
 header {
-  background: var(--nc-bg-2);
-  border-bottom: 1px solid var(--nc-bg-3);
+  /* background: var(--nc-bg-2);
+  border-bottom: 1px solid var(--nc-bg-3); */
   padding: 2rem 1.5rem;
   margin: -2rem calc(0px - (50vw - 50%)) 2rem;
   padding-left: calc(50vw - 50%);
