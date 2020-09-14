@@ -59,4 +59,10 @@ export default [
     slug: 'savasana',
     meaning: '--',
   },
+  {
+    id: 11,
+    name: 'Visranta Karaka',
+    slug: 'visranta-karaka',
+    meaning: 'Posturas restaurativas',
+  },
 ]
