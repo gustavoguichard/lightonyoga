@@ -18,9 +18,7 @@ export default function SequencePage({ sequence }) {
       </div>
       <div className="flex flex-wrap">
         {sequence.asanas.map(({ tagline, asana, variation }) => {
-          const picture = variation
-            ? `/variations/${variation.id}.png`
-            : `/${asana.slug}.png`
+          const picture = (variation || asana).image
           const link = variation
             ? `/asana/${asana.slug}/${variation.slug}`
             : `/asana/${asana.slug}`

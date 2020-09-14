@@ -5,7 +5,7 @@ export default function AsanaCard({ asana }) {
     <Card
       title={asana.name}
       link={`/asana/${asana.slug}`}
-      picture={`/${asana.slug}.png`}
+      picture={asana.image}
       tagline={asana.meaning}
     />
   )

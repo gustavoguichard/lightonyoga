@@ -17,7 +17,8 @@ export default function VariationPage({ variation }) {
     >
       <MainContent
         videos={variation.videos}
-        picture={`/variations/${variation.id}.png`}
+        picture={variation.image}
+        asana={variation}
       >
         <p className="text-xs">
           Ir para:{' '}

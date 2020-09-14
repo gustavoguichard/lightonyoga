@@ -140,4 +140,14 @@ export default [
     tagline: 'Permite uma elevação maior do peito e orgãos do baixo ventre.',
     description: `<p>Posicione de costas para o cavalo, pés na largura do quadril. Apoie as mãos na parte de cima do cavalo, braços flexionados e cotovelos apontando para trás. Use esse apoio das mãos para elevar o tronco para cima e abrir o peito. Siga as instruções passadas anteriormente.</p>`,
   },
+  {
+    id: 15,
+    asana: 3,
+    name: 'Bloco entre as coxas mediais',
+    slug: 'bloco-entre-as-coxas-mediais',
+    tags: [18],
+    tagline:
+      'Traz uma consciência maior da rotação das coxas e compactação do quadril.',
+    description: `<p>De pé traga um bloco deitado horizontal com a parte mais estreita para baixo na região medial das coxas. Aproxime os pés o máximo possível criando uma absorção da face externas das pernas em direção a interna (compactação do quadril). Mova o bloco para cima em direção ao púbis elevando a parte interna das coxas observando o efeito que esse movimento tem na elevação da coluna vertebral. Agora mova o bloco para trás girando as coxas de fora para dentro e observe o reflexo que esse movimento tem no seu quadril e parte inferior das costas (sacro e lombar). Siga todas as instruções citadas anteriormente.</p>`,
+  },
 ]

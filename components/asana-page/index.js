@@ -37,6 +37,7 @@ export default function AsanaPage({ asana }) {
       }
     >
       <MainContent
+        asana={asana}
         videos={asana.videos}
         picture={`/${asana.slug}.png`}
         cardContent={<CardContent {...asana} />}
