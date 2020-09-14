@@ -37,8 +37,8 @@ export default [
   },
   {
     id: 7,
-    name: 'Hand Balance',
-    slug: 'hand-balance',
+    name: 'Hasta Tolana Sthiti',
+    slug: 'hasta-tolana-sthiti',
     meaning: 'Posturas de equilíbrio sobre as mãos',
   },
   {
@@ -55,14 +55,14 @@ export default [
   },
   {
     id: 10,
-    name: 'Savasana',
-    slug: 'savasana',
-    meaning: 'Postura do cadáver',
-  },
-  {
-    id: 11,
     name: 'Visranta Karaka',
     slug: 'visranta-karaka',
     meaning: 'Posturas restaurativas',
+  },
+  {
+    id: 11,
+    name: 'Grathana Sthiti',
+    slug: 'grathana-sthiti',
+    meaning: 'Posturas de corpo em nó',
   },
 ]
