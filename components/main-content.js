@@ -5,13 +5,16 @@ export default function PostureMainContent({
   cardContent,
   videos,
   asana,
-  picture,
 }) {
   return (
     <div>
       <div className="md:flex justify-between items-start">
         <div className="md:order-2 md:w-5/12 mb-3 block bg-gray-200 border-gray-300 border-2 rounded overflow-hidden">
-          <img className="max-w-full m-0" src={picture} alt={asana.name} />
+          <img
+            className="max-w-full m-0"
+            src={asana?.image}
+            alt={asana?.name}
+          />
           {cardContent}
         </div>
         <main className="md:w-7/12 md:mr-8">{children}</main>

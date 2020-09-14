@@ -22,11 +22,13 @@ export default function Login() {
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <p>
             <label for="email">E-mail</label>
-            <input {...email('email')} />
+            <br />
+            <input className="text-lg p-4" {...email('email')} />
           </p>
           <p>
             <label for="password">Senha</label>
-            <input {...password('password')} />
+            <br />
+            <input className="text-lg p-4" {...password('password')} />
           </p>
           <button className="self-stretch p-4 text-xl mt-6 mx-2 text-center bg-blue-600">
             Entrar
