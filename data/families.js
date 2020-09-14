@@ -57,7 +57,7 @@ export default [
     id: 10,
     name: 'Savasana',
     slug: 'savasana',
-    meaning: '--',
+    meaning: 'Postura do cadáver',
   },
   {
     id: 11,
