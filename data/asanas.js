@@ -60,6 +60,99 @@ export default [
     curiosities: `<p>No <em>Light On Yoga</em> B.K.S. Iyengar diz que idealmente em tadasana os braços devem estar elevados acima da cabeça, mas por conveniência podem estar ao lado das coxas.</p>`,
   },
   {
+    id: 4,
+    name: 'Utthita Hasta Padasana',
+    slug: 'utthita-hasta-padasana',
+    meaning: 'Postura das pernas e braços estendidos',
+    family: 1,
+    sanscritWords: [1, 8, 9],
+    movements: [9],
+    actions: {
+      entering:
+        '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), une ponta dos dedos em frente ao peito, inspira e salta afastando pernas e braços para as laterais; mãos em linhas com os ombros, palmas viradas para o chão; pés em linhas com os punhos; bordas externas dos pés paralelas às bordas do tapetinho; eleva as patelas.</p>',
+      legs:
+        '<p>Pressione as bordas externas dos pés contra o chão; eleve o centro dos arcos dos pés; absorve os tornozelos externos; eleva as patelas dos joelhos.</p>',
+      core:
+        '<p>Topo da coxa para trás e cóccix para frente; absorve a parte externa das pernas em direção à interna e a interna em direção à externa; eleva a púbis.</p>',
+      trunk:
+        '<p>Estende a parte anterior do tronco da púbis às clavículas; alonga as laterais do tronco.</p>',
+      arms:
+        '<p>Gira ombros para trás e para baixo; afaste os ombros das orelhas; absorva os tríceps.</p>',
+      head: '<p>Mantenha o olhar na altura dos olhos.</p>',
+      leaving:
+        '<p>Resistindo com pernas e braços bem estendidos, exala e salta voltando para <em>Tadasana</em>.</p>',
+    },
+    premium: {
+      advancedActions: [],
+      connections: [],
+    },
+    teachers: {
+      observe: [
+        'Distância das pernas',
+        'Alinhamento dos pés',
+        'Patelas elevadas',
+        'Braços em linhas com ombros',
+        'Lateral: cóccix para frente, lombar longa, sem jogar costelas anteriores para frente',
+        'Tríceps absorvidos',
+        'Tornozelos absorvidos',
+      ],
+    },
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    health: {
+      benefits: [],
+      caution: [],
+    },
+  },
+  {
+    id: 5,
+    name: 'Parsva Hasta Padasana',
+    slug: 'parsva-hasta-padasana',
+    meaning: 'Postura das pernas e braços estendidos',
+    family: 1,
+    sanscritWords: [4, 8, 9],
+    movements: [2],
+    actions: {
+      entering:
+        '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>, afastando pernas e braços para as laterais; mãos em linhas com os ombros; pés em linhas com os punhos; eleva as patelas; gira pé esquerdo para dentro; perna e pé direito para fora; alinha calcanhar do pé direito com o centro do arco do pé da frente.</p>',
+      legs:
+        '<p>Pressione a borda externa do pé esquerdo contra o chão; borda interna do pé direito contra o chão; eleva as patelas dos joelhos; topo da coxa esquerda para trás e centro do glúteo direito para frente; mantenha tornozelo, joelho e topo da coxa da perna direita em linha; absorve a parte externa da perna direita em direção à interna e alonga a parte interna da virilha em direção ao joelho, joelho em direção ao tornozelo e tornozelo em direção ao calcanhar interno.</p>',
+      core: '<p>Eleva a púbis.</p>',
+      trunk:
+        '<p>Resiste com o abdome da direita para esquerda; estende a parte anterior do tronco da púbis às clavículas; alonga as laterais do tronco.</p>',
+      arms:
+        '<p>Gira ombros para trás e para baixo; afaste os ombros das orelhas; absorva os tríceps.</p>',
+      head: '<p>Mantenha o olhar na altura dos olhos.</p>',
+      leaving:
+        '<p>Gira o pé direito para dentro, perna e pé esquerdo para fora e repete do outro lado.</p>',
+    },
+    premium: {
+      advancedActions: [],
+      connections: [],
+    },
+    teachers: {
+      observe: [
+        'Patelas elevadas',
+        'Alinhamento do calcanhar com arco do pé',
+        'Alinhamento da perna da frente',
+        'Pelve - topo do coxa e centro do glúteo',
+        'Tríceps absorvidos',
+      ],
+    },
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    health: {
+      benefits: [],
+      caution: [],
+    },
+  },
+  {
     id: 1,
     name: 'Utthita Trikonasana',
     slug: 'utthita-trikonasana',
@@ -70,7 +163,7 @@ export default [
     videos: ['LyK7zmrRcwo', '1DB2ZV_5E-I'],
     actions: {
       entering:
-        '<p>À partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta* para utthita hasta padasana. Braços paralelos ao chão, palma das mãos voltada para baixo,punhos em linha com os tornozelos. Gira o pé esquerdo ligeiramente para dentro, perna e pé direito para fora 90º; alinha o calcanhar do pé direito com centro do arco do pé esquerdo (<i>Parsva Hasta Padasana</i>). Observa o alinhamento do tornozelo, joelho e centro do topo da coxa da perna direita; eleva as patelas. Resistindo com peso na borda externa do pé esquerdo e o braço esquerdo bem estendido, exala e flexiona o tronco a partir do quadril; mão direita no tornozelo; eleva o braço esquerdo em linha com o direito.</p>',
+        '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta* para utthita hasta padasana. Braços paralelos ao chão, palma das mãos voltada para baixo,punhos em linha com os tornozelos. Gira o pé esquerdo ligeiramente para dentro, perna e pé direito para fora 90º; alinha o calcanhar do pé direito com centro do arco do pé esquerdo (<i>Parsva Hasta Padasana</i>). Observa o alinhamento do tornozelo, joelho e centro do topo da coxa da perna direita; eleva as patelas. Resistindo com peso na borda externa do pé esquerdo e o braço esquerdo bem estendido, exala e flexiona o tronco a partir do quadril; mão direita no tornozelo; eleva o braço esquerdo em linha com o direito.</p>',
       legs:
         '<p>Pressiona a borda externa do pé esquerdo e a borda interna do pé direito contra chão; mantém as patelas elevadas.</p>',
       core:
@@ -152,7 +245,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     movements: [1, 2, 7, 5, 6, 3, 4],
     actions: {
       entering:
-        '<p>À partir de <i><a href="/asana/tadasana">Tadasana</a></i>, inspira e salta para utthita hasta padasana; gira pé esquerdo para dentro, perna e pé direito para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; resistindo com peso na borda externa do pé esquerdo e braço esquerdo estendido; flexiona a perna direita à partir da virilha interna que vai em direção ao joelho interno até que a coxa fique paralela e a canela perpendicular ao chão; mantendo a lateral direita do tronco longa, exala e flexiona o tronco levando a mão no chão por fora do pé direito; estende o braço esquerdo em direção ao teto e, à partir do ombro, gira o braço até que a palma da mão esteja virada na direção da cabeça; alonga ainda mais a parte interna do braço em direção ao teto; pressionando o pé esquerdo contra o chão exala e desce o braço por cima da orelha esquerda.</p>',
+        '<p>A partir de <i><a href="/asana/tadasana">Tadasana</a></i>, inspira e salta para utthita hasta padasana; gira pé esquerdo para dentro, perna e pé direito para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; resistindo com peso na borda externa do pé esquerdo e braço esquerdo estendido; flexiona a perna direita A partir da virilha interna que vai em direção ao joelho interno até que a coxa fique paralela e a canela perpendicular ao chão; mantendo a lateral direita do tronco longa, exala e flexiona o tronco levando a mão no chão por fora do pé direito; estende o braço esquerdo em direção ao teto e, A partir do ombro, gira o braço até que a palma da mão esteja virada na direção da cabeça; alonga ainda mais a parte interna do braço em direção ao teto; pressionando o pé esquerdo contra o chão exala e desce o braço por cima da orelha esquerda.</p>',
       legs:
         '<p>Pressiona borda externa do pé esquerdo contra o chão; absorve a parte interna da perna esquerda e mantém ela bem estendida; pressiona borda interna do pé direito contra o chão; conecta o joelho com o braço direito</p>',
       core:
@@ -162,7 +255,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
       arms:
         '<p>Estende bem o braço esquerdo e resiste com o braço direito contra o joelho direito.</p>',
       head:
-        '<p>Alongue o pescoço e gire a cabeça - à partir da base do crânio - levando o nariz em direção à axila esquerda.</p>',
+        '<p>Alongue o pescoço e gire a cabeça - A partir da base do crânio - levando o nariz em direção à axila esquerda.</p>',
       all:
         '<p>Estenda bem a perna esquerda e o braço esquerdo para longe um do outro.</p>',
       leaving:

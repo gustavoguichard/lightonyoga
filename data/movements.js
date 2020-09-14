@@ -5,6 +5,7 @@ export default [
   { id: 4, name: 'flexão cervical' },
   { id: 5, name: 'flexão do ombro' },
   { id: 6, name: 'rotação lateral do ombro' },
+  { id: 9, name: 'abdução dos ombros' },
   { id: 7, name: 'flexão do joelho' },
   { id: 8, name: 'retroposição dos ombros' },
 ]

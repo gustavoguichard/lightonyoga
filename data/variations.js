@@ -109,4 +109,35 @@ export default [
       'Além de servir de suporte, ajuda a corrigir o plano frontal do estudante.',
     description: `<p>...</p>`,
   },
+  {
+    id: 12,
+    asana: 3,
+    name: 'Usando a parede',
+    slug: 'usando-a-parede',
+    tags: [1, 4, 12],
+    tagline:
+      'Para tomar consciência do alinhamento correto de Tadasana você pode experimentar fazer a postura com as costas na parede.',
+    description: `<p>Posicione-se de costas para parede, os calcanhares posteriores o mais próximo da parede possível. Flexione ligeiramente os joelhos e mova a parte superior dos glúteos em direção aos calcanhares levando o cóccix para dentro. Lentamente mantendo essa ação estenda as pernas movendo a parte frontal e superior das coxas para trás.</p>
+    <p>Observe a tendência de projetar o abdômen a frente criando uma hiperlordose lombar. Resista com sacro em direção a parede e mova as laterais do tronco para cima seguindo as ações citadas acima. Gire os ombros para trás em direção a parede abrindo o peito sem perturbar a lombar. Parte posterior da cabeça também na parede.</p>`,
+  },
+  {
+    id: 13,
+    asana: 3,
+    name: 'Usando o chão',
+    slug: 'usando-o-chao',
+    tags: [1, 12],
+    tagline:
+      'Outra variação possível é Supta Tadasana deitando de costas no chão com os pés contra a parede.',
+    description: `<p>Deite-se de costas no chão com os pés voltados para a parede.</p>
+    <p>Flexione ligeiramente os joelhos e mova a parte superior dos glúteos em direção aos calcanhares levando o cóccix para dentro. Lentamente mantendo essa ação estenda as pernas movendo a parte frontal e superior das coxas para trás. Eleve a cabeça e cheque se os pés estão na linha central do corpo. Observe a ação dos pés, procure usar essa referência da parede para espalhar todos os dedos e distribuir igualmente a pressão dos pés na parede. Siga todas as instruções anteriores.</p>`,
+  },
+  {
+    id: 14,
+    asana: 3,
+    name: 'No cavalo',
+    slug: 'no-cavalo',
+    tags: [6, 12],
+    tagline: 'Permite uma elevação maior do peito e orgãos do baixo ventre.',
+    description: `<p>Posicione de costas para o cavalo, pés na largura do quadril. Apoie as mãos na parte de cima do cavalo, braços flexionados e cotovelos apontando para trás. Use esse apoio das mãos para elevar o tronco para cima e abrir o peito. Siga as instruções passadas anteriormente.</p>`,
+  },
 ]
