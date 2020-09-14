@@ -41,10 +41,10 @@ export default function Home({ asanas, tags }) {
             rapidamente, resolvemos desenvolver uma ferramenta que nos ajude.
           </p>
           <p>
-            Também queremos que esse conhecimento acessível e compartilhável, o
-            que tende a ajudar na evolução do método sob uma perspectiva
-            científica. Guruji encarava o Yoga como uma ciência em constante
-            desenvolvimento:
+            Também queremos que esse conhecimento seja acessível e
+            compartilhável, o que tende a ajudar na evolução do método sob uma
+            perspectiva científica. Guruji encarava o Yoga como uma ciência em
+            constante desenvolvimento:
           </p>
           <blockquote>Que meu fim seja o seu começo</blockquote>
           <p>

@@ -28,7 +28,7 @@ export default function HealthSection({ asana, isLogged }) {
         <VariationsFromTag
           asanaId={asana.id}
           tag={12}
-          title="Variações para o período menstrual"
+          title="Variações para o ciclo menstrual"
         />
         {isLogged &&
           tags

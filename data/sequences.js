@@ -1,8 +1,8 @@
 export default [
   {
     id: 1,
-    name: 'Sequência para período iniciante',
-    slug: 'sequencia-para-periodo-iniciante',
+    name: 'Sequência para ciclo menstrual iniciante',
+    slug: 'sequencia-para-ciclo-menstrual-iniciante',
     tags: [1, 12],
     description:
       '<p>Esta sequencia deve ser praticada por praticantes iniciantes nos primeiros dias de menstruação, quando o fluxo ainda é forte.</p>',

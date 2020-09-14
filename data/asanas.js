@@ -213,7 +213,7 @@ export default [
         'Desenvolve o tórax',
       ],
       caution: [
-        'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
+        'Pessoas com problemas nos joelhos, ciclo menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
       ],
       contraindications: [],
     },
@@ -270,7 +270,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
         'Desenvolve o tórax',
       ],
       caution: [
-        'Pessoas com problemas nos joelhos, período menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
+        'Pessoas com problemas nos joelhos, ciclo menstrual e gestantes devem apenas afastar as pernas ao invés de saltar.',
       ],
       contraindications: [],
     },

@@ -15,7 +15,7 @@ export default [
   { name: 'Gestação', slug: 'gestacao', type: 'health', id: 13 },
   { name: 'Joelhos', slug: 'joelhos', type: 'health', id: 15 },
   { name: 'Lombar', slug: 'lombar', type: 'health', id: 16 },
-  { name: 'Período', slug: 'periodo', type: 'health', id: 12 },
+  { name: 'Ciclo menstrual', slug: 'ciclo-menstrual', type: 'health', id: 12 },
   { name: 'Pescoço e Ombros', slug: 'pescoco-ombros', type: 'health', id: 14 },
   { name: 'Didática', slug: 'didatica', type: 'study', id: 18 },
   { name: 'Preparatório', slug: 'preparatorio', type: 'study', id: 21 },
