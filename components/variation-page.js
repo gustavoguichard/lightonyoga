@@ -11,7 +11,7 @@ export default function VariationPage({ variation }) {
       subtitle={
         <span className="font-semibold">
           <span className="text-sm font-normal">Variação:</span>{' '}
-          {variation.title}
+          {variation.name}
         </span>
       }
     >

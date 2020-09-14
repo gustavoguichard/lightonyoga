@@ -11,7 +11,7 @@ import TeacherSection from './teacher-section'
 import Information from './information'
 import VariationsFromTag from './variations-from-tag'
 
-export default function AsanaPage({ asana, family, movements, sanscritWords }) {
+export default function AsanaPage({ asana }) {
   const isLogged = useLogged()
   return (
     <Layout
@@ -39,13 +39,7 @@ export default function AsanaPage({ asana, family, movements, sanscritWords }) {
       <MainContent
         videos={asana.videos}
         picture={`/${asana.slug}.png`}
-        cardContent={
-          <CardContent
-            sanscritWords={sanscritWords}
-            movements={movements}
-            family={family}
-          />
-        }
+        cardContent={<CardContent {...asana} />}
       >
         {asana.introduction && <p className="text-xl">{asana.introduction}</p>}
         <Information asana={asana} />

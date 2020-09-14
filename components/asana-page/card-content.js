@@ -14,7 +14,7 @@ export default function CardContent({ family, movements, sanscritWords }) {
             key={item.id}
             prefix="glossario"
             id={kebabCase(item.word)}
-            description={`${item.word} = ${item.translation}`}
+            name={`${item.word} = ${item.translation}`}
           />
         ))}
       </dd>

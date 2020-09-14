@@ -55,7 +55,7 @@ export default function Search() {
         <div className="md:flex">
           {values(list).length
             ? map(list, (variations, name) => (
-                <div key={name}>
+                <div className="w-full" key={name}>
                   {!!search.asana || <h3>{name}</h3>}
                   <VariationsList variations={variations} />
                 </div>

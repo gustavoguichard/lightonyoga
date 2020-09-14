@@ -5,7 +5,7 @@ export default [
     slug: 'tadasana',
     alternateNames: ['Samasthiti'],
     meaning: 'Postura da montanha',
-    familyId: 1,
+    family: 1,
     sanscritWords: [5, 6, 7],
     movements: [8],
     actions: {
@@ -64,7 +64,7 @@ export default [
     name: 'Utthita Trikonasana',
     slug: 'utthita-trikonasana',
     meaning: 'Postura do triângulo estendido',
-    familyId: 1,
+    family: 1,
     sanscritWords: [1, 2, 3],
     movements: [1, 2, 3],
     videos: ['LyK7zmrRcwo', '1DB2ZV_5E-I'],
@@ -102,13 +102,11 @@ export default [
       ],
     },
     krama: {
-      preparations: [{ id: 3, name: 'Tadasana', slug: 'tadasana' }],
+      preparations: [{ id: 3 }],
       connectedAsanas: [],
       compensations: [
         {
           id: 3,
-          name: 'Tadasana',
-          slug: 'tadasana',
           why: 'Ajuda a restaurar a energia entre as posturas em pé.',
         },
       ],
@@ -149,7 +147,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     name: 'Utthita Parsvakonasana',
     slug: 'utthita-parsvakonasana',
     meaning: 'Postura do ângulo lateral estendido',
-    familyId: 1,
+    family: 1,
     sanscritWords: [1, 4, 3],
     movements: [1, 2, 7, 5, 6, 3, 4],
     actions: {
@@ -185,28 +183,11 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     },
     krama: {
       preparations: [
-        {
-          id: 1,
-          name: 'Utthita Trikonasana',
-          slug: 'utthita-trikonasana',
-          why: 'Prepara a perna de trás e as laterais do tronco.',
-        },
+        { id: 1, why: 'Prepara a perna de trás e as laterais do tronco.' },
       ],
-      connectedAsanas: [
-        {
-          id: 1,
-          name: 'Utthita Trikonasana',
-          slug: 'utthita-trikonasana',
-          why: 'Ação das costelas para dentro.',
-        },
-      ],
+      connectedAsanas: [{ id: 1, why: 'Ação das costelas para dentro.' }],
       compensations: [
-        {
-          id: 3,
-          name: 'Tadasana',
-          slug: 'tadasana',
-          why: 'Ajuda a restaurar a energia entre as posturas em pé.',
-        },
+        { id: 3, why: 'Ajuda a restaurar a energia entre as posturas em pé' },
       ],
     },
     teachers: {

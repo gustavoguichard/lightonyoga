@@ -17,21 +17,21 @@ export default function SequencePage({ sequence }) {
         ))}
       </div>
       <div className="flex flex-wrap">
-        {sequence.asanas.map(({ id, description, asana, variation }) => {
+        {sequence.asanas.map(({ tagline, asana, variation }) => {
           const picture = variation
             ? `/variations/${variation.id}.png`
             : `/${asana.slug}.png`
           const link = variation
-            ? `/asana/${variation.asana.slug}/${variation.slug}`
+            ? `/asana/${asana.slug}/${variation.slug}`
             : `/asana/${asana.slug}`
           return (
             <Card
-              key={id}
+              key={(variation || asana).id}
               picture={picture}
               link={link}
-              title={variation ? variation.title : asana.name}
-              subtitle={variation ? variation.asana.name : null}
-              tagline={description}
+              title={variation ? asana.name : asana.name}
+              subtitle={variation ? variation.name : null}
+              tagline={tagline}
             />
           )
         })}
@@ -50,14 +50,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const result = await api.getSequenceBySlug(slug)
-  const asanas = await result.asanas.map((item) => {
-    const asana = item.variation ? null : api.getAsana(item.id)
-    const variation = item.variation ? api.getVariation(item.variation) : null
-    return { ...item, asana, variation }
-  })
-  const tags = await result.tags.map((tag) => api.getTag(tag))
-  const sequence = { ...result, tags, asanas }
+  const sequence = await api.getSequenceBySlug(slug)
   return {
     props: { sequence },
   }

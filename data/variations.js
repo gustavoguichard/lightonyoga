@@ -1,8 +1,8 @@
 export default [
   {
     id: 1,
-    asanaId: 1,
-    title: 'Mão de baixo no bloco ou cadeira',
+    asana: 1,
+    name: 'Mão de baixo no bloco ou cadeira',
     slug: 'mao-de-baixo-no-bloco-ou-cadeira',
     tags: [1, 12, 5, 20],
     videos: ['LyK7zmrRcwo'],
@@ -14,8 +14,8 @@ export default [
   },
   {
     id: 2,
-    asanaId: 1,
-    title: 'Com a mão de cima na cintura',
+    asana: 1,
+    name: 'Com a mão de cima na cintura',
     slug: 'com-a-mao-de-cima-na-cintura',
     tags: [1, 14],
     tagline: 'Para trabalhar o giro do tronco.',
@@ -23,8 +23,8 @@ export default [
   },
   {
     id: 3,
-    asanaId: 1,
-    title: 'Costas contra a parede',
+    asana: 1,
+    name: 'Costas contra a parede',
     slug: 'costas-contra-a-parede',
     tags: [12, 4],
     tagline: 'Trabalha o plano frontal a partir das costas.',
@@ -32,8 +32,8 @@ export default [
   },
   {
     id: 4,
-    asanaId: 1,
-    title: 'No cavalo',
+    asana: 1,
+    name: 'No cavalo',
     slug: 'no-cavalo',
     tags: [12, 13, 6, 7],
     tagline: 'Restaurativa.',
@@ -41,8 +41,8 @@ export default [
   },
   {
     id: 5,
-    asanaId: 1,
-    title: 'Corda para a mão',
+    asana: 1,
+    name: 'Corda para a mão',
     slug: 'corda-para-a-mao',
     tags: [12, 8],
     premium: true,
@@ -52,8 +52,8 @@ export default [
   },
   {
     id: 6,
-    asanaId: 1,
-    title: 'Supta Padanghustasana lateral com suporte',
+    asana: 1,
+    name: 'Supta Padanghustasana lateral com suporte',
     slug: 'supta-padanghustasana-lateral-com-suporte',
     tags: [12, 10, 11],
     tagline: 'Em caso de cólica menstrual ou indisposição fazer esta variação.',
@@ -62,8 +62,8 @@ export default [
   },
   {
     id: 7,
-    asanaId: 1,
-    title: 'Borda externa do pé de trás na parede',
+    asana: 1,
+    name: 'Borda externa do pé de trás na parede',
     slug: 'borda-externa-do-pe-de-tras-na-parede',
     tags: [4, 18],
     tagline:
@@ -72,8 +72,8 @@ export default [
   },
   {
     id: 8,
-    asanaId: 1,
-    title: 'De frente para parede ou cavalo',
+    asana: 1,
+    name: 'De frente para parede ou cavalo',
     slug: 'de-frente-para-parede-ou-cavalo',
     tags: [4, 6, 16, 18],
     tagline: 'Ênfase na rotação do tronco.',
@@ -81,8 +81,8 @@ export default [
   },
   {
     id: 9,
-    asanaId: 1,
-    title: 'Mão no aro da cadeira',
+    asana: 1,
+    name: 'Mão no aro da cadeira',
     slug: 'mao-no-aro-da-cadeira',
     tags: [20, 18],
     tagline:
@@ -91,8 +91,8 @@ export default [
   },
   {
     id: 10,
-    asanaId: 1,
-    title: 'Pé direito em uma rampa, com o assento da cadeira invertida',
+    asana: 1,
+    name: 'Pé direito em uma rampa, com o assento da cadeira invertida',
     slug: 'pe-direito-em-uma-rampa-com-o-assento-da-cadeira-invertida',
     tags: [20, 18],
     tagline:
@@ -101,8 +101,8 @@ export default [
   },
   {
     id: 11,
-    asanaId: 2,
-    title: 'Segurar o braço estendido',
+    asana: 2,
+    name: 'Segurar o braço estendido',
     slug: 'segurar-o-braço-estendido',
     tags: [22],
     tagline:
