@@ -27,8 +27,8 @@ export default function KramaSection({ asana }) {
   )
 }
 
-const KramaList = ({ asanas, title }) =>
-  asanas?.length ? (
+const KramaList = ({ asanas, title }) => {
+  return asanas?.length ? (
     <>
       <h3>{title}</h3>
       <AsanaList
@@ -37,3 +37,4 @@ const KramaList = ({ asanas, title }) =>
       />
     </>
   ) : null
+}

@@ -13,26 +13,19 @@ export default function SequencePage({ sequence }) {
       />
       <div className="-mt-2 mb-2">
         {sequence.tags.map((tag) => (
-          <Tag key={tag.id} tag={tag} />
+          <Tag key={'tag-' + tag.id} tag={tag} />
         ))}
       </div>
       <div className="flex flex-wrap">
-        {sequence.asanas.map(({ tagline, asana, variation }) => {
-          const picture = (variation || asana).image
-          const link = variation
-            ? `/asana/${asana.slug}/${variation.slug}`
-            : `/asana/${asana.slug}`
-          return (
-            <Card
-              key={(variation || asana).id}
-              picture={picture}
-              link={link}
-              title={variation ? asana.name : asana.name}
-              subtitle={variation ? variation.name : null}
-              tagline={tagline}
-            />
-          )
-        })}
+        {sequence.asanas.map(({ tagline, asana, variation }, idx) => (
+          <Card
+            key={`${idx}-${(variation || asana).id}`}
+            pose={variation || asana}
+            title={variation ? asana.name : asana.name}
+            subtitle={variation ? variation.name : null}
+            tagline={tagline}
+          />
+        ))}
       </div>
     </Layout>
   )
