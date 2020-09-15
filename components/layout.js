@@ -9,7 +9,7 @@ export default function Layout({ title, subtitle, children }) {
   const isLogged = useLogged()
   return (
     <>
-      <div className="flex justify-between p-3 bg-gray-100 border-b-2 border-gray-300">
+      <div className="flex flex-col md:flex-row justify-between p-3 bg-gray-100 border-b-2 border-gray-300">
         <p className="mb-0">
           <Link href="/">
             <a>Home</a>
