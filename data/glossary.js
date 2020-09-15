@@ -16,7 +16,7 @@ export default [
   },
   { id: 8, word: 'hasta', translation: 'mão, braço' },
   { id: 9, word: 'pada', translation: 'pé, perna' },
-  { id: 9, word: 'danda', translation: 'bastão' },
+  { id: 62, word: 'danda', translation: 'bastão' },
   { id: 11, word: 'ardha', translation: 'meia, metade' },
   { id: 12, word: 'chandra', translation: 'lua' },
   { id: 13, word: 'parivrtta', translation: 'revolvido, torcido' },
