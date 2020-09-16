@@ -7,7 +7,7 @@ export default [
     meaning: 'Postura da montanha',
     family: 1,
     sanscritWords: [5, 6, 7],
-    movements: [8],
+    movements: [26, 8],
     actions: {
       entering:
         '<p>Fique de pé no seu tapetinho, pés unidos e braços ao longo do corpo.</p>',
@@ -66,7 +66,7 @@ export default [
     meaning: 'Postura das pernas e braços estendidos',
     family: 1,
     sanscritWords: [1, 8, 9],
-    movements: [9],
+    movements: [26, 1, 9],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), une ponta dos dedos em frente ao peito, inspira e salta afastando pernas e braços para as laterais; mãos em linhas com os ombros, palmas viradas para o chão; pés em linhas com os punhos; bordas externas dos pés paralelas às bordas do tapetinho; eleva as patelas.</p>',
@@ -114,7 +114,7 @@ export default [
     meaning: 'Postura das pernas e braços estendidos',
     family: 1,
     sanscritWords: [4, 8, 9],
-    movements: [2],
+    movements: [26, 1, 2, 9],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>, afastando pernas e braços para as laterais; mãos em linhas com os ombros; pés em linhas com os punhos; eleva as patelas; gira pé esquerdo para dentro; perna e pé direito para fora; alinha calcanhar do pé direito com o centro do arco do pé da frente.</p>',
@@ -159,7 +159,7 @@ export default [
     meaning: 'Postura do triângulo estendido',
     family: 1,
     sanscritWords: [1, 2, 3],
-    movements: [1, 2, 3],
+    movements: [26, 1, 2, 3],
     videos: ['LyK7zmrRcwo', '1DB2ZV_5E-I'],
     actions: {
       entering:
@@ -242,7 +242,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do ângulo lateral estendido',
     family: 1,
     sanscritWords: [1, 4, 3],
-    movements: [1, 2, 7, 5, 6, 3, 4],
+    movements: [26, 7, 1, 2, 5, 6, 3, 4],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; gira pé esquerdo para dentro, perna e pé direito para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; resistindo com peso na borda externa do pé esquerdo e braço esquerdo estendido; flexiona a perna direita A partir da virilha interna que vai em direção ao joelho interno até que a coxa fique paralela e a canela perpendicular ao chão; mantendo a lateral direita do tronco longa, exala e flexiona o tronco levando a mão no chão por fora do pé direito; estende o braço esquerdo em direção ao teto e, A partir do ombro, gira o braço até que a palma da mão esteja virada na direção da cabeça; alonga ainda mais a parte interna do braço em direção ao teto; pressionando o pé esquerdo contra o chão exala e desce o braço por cima da orelha esquerda.</p>',
@@ -300,7 +300,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do guerreiro I',
     family: 1,
     sanscritWords: [10],
-    movements: [7, 18, 5, 10],
+    movements: [26, 7, 18, 5, 10],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; a partir dos ombros gira braços e palmas das mãos para o teto; eleva os braços estendidos e une palma das mãos acima da cabeça; gira pé esquerdo para dentro 60º, pé e perna direita para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; gira perna esquerda de fora pra dentro, gira pelve e tronco da esquerda para direita; alinha os quadris paralelos à parede lateral; resistindo com a borda externa do pé esquerdo e o cóccix para dentro, eleva ainda mais os braços e flexiona a perna direita até que a coxa fique paralela e a canela perpendicular ao chão.</p>',
@@ -351,7 +351,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura da meia-lua',
     family: 1,
     sanscritWords: [11, 12],
-    movements: [1, 2, 9, 3],
+    movements: [26, 1, 2, 9, 3],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; gira pé esquerdo para dentro, perna e pé direito para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; resistindo com peso na borda externa do pé esquerdo, exala e entra em utthita trikonasana; flexiona a perna direita; alinha o dedão da mão direita com o dedinho do pé e move a mão uns 30 cm à frente; da um passo com o pé de trás em direção a perna da frente; eleva o calcanhar do pé de trás apoiando na bola do dedão do pé no chão; gira o tronco da direita para esquerda; pressiona a borda interna do pé direito contra o chão; resistindo com a perna esquerda bem estendida, à partir da parte interna da coxa esquerda eleva a perna e ao mesmo tempo estende a perna direita.</p>',
@@ -411,7 +411,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do guerreiro III',
     family: 1,
     sanscritWords: [10],
-    movements: [11, 5, 10],
+    movements: [26, 11, 5, 10],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; mantenha as pernas firmes; a partir dos ombros gira braços e palmas das mãos para o teto; eleva os braços estendidos e une palma das mãos acima da cabeça; gira pé esquerdo para dentro, pé e perna direita para fora 90º; exala e entra em <i><a href="/asana/virabhadrasana-1">virabhadrasana I</a></i>; gira a parte interna da coxa esquerda em direção ao teto e eleva o calcanhar; flexiona o tronco sobre a perna direita até que o tronco esteja paralelo ao chão (abdômen em contato com a coxa); dá um passo com a perna esquerda a frente e mantém a perna e os braços bem estendidos; fixa o olhar em um ponto a frente; resistindo com a perna esquerda bem estendida, exala e estende a perna direita ao mesmo tempo que eleva a perna esquerda à partir do topo da coxa.</p>',
@@ -468,7 +468,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura da meia-lua revolvida',
     family: 1,
     sanscritWords: [13, 11, 12],
-    movements: [11, 9, 3],
+    movements: [26, 11, 9, 3],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; gira perna e pé direito para fora 90 e ponta do pé esquerdo bem para dentro; exala e entra em <i><a href="/asana/parivrtta-trikonasana">Parivrtta Trikonasana</a></i>. Flexiona a perna da frente levando a mão esquerda +ou- 20cm a frente do pé direito alinhando o dedão da mão esquerda com o dedão do pé direito. Dá um passinho com a perna de trás em direção ao pé da frente. Gira ainda mais o tronco da esquerda para a direita. Mantendo a perna de trás estendida, pressiona a borda interna do pé da frente, e estende a perna da frente enquanto eleva a perna de trás a partir do topo da coxa levando a parte interna da coxa em direção ao teto.</p>',
@@ -629,7 +629,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do alongamento intenso lateral',
     family: 1,
     sanscritWords: [4, 14, 15],
-    movements: [11, 12],
+    movements: [26, 11, 12, 30],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; a partir dos ombros, gira braços, cotovelos e palmas para cima; mantendo as pernas bem estendidas eleve os braços; pé esquerdo para dentro (75-80º LoY), perna e pé direito para fora; gira perna esquerda de fora pra dentro, gira pelve e tronco da esquerda para direita; alinha os quadris paralelos à parede lateral; resistindo com a borda externa do pé esquerdo contra o chão e mantendo a parte anterior do tronco longa, flexiona o tronco a frente levando as mãos no chão abaixo da linha dos ombros, mantém o olhar a frente.</p>',
@@ -680,7 +680,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura das pernas afastadas e alongadas intensamente',
     family: 1,
     sanscritWords: [16, 9, 14, 15],
-    movements: [1, 11, 13, 14],
+    movements: [25, 1, 11, 30, 13, 14],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; afaste os pés ainda mais do que nas outras posturas (entre 1,3 e 1,5 metros); traga as mãos na cintura, cotovelos para trás; pressione a borda externa dos pés; eleve as patelas dos joelhos e gire as coxas frontais de fora para dentro; topos das coxas para trás e cóccix para dentro; alonga a parte anterior do tronco da púbis às clavículas; gire os ombros para trás e para baixo; mantendo a cervical longa, inspire e olhe numa diagonal acima; exale e flexione o tronco a frente paralelo ao chão; leve a ponta dos dedos das mãos ao chão em linha com os ombros; olhar à frente; leve os calcanhares das mãos em linha com os pés; resistindo com as escápulas para dentro, exale e flexione a frente a partir do quadril, levando o cocuruto da cabeça ao chão.</p>',
@@ -733,7 +733,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do alongamento intenso da coluna',
     family: 1,
     sanscritWords: [14, 15],
-    movements: [11, 15],
+    movements: [26, 11, 15, 30],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), pressione os quatro cantos do pé igualmente contra o chão; eleve o centro dos arcos dos pés; absorve os tornozelos externos em direção aos internos e eleve os tornozelos internos; eleva patelas dos joelhos; gire as coxas frontais de fora para dentro, topo da coxa para trás e cóccix para frente; inspire e eleve os braços em urdhva hastasana; resistindo com as pernas firmes e a parte anterior do tronco longa da púbis às clavículas, exale e flexione o tronco mantendo a coluna côncava e as pontas dos dedos das mãos no chão na linha dos ombros; olhe à frente movendo o esterno em direção ao queixo; mantendo a parte frontal do tronco longa e os braços estendidos, mova os dedos das mãos em linha com os dedos dos pés; na exalação, flexione ainda mais o tronco, levando umbigo em direção às coxas, esterno em direção às canelas e topo da cabeça em direção ao chão.</p>',
@@ -790,7 +790,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura invertida sobre a cabeça com apoio',
     family: 8,
     sanscritWords: [42, 37],
-    movements: [13, 5],
+    movements: [26, 13, 5],
     actions: {
       setup: `Dobrar o tapetinho em 4, agachar em frente ao tapetinho alinhando os cotovelos na borda boa. Trazer as palmas das mãos nos ombros para checar alinhando cotovelos e ombros. Entrelaçar os dedos das mãos até a raiz e a ponta dos polegares um sobre o outro mantendo um espaço entre as mãos como se existisse uma bola de tênis. Levar o cocuruto da cabeça no chão (demonstrar antes onde fica o cocuruto - calcanhar da mão no centro das sobrancelhas, ponta do dedo médio no cocuruto) e as costas da cabeça entre as mãos.`,
       entering: `<p>Pressionando a borda externa do antebraço contra o chão, eleva os joelhos e a pélvis, estendendo as pernas caminha ao máximo com os pés na direção do tronco. Entra com as escápulas na direção do peito, afasta os ombros das orelhas, pressiona ainda mais os antebraços contra o chão, estenda bem as pernas e a partir do topo da coxa eleva uma perna estendida e depois a outra levando pés e pernas unidas na direção do teto.</p>`,
@@ -830,7 +830,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do camelo',
     family: 4,
     sanscritWords: [45],
-    movements: [17, 7, 18, 16, 8, 19, 10],
+    movements: [17, 7, 18, 16, 29, 8, 19, 10],
     actions: {
       entering: `<p>Ajoelhado no chão, traz as mãos na cintura, afasta os joelhos, tornozelos e pés na largura do quadril, espalha os dedos dos pés todos em contato com o chão e apontados para trás, pressiona o tornozelo frontal contra o chão, absorve os tornozelos externos em direção aos tornozelos internos, relaxa os glúteos, move o cóccix pra frente (resiste com os ossos dos glúteos para frente), mantendo o quadril na linha dos joelhos, alonga a parte anterior do tronco desde a púbis até as clavículas, movendo as escápulas em direção ao peito, flexiona o tronco para trás levando as palmas das mãos nas solas dos pés.</p>`,
       legs:
