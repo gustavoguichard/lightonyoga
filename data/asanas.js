@@ -790,7 +790,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura invertida sobre a cabeça com apoio',
     family: 8,
     sanscritWords: [42, 37],
-    movements: [13, 5, 9],
+    movements: [13, 5],
     actions: {
       setup: `Dobrar o tapetinho em 4, agachar em frente ao tapetinho alinhando os cotovelos na borda boa. Trazer as palmas das mãos nos ombros para checar alinhando cotovelos e ombros. Entrelaçar os dedos das mãos até a raiz e a ponta dos polegares um sobre o outro mantendo um espaço entre as mãos como se existisse uma bola de tênis. Levar o cocuruto da cabeça no chão (demonstrar antes onde fica o cocuruto - calcanhar da mão no centro das sobrancelhas, ponta do dedo médio no cocuruto) e as costas da cabeça entre as mãos.`,
       entering: `<p>Pressionando a borda externa do antebraço contra o chão, eleva os joelhos e a pélvis, estendendo as pernas caminha ao máximo com os pés na direção do tronco. Entra com as escápulas na direção do peito, afasta os ombros das orelhas, pressiona ainda mais os antebraços contra o chão, estenda bem as pernas e a partir do topo da coxa eleva uma perna estendida e depois a outra levando pés e pernas unidas na direção do teto.</p>`,
