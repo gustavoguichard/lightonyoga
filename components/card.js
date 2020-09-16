@@ -4,7 +4,7 @@ export default function Card({ title, subtitle, tagline, pose }) {
   return (
     <Link href="/asana/[...slug]" as={pose.link}>
       <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex">
-        <div className="flex overflow-hidden flex-col rounded m-2 border-2 border-gray-300 bg-gray-200">
+        <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-300 bg-gray-200">
           <img
             className="w-full mb-2"
             src={pose.image}
