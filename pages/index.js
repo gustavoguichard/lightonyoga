@@ -17,22 +17,28 @@ export default function Home({ asanas, tags }) {
             ferramenta que nos ajude.
           </p>
           <p>
-            Com isso em mente, resolvemos fazer esta plataforma que tem o
-            objetivo de servir de material complementar dos estudos e como uma
-            forma de democratizar o conhecimento do método.
+            Com isso em mente, fizemos esta plataforma que tem o objetivo de
+            servir de material complementar dos estudos e como uma forma de
+            democratizar o conhecimento do método.
           </p>
           <blockquote>
-            A afirmação de Guruji 'dar não nos empobrece, reter não nos
-            enriquece' não apenas deve ser compreendida por nós, mas também
-            praticada. <em>- Geetaji</em>
+            A afirmação de Guruji &ldquo;dar não nos empobrece, reter não nos
+            enriquece&rdquo; não apenas deve ser compreendida por nós, mas
+            também praticada. <i>&minus; Geetaji</i>
           </blockquote>
           <p>
             Também queremos que esse conhecimento seja acessível e
             compartilhável, o que tende a ajudar na evolução do método sob uma
             perspectiva científica. Guruji encarava o Yoga como uma ciência em
-            constante desenvolvimento:
+            constante desenvolvimento.
           </p>
-          <blockquote>Que meu fim seja o seu começo</blockquote>
+          <blockquote>
+            Eu desenvolvi os props para que as pessoas possam se beneficiar.
+            Milhares estão se beneficiando e continuarão se beneficiando deles.
+            Deus alguma vez registrou uma patente para sua criação? Então que
+            direito eu, um mero mortal, tenho para fazer isso?{' '}
+            <i>&minus; B.K.S. Iyengar</i>
+          </blockquote>
           <p>
             <strong>Importante:</strong> O conteúdo descrito nesta plataforma
             deve ser usado como material de apoio. Ele não substitui a
@@ -40,17 +46,9 @@ export default function Home({ asanas, tags }) {
             pretende ser tomado como correto já que é altamente embasado em
             nossas próprias práticas pessoais.
           </p>
-          <p className="text-center">
-            Quando perguntaram ao Guruji o porquê dele não registrar patente dos
-            props ele disse:
-          </p>
           <blockquote>
-            Eu desenvolvi os props para que as pessoas possam se beneficiar.
-            Milhares estão se beneficiando e continuarão se beneficiando deles.
-            Deus alguma vez registrou uma patente para sua criação? Então que
-            direito eu, um mero mortal, tenho para fazer isso?
+            Que meu fim seja o seu começo <i>&minus; B.K.S. Iyengar</i>
           </blockquote>
-          <p className="text-lg text-center">Namastê</p>
         </main>
       </div>
     </Layout>
