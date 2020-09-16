@@ -830,7 +830,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do camelo',
     family: 4,
     sanscritWords: [45],
-    movements: [17, 7, 18, 16, 8, 19],
+    movements: [17, 7, 18, 16, 8, 19, 10],
     actions: {
       entering: `<p>Ajoelhado no chão, traz as mãos na cintura, afasta os joelhos, tornozelos e pés na largura do quadril, espalha os dedos dos pés todos em contato com o chão e apontados para trás, pressiona o tornozelo frontal contra o chão, absorve os tornozelos externos em direção aos tornozelos internos, relaxa os glúteos, move o cóccix pra frente (resiste com os ossos dos glúteos para frente), mantendo o quadril na linha dos joelhos, alonga a parte anterior do tronco desde a púbis até as clavículas, movendo as escápulas em direção ao peito, flexiona o tronco para trás levando as palmas das mãos nas solas dos pés.</p>`,
       legs:
