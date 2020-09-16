@@ -30,6 +30,10 @@ export default function Layout({ title, subtitle, children }) {
           <Link href="/glossario">
             <a>Glossário</a>
           </Link>
+          {' • '}
+          <Link href="/movimentos-articulares">
+            <a>Movimentos articulares</a>
+          </Link>
         </p>
         <a
           className="self-end"

@@ -4,7 +4,6 @@ import Link from 'next/link'
 import api from 'lib/api'
 
 import Layout from 'components/layout'
-import AsanaList from 'components/asana-list'
 
 export default function Asana({ families }) {
   return (

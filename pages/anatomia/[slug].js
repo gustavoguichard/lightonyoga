@@ -1,5 +1,6 @@
 import kebabCase from 'lodash/kebabCase'
 import upperFirst from 'lodash/upperFirst'
+import Link from 'next/link'
 
 import api from 'lib/api'
 
@@ -9,6 +10,12 @@ import AsanaList from 'components/asana-list'
 export default function AnatomyMovement({ movement, asanas }) {
   return (
     <Layout title={upperFirst(movement?.name)} subtitle="Movimento articular">
+      <p className="text-xs mb-0">
+        Ver os{' '}
+        <Link href="/movimentos-articulares">
+          <a>principais movimentos articulares</a>
+        </Link>
+      </p>
       <div className="md:flex">
         <AsanaList asanas={asanas} />
       </div>

@@ -300,7 +300,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do guerreiro I',
     family: 1,
     sanscritWords: [10],
-    movements: [7, 9, 5, 10],
+    movements: [7, 18, 5, 10],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; a partir dos ombros gira braços e palmas das mãos para o teto; eleva os braços estendidos e une palma das mãos acima da cabeça; gira pé esquerdo para dentro 60º, pé e perna direita para fora 90º; alinha calcanhar do pé direito com centro do arco do pé esquerdo; eleva patelas; gira perna esquerda de fora pra dentro, gira pelve e tronco da esquerda para direita; alinha os quadris paralelos à parede lateral; resistindo com a borda externa do pé esquerdo e o cóccix para dentro, eleva ainda mais os braços e flexiona a perna direita até que a coxa fique paralela e a canela perpendicular ao chão.</p>',
@@ -780,6 +780,86 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
         'Laterais do tronco longas',
         'Ombros afastados das orelhas',
         'Subida sem comprimir a lombar',
+      ],
+    },
+  },
+  {
+    id: 15,
+    name: 'Salamba Sirsasana',
+    slug: 'salamba-sirsasana',
+    meaning: 'Postura invertida sobre a cabeça com apoio',
+    family: 8,
+    sanscritWords: [42, 37],
+    movements: [13, 5, 9],
+    actions: {
+      setup: `Dobrar o tapetinho em 4, agachar em frente ao tapetinho alinhando os cotovelos na borda boa. Trazer as palmas das mãos nos ombros para checar alinhando cotovelos e ombros. Entrelaçar os dedos das mãos até a raiz e a ponta dos polegares um sobre o outro mantendo um espaço entre as mãos como se existisse uma bola de tênis. Levar o cocuruto da cabeça no chão (demonstrar antes onde fica o cocuruto - calcanhar da mão no centro das sobrancelhas, ponta do dedo médio no cocuruto) e as costas da cabeça entre as mãos.`,
+      entering: `<p>Pressionando a borda externa do antebraço contra o chão, eleva os joelhos e a pélvis, estendendo as pernas caminha ao máximo com os pés na direção do tronco. Entra com as escápulas na direção do peito, afasta os ombros das orelhas, pressiona ainda mais os antebraços contra o chão, estenda bem as pernas e a partir do topo da coxa eleva uma perna estendida e depois a outra levando pés e pernas unidas na direção do teto.</p>`,
+      legs:
+        '<p>Leva os calcanhares internos na direção do teto levando o topo dos glúteos em direção aos calcanhares, mantendo os dedões dos pés unidos estendendo as pernas ao máximo.</p>',
+      core:
+        '<p>Cóccix para dentro, topo das coxas para trás; girar as coxas frontais de fora para dentro.</p>',
+      trunk:
+        '<p>Escápulas para dentro, para cima e para longe uma da outra; costelas frontais em direção às costelas posteriores.</p>',
+      arms:
+        '<p>Pressiona os antebraços contra o chão; afasta os ombros do chão.</p>',
+      head: '<p>Manter a parte posterior do pescoço longa.</p>',
+      leaving:
+        '<p>Pressionando novamente os antebraços contra o chão, mantendo os ombros longe das orelhas, estendendo ainda mais as pernas e, resistindo com o topo das coxas em direção ao teto, desce uma perna estendida depois a outra; entra em adho mukha virasana.</p>',
+    },
+    health: {
+      benefits: [],
+      caution: [],
+      contraindications: [
+        'Ciclo menstrual',
+        'Pressão alta',
+        'Problemas na cervical',
+        'Inflamações e outros problemas nos olhos e ouvidos',
+      ],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+  },
+  {
+    id: 16,
+    name: 'Ustrasana',
+    slug: 'ustrasana',
+    meaning: 'Postura do camelo',
+    family: 4,
+    sanscritWords: [45],
+    movements: [17, 7, 18, 16, 8, 19],
+    actions: {
+      entering: `<p>Ajoelhado no chão, traz as mãos na cintura, afasta os joelhos, tornozelos e pés na largura do quadril, espalha os dedos dos pés todos em contato com o chão e apontados para trás, pressiona o tornozelo frontal contra o chão, absorve os tornozelos externos em direção aos tornozelos internos, relaxa os glúteos, move o cóccix pra frente (resiste com os ossos dos glúteos para frente), mantendo o quadril na linha dos joelhos, alonga a parte anterior do tronco desde a púbis até as clavículas, movendo as escápulas em direção ao peito, flexiona o tronco para trás levando as palmas das mãos nas solas dos pés.</p>`,
+      legs:
+        '<p>Pressiona os tornozelos frontais e as tíbias contra o chão.</p>',
+      core: '<p>Cóccix pra dentro.</p>',
+      trunk: '<p>Escápulas para dentro.</p>',
+      arms:
+        '<p>Pressionar as palmas das mãos contra as solas dos pés para a ação das escápulas na direção do peito.</p>',
+      head:
+        '<p>Mantendo a parte posterior do pescoço longa relaxa a cabeça.</p>',
+      leaving:
+        '<p>Pressiona os tornozelos anteriores contra o chão, mantendo o cóccix para dentro, relaxa o pescoço, inspira e retorna a partir do externos para trás.</p>',
+    },
+    health: {
+      benefits: [],
+      caution: [],
+      contraindications: [],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    teachers: {
+      observe: [
+        'Coxas perpendiculares ao chão',
+        'Tornozelos contra o chão',
+        'Palmas pressionando sola dos pés ou blocos',
       ],
     },
   },
