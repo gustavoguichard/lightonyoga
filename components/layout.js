@@ -55,7 +55,7 @@ export default function Layout({ title, subtitle, children }) {
         </Head>
         {title && (
           <header className="mt-0 bg-gray-100 border-b-2">
-            <h1>
+            <h1 className="text-3xl md:text-4xl">
               {title}
               {subtitle && (
                 <span className="block text-xl text-gray-600 mt-2 leading-snug">

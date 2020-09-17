@@ -6,7 +6,7 @@ import MainSearch from 'components/main-search'
 export default function Home({ asanas, tags }) {
   return (
     <Layout>
-      <div className="md:flex mt-4 md:mt-8 flex-col items-center">
+      <div className="flex mt-8 flex-col items-center">
         <MainSearch asanas={asanas} tags={tags} />
         <main className="md:w-7/12 md:ml-8">
           <p>

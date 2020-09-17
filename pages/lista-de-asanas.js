@@ -1,3 +1,5 @@
+import sortBy from 'lodash/sortBy'
+
 import api from 'lib/api'
 
 import Layout from 'components/layout'
@@ -14,7 +16,8 @@ export default function AllAsanas({ asanas }) {
 }
 
 export async function getStaticProps() {
-  const asanas = await api.listAsanas()
+  const result = await api.listAsanas()
+  const asanas = sortBy(result, 'name')
   return {
     props: { asanas },
   }

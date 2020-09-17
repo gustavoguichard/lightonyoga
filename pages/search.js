@@ -1,38 +1,32 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import map from 'lodash/map'
-import groupBy from 'lodash/groupBy'
-import values from 'lodash/values'
 
 import api from 'lib/api'
 
 import Layout from 'components/layout'
 import Tag from 'components/tag'
+import AsanaList from 'components/asana-list'
 import VariationsList from 'components/variations-list'
 
 const changedSearch = (setLoading, setList, setSearch) => async (query) => {
   setLoading(true)
-  const { asana, ...rest } = query
-  const asanaObj = await api.getAsana(query.asana)
-  const tagsIds = values(rest)
+  const asanasIds = query.asanas?.split(',').map((n) => Number(n)) || []
+  const tagsIds = query.tags?.split(',').map((n) => Number(n)) || []
+  const asanas = await api.listAsanasFromIds(asanasIds)
   const tags = await api.listTags(tagsIds)
-  setSearch({ asana: asanaObj, tags })
-  const result = await api.listVariations({ asanaId: asana, tags: tagsIds })
-  const list = groupBy(result, 'asana.name')
+  setSearch({ asanas, tags })
+  const list = asanas.length
+    ? await asanas.reduce((obj, asana) => {
+        obj[asana.name] = api.listVariations({
+          asanaId: asana.id,
+          tags: tagsIds,
+        })
+        return obj
+      }, {})
+    : { Variações: await api.listVariations({ tags: tagsIds }) }
   setList(list)
   setLoading(false)
-}
-
-const Subtitle = ({ search }) => {
-  const { asana, tags } = search
-  return (
-    <>
-      {asana && `${asana.name} - `}
-      {tags?.map((tag) => (
-        <Tag key={tag.id} tag={tag} />
-      ))}
-    </>
-  )
 }
 
 export default function Search() {
@@ -48,19 +42,28 @@ export default function Search() {
   }, [router.query])
 
   return (
-    <Layout title="Busca" subtitle={<Subtitle search={search} />}>
+    <Layout title="Busca">
       {loading ? (
         'Carregando...'
       ) : (
-        <div className="md:flex">
-          {values(list).length
-            ? map(list, (variations, name) => (
-                <div className="w-full" key={name}>
-                  {!!search.asana || <h3>{name}</h3>}
-                  <VariationsList variations={variations} />
-                </div>
-              ))
-            : 'Nada encontrado'}
+        <div className="md:flex md:flex-col">
+          <div>
+            <h4>Resultados para:</h4>
+            {search.tags?.map((tag) => (
+              <Tag key={tag.name + tag.id} tag={tag} />
+            ))}
+            <AsanaList hideTitle asanas={search.asanas} />
+          </div>
+          {map(list, (variations, name) => (
+            <div className="w-full" key={name}>
+              <h3>{name}</h3>
+              {variations.length ? (
+                <VariationsList variations={variations} />
+              ) : (
+                'Nada encontrado'
+              )}
+            </div>
+          ))}
         </div>
       )}
     </Layout>

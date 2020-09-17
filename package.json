@@ -12,10 +12,12 @@
     "autoprefixer": "^9.8.6",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
+    "match-sorter": "^4.2.1",
     "next": "9.5.3",
     "postcss-import": "^12.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-tag-autocomplete": "^6.1.0",
     "react-use-form-state": "^0.13.1",
     "tailwindcss": "^1.8.7",
     "tailwindcss-responsive-embed": "^1.0.0"
