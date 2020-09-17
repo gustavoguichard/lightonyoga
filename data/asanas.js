@@ -680,7 +680,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura das pernas afastadas e alongadas intensamente',
     family: 1,
     sanscritWords: [16, 9, 14, 15],
-    movements: [25, 1, 11, 15, 30, 13, 14],
+    movements: [25, 1, 11, 30, 13, 14],
     actions: {
       entering:
         '<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e salta para <a href="/asana/utthita-hasta-padasana">Utthita hasta padasana</a>; afaste os pés ainda mais do que nas outras posturas (entre 1,3 e 1,5 metros); traga as mãos na cintura, cotovelos para trás; pressione a borda externa dos pés; eleve as patelas dos joelhos e gire as coxas frontais de fora para dentro; topos das coxas para trás e cóccix para dentro; alonga a parte anterior do tronco da púbis às clavículas; gire os ombros para trás e para baixo; mantendo a cervical longa, inspire e olhe numa diagonal acima; exale e flexione o tronco a frente paralelo ao chão; leve a ponta dos dedos das mãos ao chão em linha com os ombros; olhar à frente; leve os calcanhares das mãos em linha com os pés; resistindo com as escápulas para dentro, exale e flexione a frente a partir do quadril, levando o cocuruto da cabeça ao chão.</p>',
@@ -919,7 +919,7 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
     meaning: 'Postura do poderoso',
     family: 1,
     sanscritWords: [56],
-    movements: [20, 7, 11, 5],
+    movements: [20, 7, 11, 28, 5],
     actions: {
       entering: `<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e eleva os braços em urdhva hastasana, braços paralelos; mantém as pernas firmes; cóccix para dentro; eleva a púbis; alonga as laterais do tronco; gira os braços levando os tríceps para frente, afastando os ombros das orelhas; mantém os cotovelos absorvidos; resistindo com o cóccix para dentro e braços bem estendidos, expire e flexione os joelhos até que as coxas fiquem paralelas ao chão.</p>`,
       legs:
@@ -1015,6 +1015,49 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
         'Na postura: cotovelos flutuantes',
         'Cóccix para dentro e topo das coxas para trás',
         'Giro e extensão das pernas',
+      ],
+    },
+  },
+  {
+    id: 20,
+    name: 'Adho Mukha Svanasana',
+    slug: 'adho-mukha-svanasana',
+    meaning: 'Postura do cachorro olhando para baixo',
+    family: 7,
+    sanscritWords: [46, 47, 48],
+    movements: [20, 26, 11, 15, 14, 28, 5, 6],
+    actions: {
+      entering: `<p>A partir de <i>adho mukha virasana</i>, estende os braços a frente e espalha bem os dedos as mãos no chão, apontando o dedo do meio para frente e os polegares em linhas entre si; Ponta dos dedos dos pés para baixo e estende as pernas e subindo o quadril para cima, elevando o cóccix para cima e para trás; Estenda bem as pernas a partir das coxas frontais para trás; Gira as coxas internas para trás; Resiste com as escápulas em direção ao peito; Pressionando os dedos contra o chão leve o peso do corpo na direção dos calcanhares e relaxa a cabeça.</p>`,
+      legs:
+        '<p>Eleva as patelas dos joelhos; Resiste com as pernas para trás; Tornozelos frontais em direção aos posteriores e peso em direção aos calcanhares.</p>',
+      core: '<p>Leve as virilhas internas para trás e eleve os ísquios.</p>',
+      trunk:
+        '<p>Leve as dorsais para dentro na direção do esterno; alongue as laterais do tronco afastando os quadris das axilas.</p>',
+      arms:
+        '<p>Estende bem os braços; Gire bem os ombros, levando o braço superior de dentro para fora com os bíceps para cima e tríceps absorvido.</p>',
+      head:
+        '<p>Mantenha o pescoço posterior longo e deixe a cabeça em linha com os braços.</p>',
+      leaving:
+        '<p>Resistindo com o topo das coxas para trás, flexione os joelhos e volta para adho mukha virasana.</p>',
+    },
+    health: {
+      benefits: [],
+      caution: [],
+      contraindications: [],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    teachers: {
+      observe: [
+        'A largura dos braços em relação às pernas',
+        'Dedos das mãos espalhados no chão',
+        'Pés bordas externas alinhadas',
+        'Bordas internas dos pés na direção do chão',
+        'Giro das coxas internas para trás.',
       ],
     },
   },
