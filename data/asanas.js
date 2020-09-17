@@ -863,4 +863,159 @@ Gem diz para inspirar e retornar da postura normalmente enquanto que LoY diz par
       ],
     },
   },
+  {
+    id: 17,
+    name: 'Garudasana',
+    slug: 'garudasana',
+    meaning: 'Postura da águia',
+    family: 1,
+    sanscritWords: [18],
+    movements: [7, 27, 11, 32, 13, 5, 6, 31],
+    actions: {
+      entering: `<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), leve as mãos na cintura e flexione as pernas; eleve a perna direita e cruze a coxa direita por cima da coxa esquerda; enganche os dedos do pé direito por trás do tornozelo esquerdo, mantendo o peito do pé contra a panturrilha esquerda; deve haver o mínimo de espaço entre o tornozelo direito e perna esquerda e as costas do joelho direito e a parte externa do joelho esquerdo; cóccix para dentro; eleva a púbis, mantenha o olhar a frente; abra os braços para as laterais e, num rápido movimento, enlace os braços a frente mantendo o braço direito por baixo do braço esquerdo, enganche o antebraço direito em volta do antebraço esquerdo unindo as palmas das mãos em namaskar; dedos em direção ao teto.</p>`,
+      legs:
+        '<p>Pressione a borda interna do pé esquerdo firme contra o chão; pressione o peito do pé esquerdo contra a panturrilha esquerda.</p>',
+      core:
+        '<p>Cóccix pra dentro, eleve a púbis; gire o quadril da direita para a esquerda.</p>',
+      trunk:
+        '<p>Resiste com as escápulas para dentro em direção ao peito, eleva o esterno e afasta as clavículas.</p>',
+      arms:
+        '<p>Gire os ombros para trás e para baixo; eleva o braço direito mantendo a face inferior do braço paralela ao chão; afasta os antebraços do rosto; mantém o contato de toda a palma das mãos.</p>',
+      head: '<p>Mantém olhar a frente, respiração tranquila.</p>',
+      all:
+        '<p>Ao se equilibrar na postura, vá estendendo a perna esquerda.</p>',
+      leaving:
+        '<p>Desfaz o cruzar dos braços e volte as mãos para a cintura; desfaz o cruzar das pernas e retorne a tadasana; respira; leve as mãos à cintura novamente e repita para o outro lado.</p>',
+    },
+    health: {
+      benefits: [
+        'Desenvolve tornozelo e remove rigidez dos ombros',
+        'Recomendado para prevenir cãibras e dores nas panturrilhas e pernas',
+      ],
+      caution: [],
+      contraindications: [],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    teachers: {
+      observe: [
+        'Parte anterior do tronco longa',
+        'Braço inferior paralelo ao chão e antebraços para longe do rosto',
+        'Giro do quadril',
+        'Espaço entre as pernas',
+        'Escápulas absorvidas',
+      ],
+    },
+    curiosities: '<p>Esta postura não consta no <em>Gem for Women</em>.</p>',
+  },
+  {
+    id: 18,
+    name: 'Utkatasana',
+    slug: 'utkatasana',
+    meaning: 'Postura do poderoso',
+    family: 1,
+    sanscritWords: [56],
+    movements: [20, 7, 11, 5],
+    actions: {
+      entering: `<p>A partir de <a href="/asana/tadasana">Tadasana</a> (<i>Samasthiti</i>), inspira e eleva os braços em urdhva hastasana, braços paralelos; mantém as pernas firmes; cóccix para dentro; eleva a púbis; alonga as laterais do tronco; gira os braços levando os tríceps para frente, afastando os ombros das orelhas; mantém os cotovelos absorvidos; resistindo com o cóccix para dentro e braços bem estendidos, expire e flexione os joelhos até que as coxas fiquem paralelas ao chão.</p>`,
+      legs:
+        '<p>Leva o peso em direção aos calcanhares; mantém as pernas firmemente unidas; joelhos bem unidos; flexiona bem as pernas, mantendo coxas paralelas ao chão.</p>',
+      core: '<p>Cóccix para dentro; eleva a púbis.</p>',
+      trunk:
+        '<p>Leve o tronco para trás, levando mais o peso aos calcanhares.</p>',
+      arms:
+        '<p>Extende bem os braços, para alongar as laterais do tronco e leve o topo dos braços para trás da linha das orelhas.</p>',
+      head: '<p>Mantém olhar a frente, respiração tranquila.</p>',
+      leaving:
+        '<p>Pressionando bem os calcanhares e resistindo com os braços bem estendidos, inspira e estenda as pernas; exale e desça os braços retornando a tadasana.</p>',
+    },
+    health: {
+      benefits: [
+        'Remove rigidez dos ombros',
+        'Corrige deformidades menores nas pernas',
+        'Fortalece tornozelos e pernas',
+        'Eleva o diafragma e massageia o coração',
+        'Tonifica órgãos abdominais e costas e desenvolve o peito',
+      ],
+      caution: ['Problemas cardíacos e pressão alta, não elevar os braços'],
+      contraindications: [],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    teachers: {
+      observe: [
+        'Calcanhares no chão',
+        'Coxas o mais paralelas ao chão possível',
+        'Não projetar a lombar para frente ou empinar bumbum',
+        'Perpendicularidade do tronco com o chão',
+        'Ombros afastados das orelhas',
+      ],
+    },
+    curiosities: '<p>Esta postura não consta no <em>Gem for Women</em>.</p>',
+  },
+  {
+    id: 19,
+    name: 'Salamba Sarvangasana',
+    slug: 'salamba-sarvangasana',
+    meaning: 'Postura em que todos os membros suportam o corpo',
+    family: 8,
+    sanscritWords: [42, 39, 40],
+    movements: [26, 32, 13, 19, 8, 4],
+    actions: {
+      setup: `<p>Materiais: 3-4 mantas e um cinto; colocar as mantas sobre a borda do tapetinho, com as "bordas boas" viradas para a borda do tapete; ao colocar as mantas, estar de frente para as bordas das mesmas; sentar à frente das mantas e tirar medida do cinto na largura dos ombros; vestir o cinto por trás, logo acima dos cotovelos, com a fivela virada para as costas e sem contato com a pele.</p>`,
+      entering: `<p>Deitar-se desenrolando a coluna até que os ombros fiquem em linha com as bordas das mantas; trazer os joelhos em direção ao peito; levar a ponta dos dedos das mãos ao chão, ao lado do corpo, usar de alavanca para quicar com os pés para Halasana; levar as mãos nas costas, afaste as pernas e flexione-as ligeiramente; à partir desse ponto, não virar mais a cabeça; parte mais importante da postura: liberação dos ombros; cruze os polegares atrás das costas e estenda os braços; transfira o peso do corpo para o lado esquerdo e gire o ombro direito para trás, levando o topo do ombro em direção à manta e em direção às mãos; repita para o outro lado; troque o cruzar dos polegares e repita dos dois lados; neste momento o pescoço deve estar ⅔ para fora da manta (variável, mas mantem um pequeno espaço fora da manta); traga o "L" das mãos nas costas, levando os polegares o mais próximo possível das axilas, com os outros dedos virados uns para os outros; leve toda a palma das mãos nas costas puxando a pele das costas em direção aos glúteos; estenda as pernas e aproxime-as; flexione as pernas trazendo os calcanhares em direção aos glúteos; leve os joelhos em direção ao teto; resistindo com os calcanhares em direção aos glúteos, leve o cóccix para dentro e estenda as coxas em direção aos joelhos; leve o peso em direção aos cotovelos; ajuste as mãos nas costas uma vez mais; estenda as pernas levando os pés em direção ao teto.</p>`,
+      legs:
+        '<p>Eleva toda a parte interna das pernas em direção ao teto; eleve os calcanhares internos em direção ao teto; mantendo o giro das pernas e extensão da parte interna, une as pernas a partir das coxas; mantendo a parte posterior das pernas longa, eleve as bolas dos dedões dos pés em direção ao teto e relaxe os dedos.</p>',
+      core:
+        '<p>Cóccix para dentro; topo das coxas para trás; afaste um pouco as pernas e gire a parte frontal do topo das coxas de fora para dentro até os dedões dos pés se tocarem.</p>',
+      trunk:
+        '<p>Eleve a pele das costas e leve a coluna torácica em direção ao peito; leve o esterno em direção ao queixo; relaxe o abdômen; .</p>',
+      arms: '<p>Distribua o peso por todo o braço até os cotovelos.</p>',
+      head:
+        '<p>Relaxe o pescoço e deixe a cabeça escorregar para longe de você.</p>',
+      leaving:
+        '<p>Flexione as pernas levando os joelhos em direção ao teto e os calcanhares em direção aos glúteos; traga os joelhos em direção ao peito e leve os pés em direção ao chão atrás da cabeça em Halasana; após Halasana, flexione as pernas ligeiramente e afaste-as para remover os cintos dos braços; traga as pontas dos dedos das mãos ao chão com os braços estendidos ao longo do tapetinho; flexione as pernas e traga os joelhos em direção ao peito e calcanhares em direção aos glúteos; desenrole a coluna sobre a manta levando os pés em direção ao chão; após algumas respirações, deslize sobre a manta até que os ombros desçam ao mesmo nível da cabeça e os glúteos estejam no centro da manta; respire mais um pouco, gire para o lado direito e levante-se.</p>',
+    },
+    health: {
+      benefits: [
+        'Remove rigidez dos ombros',
+        'Corrige deformidades menores nas pernas',
+        'Fortalece tornozelos e pernas',
+        'Eleva o diafragma e massageia o coração',
+        'Tonifica órgãos abdominais e costas e desenvolve o peito',
+      ],
+      caution: [],
+      contraindications: [
+        'Ciclo menstrual',
+        'Pressão alta',
+        'Problemas na cervical',
+        'Inflamações e outros problemas nos olhos e ouvidos',
+      ],
+    },
+    premium: {},
+    krama: {
+      preparations: [],
+      connectedAsanas: [],
+      compensations: [],
+    },
+    teachers: {
+      observe: [
+        'Cintos e distância dos cotovelos, logo após quicar para Halasana',
+        'Olhar o giro dos ombros e a posição do pescoço sobre a manta antes de subir',
+        'Mantas bagunçadas',
+        'Palmas das mãos inteiras nas costas',
+        'Na postura: cotovelos flutuantes',
+        'Cóccix para dentro e topo das coxas para trás',
+        'Giro e extensão das pernas',
+      ],
+    },
+  },
 ]
