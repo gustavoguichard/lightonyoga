@@ -52,18 +52,21 @@ export default function Search() {
             {search.tags?.map((tag) => (
               <Tag key={tag.name + tag.id} tag={tag} />
             ))}
-            <AsanaList hideTitle asanas={search.asanas} />
+            {!!search.asanas?.length && (
+              <AsanaList hideTitle asanas={search.asanas} />
+            )}
           </div>
-          {map(list, (variations, name) => (
-            <div className="w-full" key={name}>
-              <h3>{name}</h3>
-              {variations.length ? (
-                <VariationsList variations={variations} />
-              ) : (
-                'Nada encontrado'
-              )}
-            </div>
-          ))}
+          {!!search.tags?.length &&
+            map(list, (variations, name) => (
+              <div className="w-full" key={name}>
+                <h3>{name}</h3>
+                {variations.length ? (
+                  <VariationsList variations={variations} />
+                ) : (
+                  'Nada encontrado'
+                )}
+              </div>
+            ))}
         </div>
       )}
     </Layout>

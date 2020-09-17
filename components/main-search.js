@@ -78,7 +78,8 @@ export default function MainSearch({ asanas, tags }) {
           placeholderText="Busque um asana, prop, condição, etc..."
           classNames={{
             root: 'w-full flex flex-col',
-            selectedTag: 'bg-red-700 rounded m-1',
+            selectedTag:
+              'bg-yellow-200 border-yellow-800 text-yellow-900 hover:bg-yellow-400 border-2 rounded m-1',
             search: 'relative order-first',
             searchWrapper: 'w-full ',
             searchInput: 'w-full p-6 text-lg mb-0',
