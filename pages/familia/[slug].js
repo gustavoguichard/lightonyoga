@@ -7,7 +7,7 @@ import AsanaList from 'components/asana-list'
 
 export default function Asana({ family, asanas }) {
   return (
-    <Layout title={family?.name} subtitle={family?.meaning}>
+    <Layout title={family?.name} subtitle={family?.translation}>
       <p className="text-xs mb-0">
         Ver todas as{' '}
         <Link href="/familias-dos-asanas">
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const family = await api.getFamilyBySlug(slug)
-  const asanas = await api.listAsanas({ family: family?.id })
+  const { asanas } = family
   return {
     props: { family, asanas },
   }

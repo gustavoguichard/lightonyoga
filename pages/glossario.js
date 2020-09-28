@@ -16,10 +16,10 @@ export default function GlossaryWord({ words }) {
     >
       <div className="md:flex">
         <ul className="list-disc">
-          {words.map(({ id, word, translation }) => (
+          {words.map(({ id, name, translation }) => (
             <li key={id} className="mt-0">
-              <Link href="/glossario/[id]" as={`/glossario/${kebabCase(word)}`}>
-                <a className="text-italic font-semibold">{upperFirst(word)}:</a>
+              <Link href="/glossario/[id]" as={`/glossario/${id}-${kebabCase(name)}`}>
+                <a className="text-italic font-semibold">{upperFirst(name)}:</a>
               </Link>{' '}
               {translation}
             </li>

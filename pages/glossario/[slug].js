@@ -12,7 +12,7 @@ export default function GlossaryWord({ word, asanas }) {
     <Layout
       title={
         <>
-          {upperFirst(word?.word)}
+          {upperFirst(word?.name)}
           <span className="ml-3 text-lg text-gray-600">
             <span className="text-sm mr-2">/</span>
             {upperFirst(word?.translation)}
@@ -37,7 +37,7 @@ export default function GlossaryWord({ word, asanas }) {
 export async function getStaticPaths() {
   const words = await api.listGlossary()
   return {
-    paths: words.map((w) => ({ params: { slug: kebabCase(w.word) } })),
+    paths: words.map((w) => ({ params: { slug: w.slug } })),
     fallback: false,
   }
 }
@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const word = await api.getWordBySlug(slug)
-  const asanas = await api.listAsanas({ word: word?.id })
+  const { asanas } = word
   return {
     props: { word, asanas },
   }

@@ -1,4 +1,3 @@
-import sortBy from 'lodash/sortBy'
 import Link from 'next/link'
 
 import api from 'lib/api'
@@ -14,7 +13,7 @@ export default function Asana({ families }) {
             <Link href="/familia/[slug]" as={`/familia/${family.slug}`}>
               <a className="font-semibold">{family.name}:</a>
             </Link>{' '}
-            {family.meaning}
+            {family.translation}
           </li>
         ))}
       </ul>
@@ -23,8 +22,7 @@ export default function Asana({ families }) {
 }
 
 export async function getStaticProps() {
-  const result = await api.listFamilies()
-  const families = sortBy(result, 'name')
+  const families = await api.listFamilies()
   return {
     props: { families },
   }
