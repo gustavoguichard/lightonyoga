@@ -19,5 +19,6 @@ export async function getStaticProps() {
   const asanas = await api.fetch('asanas')
   return {
     props: { asanas },
+    revalidate: 10,
   }
 }

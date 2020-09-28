@@ -29,5 +29,6 @@ export async function getStaticProps({ params }) {
   const { variations } = tag
   return {
     props: { tag, variations },
+    revalidate: 10,
   }
 }

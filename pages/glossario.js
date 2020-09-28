@@ -32,5 +32,6 @@ export async function getStaticProps() {
   const words = await api.fetch('words')
   return {
     props: { words },
+    revalidate: 10,
   }
 }

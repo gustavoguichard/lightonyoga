@@ -47,5 +47,6 @@ export async function getStaticProps({ params }) {
   const { asanas } = word
   return {
     props: { word, asanas },
+    revalidate: 10,
   }
 }

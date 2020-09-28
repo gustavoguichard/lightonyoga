@@ -35,5 +35,6 @@ export async function getStaticProps({ params }) {
   const { asanas } = family
   return {
     props: { family, asanas },
+    revalidate: 10,
   }
 }

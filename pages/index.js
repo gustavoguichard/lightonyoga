@@ -60,5 +60,6 @@ export async function getStaticProps() {
   const tags = await api.fetch('tags')
   return {
     props: { asanas, tags },
+    revalidate: 10,
   }
 }

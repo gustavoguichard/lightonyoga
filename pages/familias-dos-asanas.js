@@ -25,5 +25,6 @@ export async function getStaticProps() {
   const families = await api.fetch('families')
   return {
     props: { families },
+    revalidate: 10,
   }
 }

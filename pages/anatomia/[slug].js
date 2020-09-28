@@ -36,5 +36,6 @@ export async function getStaticProps({ params }) {
   const { asanas } = movement
   return {
     props: { movement, asanas },
+    revalidate: 10,
   }
 }
