@@ -20,8 +20,8 @@ const changedSearch = (allAsanas, allVariations, allTags, setLoading, setList, s
   setSearch({ asanas, tags })
   const list = asanas.length
   ? asanas.reduce((obj, asana) => {
-    obj[`Variações de ${asana.name}`] = variations.filter(v => v.asana.id === asana.id)
-    console.log(asana.id, allVariations, tagsIds)
+    const name = `Variações de ${asana.name}`
+    obj[name] = variations.filter(v => v.asana.id === asana.id)
     return obj
   }, {})
   : { Variações: variations }
