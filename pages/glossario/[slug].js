@@ -1,4 +1,3 @@
-import kebabCase from 'lodash/kebabCase'
 import upperFirst from 'lodash/upperFirst'
 import Link from 'next/link'
 
@@ -35,7 +34,7 @@ export default function GlossaryWord({ word, asanas }) {
 }
 
 export async function getStaticPaths() {
-  const words = await api.listGlossary()
+  const words = await api.fetch('words')
   return {
     paths: words.map((w) => ({ params: { slug: w.slug } })),
     fallback: false,
@@ -44,7 +43,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const word = await api.getWordBySlug(slug)
+  const word = await api.fetch('words', slug)
   const { asanas } = word
   return {
     props: { word, asanas },

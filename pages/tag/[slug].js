@@ -16,7 +16,7 @@ export default function Asana({ tag, variations }) {
 }
 
 export async function getStaticPaths() {
-  const tags = await api.listTags()
+  const tags = await api.fetch('tags')
   return {
     paths: tags.map((f) => ({ params: { slug: f.slug } })),
     fallback: false,
@@ -25,8 +25,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const tag = await api.getTagBySlug(slug)
-  const variations = await api.listVariations({ tags: [tag.id] })
+  const tag = await api.fetch('tags', slug)
+  const variations = await api.fetch('variations')
   return {
     props: { tag, variations },
   }

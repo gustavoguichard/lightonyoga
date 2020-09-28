@@ -1,6 +1,4 @@
 import kebabCase from 'lodash/kebabCase'
-import lowerCase from 'lodash/lowerCase'
-import sortBy from 'lodash/sortBy'
 import upperFirst from 'lodash/upperFirst'
 import Link from 'next/link'
 
@@ -31,8 +29,7 @@ export default function GlossaryWord({ words }) {
 }
 
 export async function getStaticProps() {
-  const result = await api.listGlossary()
-  const words = sortBy(result, (item) => lowerCase(item.word))
+  const words = await api.fetch('words')
   return {
     props: { words },
   }

@@ -22,7 +22,7 @@ export default function Asana({ family, asanas }) {
 }
 
 export async function getStaticPaths() {
-  const families = await api.listFamilies()
+  const families = await api.fetch('families')
   return {
     paths: families.map((f) => ({ params: { slug: f.slug } })),
     fallback: false,
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const family = await api.getFamilyBySlug(slug)
+  const family = await api.fetch('families', slug)
   const { asanas } = family
   return {
     props: { family, asanas },

@@ -14,17 +14,14 @@ const changedSearch = (setLoading, setList, setSearch) => async (query) => {
   const asanasIds = query.asanas?.split(',').map((n) => Number(n)) || []
   const tagsIds = query.tags?.split(',').map((n) => Number(n)) || []
   const asanas = await api.listAsanasFromIds(asanasIds)
-  const tags = await api.listTags(tagsIds)
+  const tags = await api.fetch('tags', tagsIds)
   setSearch({ asanas, tags })
   const list = asanas.length
     ? await asanas.reduce((obj, asana) => {
-        obj[asana.name] = api.listVariations({
-          asanaId: asana.id,
-          tags: tagsIds,
-        })
+        obj[asana.name] = api.fetch('variations')
         return obj
       }, {})
-    : { Variações: await api.listVariations({ tags: tagsIds }) }
+    : { Variações: await api.fetch('variations') }
   setList(list)
   setLoading(false)
 }

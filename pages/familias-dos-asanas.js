@@ -22,7 +22,7 @@ export default function Asana({ families }) {
 }
 
 export async function getStaticProps() {
-  const families = await api.listFamilies()
+  const families = await api.fetch('families')
   return {
     props: { families },
   }

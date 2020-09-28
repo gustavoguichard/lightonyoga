@@ -15,7 +15,7 @@ export default function Asana({ asana, variation }) {
 }
 
 export async function getStaticPaths() {
-  const asanas = await api.listAsanas()
+  const asanas = await api.fetch('asanas')
   return {
     paths: asanas.map((asana) => ({ params: { slug: [asana.slug] } })),
     fallback: true,
@@ -25,9 +25,9 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const [asanaSlug, variationSlug] = slug
-  const asana = await api.getAsanaBySlug(asanaSlug)
+  const asana = await api.fetch('asanas', asanaSlug)
   const variation = variationSlug
-    ? await api.getVariationBySlug(variationSlug)
+    ? await api.fetch('variations', variationSlug)
     : null
   return {
     props: { asana, variation },

@@ -23,7 +23,7 @@ export default function AnatomyMovement({ movement, asanas }) {
 }
 
 export async function getStaticPaths() {
-  const movements = await api.listMovements()
+  const movements = await api.fetch('movements')
   return {
     paths: movements.map((m) => ({ params: { slug: m.slug } })),
     fallback: false,
@@ -32,7 +32,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  const movement = await api.getMovementBySlug(slug)
+  const movement = await api.fetch('movements',slug)
   const { asanas } = movement
   return {
     props: { movement, asanas },

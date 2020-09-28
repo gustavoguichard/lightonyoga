@@ -56,8 +56,8 @@ export default function Home({ asanas, tags }) {
 }
 
 export async function getStaticProps() {
-  const asanas = await api.listAsanas()
-  const tags = await api.listTags()
+  const asanas = await api.fetch('asanas')
+  const tags = await api.fetch('tags')
   return {
     props: { asanas, tags },
   }

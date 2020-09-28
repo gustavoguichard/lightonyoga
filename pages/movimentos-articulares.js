@@ -36,7 +36,7 @@ export default function Asana({ movements }) {
 }
 
 export async function getStaticProps() {
-  const result = await api.listMovements()
+  const result = await api.fetch('movements')
   const grouped = groupBy(result, 'joint')
   const movements = reduce(
     grouped,
