@@ -18,7 +18,7 @@ export default function MainSearch({ asanas, tags }) {
     ev.preventDefault()
     const results = selectedTags.reduce(
       (result, tag) => {
-        if (tag.actions) {
+        if (tag.url?.includes('asanas')) {
           result.poses = [...result.poses, tag]
         } else {
           result.filters = [...result.filters, tag]

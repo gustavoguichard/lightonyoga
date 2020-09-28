@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import map from 'lodash/map'
+import intersection from 'lodash/intersection'
 
 import api from 'lib/api'
 
@@ -9,28 +10,30 @@ import Tag from 'components/tag'
 import AsanaList from 'components/asana-list'
 import VariationsList from 'components/variations-list'
 
-const changedSearch = (setLoading, setList, setSearch) => async (query) => {
+const changedSearch = (allAsanas, allVariations, allTags, setLoading, setList, setSearch) => async (query) => {
   setLoading(true)
   const asanasIds = query.asanas?.split(',').map((n) => Number(n)) || []
   const tagsIds = query.tags?.split(',').map((n) => Number(n)) || []
-  const asanas = await api.listAsanasFromIds(asanasIds)
-  const tags = await api.fetch('tags', tagsIds)
+  const asanas = allAsanas.filter(a => asanasIds.includes(a.id))
+  const tags = allTags.filter((t) => tagsIds.includes(t.id))
+  const variations = allVariations.filter((v) => intersection(tagsIds, v.tag_ids).length)
   setSearch({ asanas, tags })
   const list = asanas.length
-    ? await asanas.reduce((obj, asana) => {
-        obj[asana.name] = api.fetch('variations')
-        return obj
-      }, {})
-    : { Variações: await api.fetch('variations') }
+  ? asanas.reduce((obj, asana) => {
+    obj[`Variações de ${asana.name}`] = variations.filter(v => v.asana.id === asana.id)
+    console.log(asana.id, allVariations, tagsIds)
+    return obj
+  }, {})
+  : { Variações: variations }
   setList(list)
   setLoading(false)
 }
 
-export default function Search() {
+export default function Search({ asanas, variations, tags }) {
   const [loading, setLoading] = useState(true)
   const [list, setList] = useState([])
   const [search, setSearch] = useState({})
-  const handleChange = changedSearch(setLoading, setList, setSearch)
+  const handleChange = changedSearch(asanas, variations, tags, setLoading, setList, setSearch)
 
   const router = useRouter()
 
@@ -68,4 +71,14 @@ export default function Search() {
       )}
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const asanas = await api.fetch('asanas')
+  const variations = await api.fetch('variations')
+  const tags = await api.fetch('tags')
+  return {
+    props: { asanas, variations, tags },
+    revalidate: 10,
+  }
 }
