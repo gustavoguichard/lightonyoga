@@ -16,11 +16,7 @@ export default function Asana({ asana, variation }) {
 
 export async function getStaticPaths() {
   const asanas = await api.fetch('asanas')
-  const variations = await api.fetch('variations')
-  const slugs = [
-    ...asanas.map((a) => a.slug),
-    ...variations.map((v) => `${v.asana.slug}/${v.slug}`),
-  ]
+  const slugs = asanas.map((a) => a.slug)
   return {
     paths: slugs.map((slug) => ({ params: { slug: [slug] } })),
     fallback: true,
