@@ -6,7 +6,7 @@ export default function AsanaList({ asanas, hideTitle }) {
       {hideTitle || <h3>Asanas</h3>}
       <div className="flex flex-wrap">
         {asanas.length ? (
-          asanas.map((asana) => <AsanaCard key={asana.name} asana={asana} />)
+          asanas.map((asana) => <AsanaCard key={asana.slug} asana={asana} />)
         ) : (
           <p>Nada encontrado</p>
         )}

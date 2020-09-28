@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   const [asanaSlug, variationSlug] = slug
   const asana = await api.getAsanaBySlug(asanaSlug)
   const variation = variationSlug
-    ? await api.getVariationBySlug(variationSlug, asana.id)
+    ? await api.getVariationBySlug(variationSlug)
     : null
   return {
     props: { asana, variation },

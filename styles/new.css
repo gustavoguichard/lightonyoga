@@ -323,6 +323,7 @@ textarea {
 ol,
 ul {
   padding-left: 2rem;
+  list-style-type: disc;
 }
 li {
   margin-top: 0.4rem;

@@ -31,7 +31,7 @@ export default function AsanaPage({ asana }) {
       subtitle={
         <span className="ml-3 text-lg text-gray-600">
           <span className="text-sm mr-2">/</span>
-          {asana.meaning}
+          {asana.translation}
           <span className="text-sm ml-2">/</span>
         </span>
       }
@@ -39,10 +39,14 @@ export default function AsanaPage({ asana }) {
       <MainContent
         asana={asana}
         videos={asana.videos}
-        picture={`/${asana.slug}.png`}
         cardContent={<CardContent {...asana} />}
       >
-        {asana.introduction && <p className="text-xl">{asana.introduction}</p>}
+        {asana.content?.body && (
+          <div
+            className="text-xl"
+            dangerouslySetInnerHTML={{ __html: asana.content.body }}
+          />
+        )}
         <Information asana={asana} />
       </MainContent>
       {isLogged && (
@@ -57,13 +61,13 @@ export default function AsanaPage({ asana }) {
       <HealthSection asana={asana} isLogged={isLogged} />
       {isLogged && <KramaSection asana={asana} />}
       {isLogged && <TeacherSection asana={asana} />}
-      {asana.curiosities && (
+      {asana.curiosities?.body && (
         <ContentSection>
           <h2>Curiosidades</h2>
           <div
             key="curiosities"
             className="max-w-screen-md"
-            dangerouslySetInnerHTML={{ __html: asana.curiosities }}
+            dangerouslySetInnerHTML={{ __html: asana.curiosities.body }}
           />
         </ContentSection>
       )}

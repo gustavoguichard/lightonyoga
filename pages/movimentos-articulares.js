@@ -1,6 +1,5 @@
 import map from 'lodash/map'
 import groupBy from 'lodash/groupBy'
-import kebabCase from 'lodash/kebabCase'
 import upperFirst from 'lodash/upperFirst'
 import reduce from 'lodash/reduce'
 import sortBy from 'lodash/sortBy'
@@ -18,11 +17,11 @@ export default function Asana({ movements }) {
           <div key={joint} className="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
             <h3>{joint}</h3>
             <ul className="list-disc">
-              {map(collection, ({ id, name }) => (
+              {map(collection, ({ id, name, slug }) => (
                 <li key={id}>
                   <Link
                     href="/anatomia/[slug]"
-                    as={`/anatomia/${kebabCase(name)}`}
+                    as={`/anatomia/${slug}`}
                   >
                     <a className="font-semibold">{upperFirst(name)}</a>
                   </Link>

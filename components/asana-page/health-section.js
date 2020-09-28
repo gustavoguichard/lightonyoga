@@ -6,7 +6,7 @@ import List from './list'
 import VariationsFromTag from './variations-from-tag'
 
 export default function HealthSection({ asana, isLogged }) {
-  const tags = api.listTags()
+  const tags = []//api.listTags()
   const excludedTags = [1, 12]
   return (
     <>

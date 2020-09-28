@@ -1,4 +1,3 @@
-import kebabCase from 'lodash/kebabCase'
 import upperFirst from 'lodash/upperFirst'
 import Link from 'next/link'
 
@@ -26,7 +25,7 @@ export default function AnatomyMovement({ movement, asanas }) {
 export async function getStaticPaths() {
   const movements = await api.listMovements()
   return {
-    paths: movements.map((m) => ({ params: { slug: kebabCase(m.name) } })),
+    paths: movements.map((m) => ({ params: { slug: m.slug } })),
     fallback: false,
   }
 }
@@ -34,7 +33,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const movement = await api.getMovementBySlug(slug)
-  const asanas = await api.listAsanas({ movement: movement?.id })
+  const { asanas } = movement
   return {
     props: { movement, asanas },
   }

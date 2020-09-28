@@ -1,28 +1,27 @@
-import kebabCase from 'lodash/kebabCase'
 import map from 'lodash/map'
 import Link from 'next/link'
 
 import CategoryLink from './category-link'
 
-export default function CardContent({ family, movements, sanscritWords }) {
+export default function CardContent({ family, movements, words }) {
   return (
     <dl className="p-4 pb-0 mb-4">
       <dt>Tradução</dt>
       <dd>
-        {map(sanscritWords, (item) => (
+        {map(words, (item) => (
           <CategoryLink
-            key={item.id}
+            key={item.slug}
             prefix="glossario"
-            id={kebabCase(item.word)}
-            name={`${item.word} = ${item.translation}`}
+            id={item.slug}
+            name={`${item.name} = ${item.translation}`}
           />
         ))}
       </dd>
       <dt>Classificação</dt>
       <dd>
-        <Link href="/familia/[slug]" as={`/familia/${kebabCase(family.name)}`}>
+        <Link href="/familia/[slug]" as={`/familia/${family.slug}`}>
           <a>
-            {family.meaning} (<i>{family.name}</i>)
+            {family.translation} (<i>{family.name}</i>)
           </a>
         </Link>
       </dd>
@@ -33,7 +32,7 @@ export default function CardContent({ family, movements, sanscritWords }) {
             key={mov.id}
             prefix="anatomia"
             {...mov}
-            id={kebabCase(mov.name)}
+            id={mov.slug}
           />
         ))}
       </dd>
