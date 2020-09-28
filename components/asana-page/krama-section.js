@@ -9,7 +9,7 @@ export default function KramaSection({ asana }) {
       <ContentSection>
         <h2>Krama - sequenciamento</h2>
         <VariationsFromTag
-          asanaId={asana.id}
+          variations={asana.variations}
           tag={21}
           title="Variações preparatórias"
         />

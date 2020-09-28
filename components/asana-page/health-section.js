@@ -1,4 +1,4 @@
-import api from 'lib/api'
+import uniqBy from 'lodash/uniqBy'
 
 import ContentSection from 'components/content-section'
 
@@ -6,44 +6,47 @@ import List from './list'
 import VariationsFromTag from './variations-from-tag'
 
 export default function HealthSection({ asana, isLogged }) {
-  const tags = []//api.listTags()
-  const excludedTags = [1, 12]
+  const { variations } = asana
   return (
     <>
       <ContentSection>
         <h2>Saúde da postura</h2>
-        <List title="Benefícios" items={asana.health?.benefits} />
-        <List title="Cuidados" items={asana.health?.caution} />
+        <List title="Benefícios" items={asana.benefits} />
+        <List title="Cuidados" items={asana.caution} />
         <List
           title="Contra-indicações"
-          items={asana.health?.contraindications}
+          items={asana.contraindications}
         />
       </ContentSection>
       <ContentSection>
         <VariationsFromTag
-          asanaId={asana.id}
           tag={1}
+          variations={asana.variations}
           title="Tornando a postura acessível"
         />
         <VariationsFromTag
-          asanaId={asana.id}
-          tag={12}
+          tag={15}
+          variations={asana.variations}
           title="Variações para o ciclo menstrual"
         />
-        {isLogged &&
-          tags
-            .filter(
-              (tag) => !excludedTags.includes(tag.id) && tag.type === 'health',
-            )
-            .map((tag) => (
-              <VariationsFromTag
-                key={tag.id}
-                asanaId={asana.id}
-                tag={tag.id}
-                title={`Variações para ${tag.name}`}
-              />
-            ))}
+        {isLogged && <HealthVariations variations={variations} />}
       </ContentSection>
     </>
   )
+}
+
+const HealthVariations = ({ variations }) => {
+  const excludedTags = [1, 15]
+  const tags = variations.reduce((acc, pose) => {
+    const healthTags = pose.tags.filter(t => t.category === 'health' && !excludedTags.includes(t.id))
+    return uniqBy([...acc, ...healthTags], 'id')
+  }, [])
+  return tags.map((tag) => (
+        <VariationsFromTag
+          key={tag.slug}
+          variations={variations}
+          tag={tag.id}
+          title={`Variações para ${tag.name}`}
+        />
+  ))
 }

@@ -7,7 +7,7 @@ import VariationsList from 'components/variations-list'
 
 export default function Asana({ tag, variations }) {
   return (
-    <Layout subtitle={upperFirst(tag?.type)} title={tag?.name}>
+    <Layout subtitle={upperFirst(tag?.category)} title={tag?.name}>
       <div className="md:flex w-full">
         <VariationsList variations={variations} />
       </div>
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { slug } = params
   const tag = await api.fetch('tags', slug)
-  const variations = await api.fetch('variations')
+  const { variations } = tag
   return {
     props: { tag, variations },
   }

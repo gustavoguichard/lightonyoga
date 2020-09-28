@@ -1,4 +1,3 @@
-import AsanaList from 'components/asana-list'
 import ContentSection from 'components/content-section'
 
 import List from './list'
@@ -11,10 +10,10 @@ export default function KramaSection({ asana }) {
         <h2>Professores</h2>
         <List
           title="O que é importante observar no aluno"
-          items={asana.teachers?.observe}
+          items={asana.observe}
         />
         <VariationsFromTag
-          asanaId={asana.id}
+          variations={asana.variations}
           tag={22}
           title="Como ajustar o aluno"
         />

@@ -36,41 +36,43 @@ export default function AsanaPage({ asana }) {
         </span>
       }
     >
-      <MainContent
-        asana={asana}
-        videos={asana.videos}
-        cardContent={<CardContent {...asana} />}
-      >
-        {asana.content?.body && (
-          <div
-            className="text-xl"
-            dangerouslySetInnerHTML={{ __html: asana.content.body }}
-          />
+      <div className="content">
+        <MainContent
+          asana={asana}
+          videos={asana.videos}
+          cardContent={<CardContent {...asana} />}
+        >
+          {asana.content?.body && (
+            <div
+              className="text-xl"
+              dangerouslySetInnerHTML={{ __html: asana.content.body }}
+            />
+          )}
+          <Information asana={asana} />
+        </MainContent>
+        {isLogged && (
+          <ContentSection>
+            <VariationsFromTag
+              variations={asana.variations}
+              tag={17}
+              title="Variações didáticas"
+            />
+          </ContentSection>
         )}
-        <Information asana={asana} />
-      </MainContent>
-      {isLogged && (
-        <ContentSection>
-          <VariationsFromTag
-            asanaId={asana.id}
-            tag={18}
-            title="Variações didáticas"
-          />
-        </ContentSection>
-      )}
-      <HealthSection asana={asana} isLogged={isLogged} />
-      {isLogged && <KramaSection asana={asana} />}
-      {isLogged && <TeacherSection asana={asana} />}
-      {asana.curiosities?.body && (
-        <ContentSection>
-          <h2>Curiosidades</h2>
-          <div
-            key="curiosities"
-            className="max-w-screen-md"
-            dangerouslySetInnerHTML={{ __html: asana.curiosities.body }}
-          />
-        </ContentSection>
-      )}
+        <HealthSection asana={asana} isLogged={isLogged} />
+        {isLogged && <KramaSection asana={asana} />}
+        {isLogged && <TeacherSection asana={asana} />}
+        {asana.curiosities?.body && (
+          <ContentSection>
+            <h2>Curiosidades</h2>
+            <div
+              key="curiosities"
+              className="max-w-screen-md"
+              dangerouslySetInnerHTML={{ __html: asana.curiosities.body }}
+            />
+          </ContentSection>
+        )}
+      </div>
     </Layout>
   )
 }

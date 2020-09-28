@@ -63,7 +63,7 @@ export default function MainSearch({ asanas, tags }) {
 
   return (
     <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-12 bg-gray-200 border-2 border-gray-300 rounded-lg">
-      <form className="flex flex-col" onSubmit={handleSubmit}>
+      <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
         <h2 className="mb-1 text-xl text-center leading-snug">
           Comece buscando um <em>Asana</em> ou <mb-1 em>Pranayama</mb-1>
         </h2>
@@ -84,8 +84,8 @@ export default function MainSearch({ asanas, tags }) {
             searchWrapper: 'w-full ',
             searchInput: 'w-full p-6 text-lg mb-0',
             suggestions:
-              'absolute bg-white z-10 py-3 left-0 right-0 rounded shadow-xl',
-            suggestionActive: 'bg-gray-200 -ml-2 is-active',
+              'absolute bg-white z-10 p-3 left-0 right-0 rounded shadow-xl',
+            suggestionActive: 'bg-gray-200 pl-2 is-active',
           }}
         />
         <button

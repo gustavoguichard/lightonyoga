@@ -11,7 +11,7 @@ export default function VariationsList({ variations }) {
         .map((variation) => (
           <VariationCard
             variation={variation}
-            key={`variation-${variation.id}`}
+            key={variation.slug}
           />
         ))}
     </div>
