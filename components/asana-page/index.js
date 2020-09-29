@@ -16,12 +16,12 @@ export default function AsanaPage({ asana }) {
   return (
     <Layout
       title={
-        asana.alternateNames ? (
+        asana.alternative_names ? (
           <span>
             {asana.name}
             <span className="text-lg text-gray-600">
               {' '}
-              - {asana.alternateNames.join(', ')}
+              - {asana.alternative_names}
             </span>
           </span>
         ) : (
