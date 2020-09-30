@@ -21,6 +21,7 @@ const ExerciseCard = ({ full_name, slug, parent_slug, image, comment }) => {
   return <Card
     pose={{ image }}
     slug={parent_slug ? `${parent_slug}/${slug}` : slug}
+    href={parent_slug ? "/asana/[slug]/[variationSlug]" : undefined}
     title={title}
     subtitle={subtitle}
     tagline={comment}

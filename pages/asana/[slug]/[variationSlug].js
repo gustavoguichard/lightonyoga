@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import api from 'lib/api'
+
 import Layout from 'components/layout'
 import MainContent from 'components/main-content'
 import Tag from 'components/tag'
@@ -20,8 +22,8 @@ export default function VariationPage({ variation }) {
         picture={variation.image}
         asana={variation}
       >
-        <p className="text-xs">
-          Ir para:{' '}
+        <p className="text-xs text-yellow-900 font-semibold p-3 bg-yellow-100 rounded inline-block border-2 border-yellow-200">
+          Ver informações completas para:{' '}
           <Link href="/asana/[slug]" as={`/asana/${variation.asana.slug}`}>
             <a>{variation.asana.name}</a>
           </Link>
@@ -37,4 +39,22 @@ export default function VariationPage({ variation }) {
       </MainContent>
     </Layout>
   )
+}
+
+
+export async function getStaticPaths() {
+  const variations = await api.fetch('variations')
+  return {
+    paths: variations.map((item) => ({ params: { slug: item.asana.slug, variationSlug: item.slug } })),
+    fallback: true,
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const { variationSlug } = params
+  const variation = await api.fetch('variations', variationSlug)
+  return {
+    props: { variation },
+    revalidate: 10,
+  }
 }
