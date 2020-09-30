@@ -44,10 +44,10 @@ export default function AsanaPage({ asana }) {
           videos={asana.videos}
           cardContent={<CardContent {...asana} />}
         >
-          {asana.content?.body && (
+          {asana.content && (
             <div
               className="text-xl"
-              dangerouslySetInnerHTML={{ __html: asana.content.body }}
+              dangerouslySetInnerHTML={{ __html: asana.content }}
             />
           )}
           <Information asana={asana} />
@@ -64,13 +64,13 @@ export default function AsanaPage({ asana }) {
         <HealthSection asana={asana} isLogged={isLogged} />
         {isLogged && <KramaSection asana={asana} />}
         {isLogged && <TeacherSection asana={asana} />}
-        {asana.curiosities?.body && (
+        {asana.curiosities && (
           <ContentSection>
             <h2>Curiosidades</h2>
             <div
               key="curiosities"
               className="max-w-screen-md"
-              dangerouslySetInnerHTML={{ __html: asana.curiosities.body }}
+              dangerouslySetInnerHTML={{ __html: asana.curiosities }}
             />
           </ContentSection>
         )}

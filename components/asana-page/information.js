@@ -7,11 +7,7 @@ export default function Information({ asana }) {
   return (
     <>
       <Actions big name="Preparação" actions={asana.setup} />
-      <Actions
-        big
-        name="Entrando na postura"
-        actions={asana.entering}
-      />
+      <Actions big name="Entrando na postura" actions={asana.entering} />
       <h3>Na postura</h3>
       <Actions name="Pés e pernas" actions={asana.legs} />
       <Actions name="Coxa, pelve e abdômen" actions={asana.core} />
@@ -23,10 +19,11 @@ export default function Information({ asana }) {
         <>
           <h3>Avançado</h3>
           <Actions
+            isList
             name="Ações avançadas"
             actions={asana.advanced_actions}
           />
-          <Actions name="Conexões" actions={asana.connections} />
+          <Actions isList name="Conexões" actions={asana.connections} />
         </>
       )}
       <Actions big name="Saindo da postura" actions={asana.leaving} />

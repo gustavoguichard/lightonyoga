@@ -35,7 +35,7 @@ export default function VariationPage({ variation }) {
           ))}
         </div>
         <h3>Instruções</h3>
-        <div dangerouslySetInnerHTML={{ __html: variation.content?.body }} />
+        <div dangerouslySetInnerHTML={{ __html: variation.content }} />
       </MainContent>
     </Layout>
   )
