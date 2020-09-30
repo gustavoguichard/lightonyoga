@@ -1,4 +1,5 @@
 import ContentSection from 'components/content-section'
+import KramaList from 'components/krama-list'
 
 export default function PostureMainContent({
   children,
@@ -19,6 +20,12 @@ export default function PostureMainContent({
         </div>
         <main className="md:w-7/12 md:mr-8">{children}</main>
       </div>
+      <KramaList
+        asana={asana}
+        title="Posturas alternativas"
+        subtitle={`Essas posturas podem ser feitas caso haja algum impedimento ou contra-indicação para praticar ${asana.name}.`}
+        kind="alternative"
+      />
       {!!videos?.length && (
         <ContentSection>
           <h2>Vídeos</h2>
