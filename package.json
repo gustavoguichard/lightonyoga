@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9.8.6",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.20",
