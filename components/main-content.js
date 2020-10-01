@@ -13,7 +13,7 @@ export default function PostureMainContent({
         <div className="md:order-2 md:w-5/12 mb-3 block bg-gray-200 border-gray-300 border-2 rounded overflow-hidden">
           <img
             className="max-w-full m-0"
-            src={asana?.image}
+            src={asana?.picture}
             alt={asana?.name}
           />
           {cardContent}

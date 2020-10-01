@@ -16,10 +16,10 @@ export default function ExerciseList({ exercises }) {
   )
 }
 
-const ExerciseCard = ({ full_name, slug, parent_slug, image, comment }) => {
+const ExerciseCard = ({ full_name, slug, parent_slug, picture, comment }) => {
   const [title, subtitle] = full_name.split(' - ')
   return <Card
-    pose={{ image }}
+    pose={{ picture }}
     slug={parent_slug ? `${parent_slug}/${slug}` : slug}
     href={parent_slug ? "/asana/[slug]/[variationSlug]" : undefined}
     title={title}

@@ -7,7 +7,7 @@ export default function Card({ title, href = '/asana/[slug]', slug, subtitle, ta
         <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-300 bg-gray-200">
           <img
             className="w-full mb-2"
-            src={pose.image}
+            src={pose.picture}
             alt={[title, subtitle].join(' - ')}
           />
           <div className="px-4 py-2">

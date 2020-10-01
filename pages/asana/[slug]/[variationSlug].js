@@ -23,7 +23,7 @@ export default function VariationPage({ variation }) {
     >
       <MainContent
         videos={variation.videos}
-        picture={variation.image}
+        picture={variation.picture}
         asana={variation}
       >
         <p className="text-xs text-yellow-900 font-semibold p-3 bg-yellow-100 rounded inline-block border-2 border-yellow-200">
