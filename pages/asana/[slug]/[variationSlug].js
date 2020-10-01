@@ -7,6 +7,10 @@ import MainContent from 'components/main-content'
 import Tag from 'components/tag'
 
 export default function VariationPage({ variation }) {
+  if (!variation?.asana) {
+    return 'Loading...'
+  }
+
   return (
     <Layout
       title={variation.asana.name}

@@ -14,6 +14,10 @@ import Information from 'components/asana-page/information'
 import VariationsFromTag from 'components/asana-page/variations-from-tag'
 
 export default function AsanaPage({ asana }) {
+  if (!asana) {
+    return 'Loading...'
+  }
+
   const isLogged = useLogged()
   return (
     <Layout
