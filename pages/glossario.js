@@ -1,4 +1,3 @@
-import kebabCase from 'lodash/kebabCase'
 import upperFirst from 'lodash/upperFirst'
 import Link from 'next/link'
 
@@ -14,9 +13,9 @@ export default function GlossaryWord({ words }) {
     >
       <div className="md:flex">
         <ul className="list-disc">
-          {words.map(({ id, name, translation }) => (
+          {words.map(({ id, name, slug, translation }) => (
             <li key={id} className="mt-0">
-              <Link href="/glossario/[id]" as={`/glossario/${id}-${kebabCase(name)}`}>
+              <Link href="/glossario/[id]" as={`/glossario/${slug}`}>
                 <a className="text-italic font-semibold">{upperFirst(name)}:</a>
               </Link>{' '}
               {translation}
