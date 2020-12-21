@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import matchSorter from 'match-sorter'
+import { matchSorter } from 'match-sorter'
 import { useRouter } from 'next/router'
 import map from 'lodash/map'
 import pickBy from 'lodash/pickBy'
@@ -62,7 +62,7 @@ export default function MainSearch({ asanas, tags }) {
   }
 
   return (
-    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-12 bg-gray-200 border-2 border-gray-300 rounded-lg">
+    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-12 bg-gray-50 border border-gray-200 rounded-lg">
       <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
         <h2 className="mb-1 text-xl text-center leading-snug">
           Comece buscando um <em>Asana</em> ou <mb-1 em>Pranayama</mb-1>

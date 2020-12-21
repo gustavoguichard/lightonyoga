@@ -18,7 +18,7 @@ export default function Login() {
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <div className="flex flex-col py-6 px-8 mb-12 bg-gray-200 border-2 border-gray-300 rounded-lg">
+      <div className="flex flex-col py-6 px-8 mb-12 bg-gray-50 border border-gray-200 rounded-lg">
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <p>
             <label for="email">E-mail</label>

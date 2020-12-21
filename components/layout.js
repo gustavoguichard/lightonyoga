@@ -9,7 +9,7 @@ export default function Layout({ title, subtitle, children }) {
   const isLogged = useLogged()
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between p-3 bg-gray-100 border-b-2 border-gray-300">
+      <div className="flex flex-col md:flex-row justify-between p-3 bg-gray-50 border-b-4 border-gray-100">
         <p className="mb-0">
           <Link href="/">
             <a>Home</a>
@@ -54,11 +54,11 @@ export default function Layout({ title, subtitle, children }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {title && (
-          <header className="mt-0 bg-gray-100 border-b-2">
+          <header className="mt-0 bg-gray-50 border-b-2 border-gray-100">
             <h1 className="text-3xl md:text-4xl">
               {title}
               {subtitle && (
-                <span className="block text-xl text-gray-600 mt-2 leading-snug">
+                <span className="block text-xl text-gray-500 mt-2 leading-snug">
                   {subtitle}
                 </span>
               )}
@@ -67,7 +67,7 @@ export default function Layout({ title, subtitle, children }) {
         )}
         {children}
       </article>
-      <footer className="flex justify-center py-4 px-6 bg-gray-100 border-gray-300 border-t-2">
+      <footer className="flex justify-center py-4 px-6 bg-gray-50 border-gray-100 border-t-4">
         <a
           target="_blank"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"

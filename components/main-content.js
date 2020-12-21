@@ -10,7 +10,7 @@ export default function PostureMainContent({
   return (
     <div>
       <div className="md:flex justify-between items-start">
-        <div className="md:order-2 md:w-5/12 mb-3 block bg-gray-200 border-gray-300 border-2 rounded overflow-hidden">
+        <div className="md:order-2 md:w-5/12 mb-3 block bg-gray-50 border-gray-200 border rounded overflow-hidden">
           <img
             className="max-w-full m-0"
             src={asana?.picture}
