@@ -1,5 +1,3 @@
-import sortBy from 'lodash/sortBy'
-
 import api from 'lib/api'
 
 import Layout from 'components/layout'
