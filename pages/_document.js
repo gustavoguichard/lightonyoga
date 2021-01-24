@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Analytics from 'components/analytics'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -14,6 +15,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.xz.style/serve/inter.css"
           />
+          <Analytics />
         </Head>
         <body>
           <Main />
