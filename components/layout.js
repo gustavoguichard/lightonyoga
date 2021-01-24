@@ -9,7 +9,7 @@ export default function Layout({ title, subtitle, children }) {
       <Header />
       <article className="max-w-screen-xl pt-0 px-6 py-2">
         <Head>
-          <title>Light On Yoga</title>
+          <title>Luz no Yoga</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {title && (
