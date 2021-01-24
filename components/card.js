@@ -1,17 +1,10 @@
 import Link from 'next/link'
 
-export default function Card({
-  title,
-  href = '/asana/[slug]',
-  slug,
-  subtitle,
-  tagline,
-  pose,
-}) {
+export default function Card({ title, slug, subtitle, tagline, pose }) {
   return (
-    <Link href={href} as={`/asana/${slug}`}>
+    <Link href={`/asana/${slug}`}>
       <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex">
-        <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-100 bg-gray-50">
+        <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-100 hover:border-orange-500 bg-gray-50">
           <img
             className="w-full mb-2 card-img"
             src={pose.picture}

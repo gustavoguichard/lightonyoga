@@ -1,6 +1,12 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        orange: colors.orange,
+      },
+    },
     aspectRatio: {
       none: 0,
       square: [1, 1],

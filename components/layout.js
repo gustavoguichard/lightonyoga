@@ -25,7 +25,7 @@ export default function Layout({ title, subtitle, children }) {
         )}
         {children}
       </article>
-      <footer className="flex justify-center py-4 px-6 bg-gray-50 border-gray-100 border-t-4">
+      <footer className="flex justify-center py-4 px-6 border-gray-100 border-t-4">
         <a
           target="_blank"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
