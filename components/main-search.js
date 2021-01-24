@@ -66,10 +66,10 @@ export default function MainSearch({ asanas, tags }) {
   }, [])
 
   return (
-    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-8 bg-gray-50 border border-gray-200 rounded-lg">
+    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 pt-2 pb-4 px-8 mb-8 bg-gray-50 border border-gray-200 rounded-lg">
       <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
-        <h2 className="mb-1 text-xl text-center leading-snug">
-          Comece buscando um <em>Asana</em>, prop, condição...
+        <h2 className="mb-2 text-xl text-center leading-snug text-gray-600 text-semibold">
+          Busque um <em>Asana</em>, prop, condição...
         </h2>
         <ReactTags
           ref={reactTags}
@@ -94,7 +94,7 @@ export default function MainSearch({ asanas, tags }) {
         />
         <button
           disabled={!selectedTags.length}
-          className="self-stretch p-4 text-xl mt-6 mx-2 text-center bg-blue-600"
+          className="self-stretch p-4 text-xl mt-2 text-center bg-blue-600"
         >
           Buscar
         </button>

@@ -5,7 +5,7 @@ import api from 'lib/api'
 
 import Layout from 'components/layout'
 
-export default function GlossaryWord({ words }) {
+export default function Glossary({ words }) {
   return (
     <Layout
       title="Glossário"
