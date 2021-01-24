@@ -10,7 +10,7 @@ export default function Asana({ families }) {
       <ul className="list-disc">
         {families.map((family) => (
           <li key={family.id}>
-            <Link href="/familia/[slug]" as={`/familia/${family.slug}`}>
+            <Link href={`/familia/${family.slug}`}>
               <a className="font-semibold">{family.name}:</a>
             </Link>{' '}
             {family.translation}

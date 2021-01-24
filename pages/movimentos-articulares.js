@@ -19,10 +19,7 @@ export default function Asana({ movements }) {
             <ul className="list-disc">
               {map(collection, ({ id, name, slug }) => (
                 <li key={id}>
-                  <Link
-                    href="/anatomia/[slug]"
-                    as={`/anatomia/${slug}`}
-                  >
+                  <Link href={`/anatomia/${slug}`}>
                     <a className="font-semibold">{upperFirst(name)}</a>
                   </Link>
                 </li>

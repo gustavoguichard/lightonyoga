@@ -15,7 +15,7 @@ export default function GlossaryWord({ words }) {
         <ul className="list-disc">
           {words.map(({ id, name, slug, translation }) => (
             <li key={id} className="mt-0">
-              <Link href="/glossario/[id]" as={`/glossario/${slug}`}>
+              <Link href={`/glossario/${slug}`}>
                 <a className="text-italic font-semibold">{upperFirst(name)}:</a>
               </Link>{' '}
               {translation}

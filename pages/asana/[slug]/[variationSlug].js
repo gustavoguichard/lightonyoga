@@ -28,7 +28,7 @@ export default function VariationPage({ variation }) {
       >
         <p className="text-xs text-yellow-900 font-semibold p-3 bg-yellow-100 rounded inline-block border-2 border-yellow-200">
           Ver informações completas para:{' '}
-          <Link href="/asana/[slug]" as={`/asana/${variation.asana.slug}`}>
+          <Link href={`/asana/${variation.asana.slug}`}>
             <a>{variation.asana.name}</a>
           </Link>
         </p>
@@ -45,11 +45,12 @@ export default function VariationPage({ variation }) {
   )
 }
 
-
 export async function getStaticPaths() {
   const variations = await api.fetch('variations')
   return {
-    paths: variations.map((item) => ({ params: { slug: item.asana.slug, variationSlug: item.slug } })),
+    paths: variations.map((item) => ({
+      params: { slug: item.asana.slug, variationSlug: item.slug },
+    })),
     fallback: true,
   }
 }
