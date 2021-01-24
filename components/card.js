@@ -13,9 +13,9 @@ export default function Card({
       <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex">
         <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-100 bg-gray-50">
           <img
-            className="w-full mb-2"
+            className="w-full mb-2 card-img"
             src={pose.picture}
-            alt={[title, subtitle].join(' - ')}
+            alt={[title, subtitle].filter((a) => a).join(' - ')}
           />
           <div className="px-4 py-2">
             {subtitle && (

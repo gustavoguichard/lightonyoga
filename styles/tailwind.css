@@ -1,7 +1,8 @@
-/* purgecss start ignore */
-@import 'tailwindcss/base';
-/* purgecss end ignore */
+@tailwind base;
 
-@import 'tailwindcss/components';
+.card-img {
+  min-height: 180px;
+}
 
-@import 'tailwindcss/utilities';
+@tailwind components;
+@tailwind utilities;
