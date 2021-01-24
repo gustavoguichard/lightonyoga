@@ -12,7 +12,7 @@ export default function Footer() {
           <a>Quem somos</a>
         </Link>
         {' • '}
-        <a href="mailto:gustavoguichard@gmail.com" target="_blank">
+        <a href="mailto:contato@luznoyoga.com.br" target="_blank">
           Contato
         </a>
       </div>
