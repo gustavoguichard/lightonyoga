@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { matchSorter } from 'match-sorter'
 import { useRouter } from 'next/router'
 import map from 'lodash/map'
@@ -61,12 +61,8 @@ export default function MainSearch({ asanas, tags }) {
     return matchSorter(suggestions, query, { keys: ['name'] })
   }
 
-  useEffect(() => {
-    reactTags.current?.input.current.input.current?.focus()
-  }, [])
-
   return (
-    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 pt-2 pb-4 px-8 mb-8 bg-gray-50 border border-gray-200 rounded-lg">
+    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 pt-2 pb-4 px-4 md:px-8 mb-8 bg-gray-50 border border-gray-200 rounded-lg">
       <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
         <h2 className="mb-2 text-xl text-center leading-snug text-gray-600 text-semibold">
           Busque um <em>Asana</em>, prop, condição...

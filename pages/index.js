@@ -41,13 +41,13 @@ export default function Home({ asanas, tags, variations, words }) {
             Ver mais
           </a>
         </Link>
-        <div className="flex">
+        <div className="md:flex">
           {word && (
             <aside className="md:w-5/12">
               <h5 className="text-sm font-semibold text-gray-600">
                 Aprenda uma nova expressão em Sânscrito:
               </h5>
-              <blockquote className="border-gray-300 text-gray-700 mb-0 bg-white">
+              <blockquote className="border-gray-200 text-gray-700 mb-0 bg-white">
                 <p className="mb-0">
                   <Link href={`/glossario/${word.slug}`}>
                     <a className="text-semibold">
