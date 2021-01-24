@@ -1,3 +1,4 @@
+import Img from 'components/img'
 import ContentSection from 'components/content-section'
 import KramaList from 'components/krama-list'
 
@@ -11,7 +12,7 @@ export default function PostureMainContent({
     <div>
       <div className="md:flex justify-between items-start">
         <div className="md:order-2 md:w-5/12 mb-3 block bg-gray-50 border-gray-200 border rounded overflow-hidden">
-          <img
+          <Img
             className="max-w-full m-0"
             src={asana?.picture}
             alt={asana?.name}

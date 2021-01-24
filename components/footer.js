@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import Img from 'components/img'
+
 export default function Footer() {
   return (
     <footer className="flex justify-between p-3 border-gray-100 border-t-4">
@@ -20,7 +22,7 @@ export default function Footer() {
         target="_blank"
         href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
       >
-        <img
+        <Img
           className="mb-0"
           src="/creative-commons.png"
           alt="Creative Commons Attribution"

@@ -1,11 +1,13 @@
 import Link from 'next/link'
 
+import Img from 'components/img'
+
 export default function Card({ title, slug, subtitle, tagline, pose }) {
   return (
     <Link href={`/asana/${slug}`}>
       <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex">
         <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-100 hover:border-orange-500 bg-gray-50">
-          <img
+          <Img
             className="w-full mb-2 card-img"
             src={pose.picture}
             alt={[title, subtitle].filter((a) => a).join(' - ')}
