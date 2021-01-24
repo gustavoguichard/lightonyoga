@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { matchSorter } from 'match-sorter'
 import { useRouter } from 'next/router'
 import map from 'lodash/map'
@@ -61,11 +61,15 @@ export default function MainSearch({ asanas, tags }) {
     return matchSorter(suggestions, query, { keys: ['name'] })
   }
 
+  useEffect(() => {
+    reactTags.current?.input.current.input.current?.focus()
+  }, [])
+
   return (
-    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-12 bg-gray-50 border border-gray-200 rounded-lg">
+    <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-6 px-8 mb-8 bg-gray-50 border border-gray-200 rounded-lg">
       <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
         <h2 className="mb-1 text-xl text-center leading-snug">
-          Comece buscando um <em>Asana</em> ou <mb-1 em>Pranayama</mb-1>
+          Comece buscando um <em>Asana</em>, prop, condição...
         </h2>
         <ReactTags
           ref={reactTags}
@@ -75,7 +79,7 @@ export default function MainSearch({ asanas, tags }) {
           onDelete={onDelete}
           onAddition={onAddition}
           suggestionsTransform={suggestionsFilter}
-          placeholderText="Busque um asana, prop, condição, etc..."
+          placeholderText="Comece a digitar..."
           classNames={{
             root: 'w-full flex flex-col',
             selectedTag:

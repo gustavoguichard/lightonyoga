@@ -53,9 +53,10 @@ export default function Home({ asanas, tags, variations }) {
 
 export async function getStaticProps() {
   const asanas = await api.fetch('asanas')
+  const variations = await api.fetch('variations')
   const tags = await api.fetch('tags')
   return {
-    props: { asanas, tags },
+    props: { asanas, tags, variations },
     revalidate: 10,
   }
 }
