@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
-import session, { useLogged } from 'lib/session'
+// import session, { useLogged } from 'lib/session'
 
 export default function Header() {
-  const router = useRouter()
-  const isLogged = useLogged()
+  // const router = useRouter()
+  // const isLogged = useLogged()
   return (
     <div className="flex flex-col md:flex-row justify-between p-3 bg-gray-50 border-b-4 border-gray-100">
       <p className="mb-0">
@@ -37,7 +37,7 @@ export default function Header() {
           <a>Quem somos</a>
         </Link>
       </p>
-      <a
+      {/* <a
         className="self-end"
         href={isLogged ? '#' : '/entrar'}
         onClick={(ev) => {
@@ -48,7 +48,7 @@ export default function Header() {
         }}
       >
         {isLogged ? 'Sair' : 'Login'}
-      </a>
+      </a> */}
     </div>
   )
 }
