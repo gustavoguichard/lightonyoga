@@ -7,7 +7,11 @@ import AsanaList from 'components/asana-list'
 
 export default function Asana({ family, asanas }) {
   return (
-    <Layout title={family?.name} subtitle={family?.translation}>
+    <Layout
+      title={`${family?.name} - ${family?.translation}`}
+      pageTitle={family?.name}
+      subtitle={family?.translation}
+    >
       <p className="text-xs mb-0">
         Ver todas as{' '}
         <Link href="/familias-dos-asanas">

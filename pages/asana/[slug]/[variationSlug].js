@@ -13,7 +13,8 @@ export default function VariationPage({ variation }) {
 
   return (
     <Layout
-      title={variation.asana.name}
+      title={`${variation.asana.name}: ${variation.name}`}
+      pageTitle={variation.asana.name}
       subtitle={
         <span className="font-semibold">
           <span className="text-sm font-normal">Variação:</span>{' '}

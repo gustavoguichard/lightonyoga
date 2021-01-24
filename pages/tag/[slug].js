@@ -7,7 +7,11 @@ import VariationsList from 'components/variations-list'
 
 export default function Asana({ tag, variations }) {
   return (
-    <Layout subtitle={upperFirst(tag?.category)} title={tag?.name}>
+    <Layout
+      subtitle={upperFirst(tag?.category)}
+      title={`Tag: ${tag?.name}`}
+      pageTitle={tag?.name}
+    >
       <div className="md:flex w-full">
         <VariationsList variations={variations} />
       </div>

@@ -2,7 +2,7 @@ import Layout from 'components/layout'
 
 export default function About() {
   return (
-    <Layout>
+    <Layout title="Quem somos">
       <div className="flex mt-8 flex-col items-center">
         <main className="md:w-7/12 md:ml-8">
           <p>
