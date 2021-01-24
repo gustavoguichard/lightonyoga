@@ -96,7 +96,7 @@ export default function MainSearch({ asanas, tags }) {
           disabled={!selectedTags.length}
           className="self-stretch p-4 text-xl mt-2 text-center bg-blue-600"
         >
-          Buscar
+          Ver resultados
         </button>
       </form>
     </div>
