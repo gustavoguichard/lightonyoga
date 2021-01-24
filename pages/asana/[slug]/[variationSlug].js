@@ -26,6 +26,7 @@ export default function VariationPage({ variation }) {
         videos={variation.videos}
         picture={variation.picture}
         asana={variation}
+        isVariation
       >
         <p className="text-xs text-yellow-900 font-semibold p-3 bg-yellow-100 rounded inline-block border-2 border-yellow-200">
           Ver informações completas para:{' '}

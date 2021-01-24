@@ -4,7 +4,7 @@ import Img from 'components/img'
 
 export default function Footer() {
   return (
-    <footer className="flex justify-between p-3 border-gray-100 border-t-4">
+    <footer className="flex justify-between p-3 border-gray-100 border-t-4 text-sm text-gray-500">
       <div>
         <Link href="/">
           <a>Home</a>

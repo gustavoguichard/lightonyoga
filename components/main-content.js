@@ -7,6 +7,7 @@ export default function PostureMainContent({
   cardContent,
   videos,
   asana,
+  isVariation,
 }) {
   return (
     <div>
@@ -15,7 +16,11 @@ export default function PostureMainContent({
           <Img
             className="max-w-full m-0"
             src={asana?.picture}
-            alt={asana?.name}
+            alt={
+              isVariation
+                ? `${asana?.asana?.name}: ${asana?.name}`
+                : asana?.name
+            }
           />
           {cardContent}
         </div>
