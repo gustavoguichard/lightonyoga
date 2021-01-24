@@ -1,53 +1,49 @@
+import { useState, useEffect } from 'react'
 import api from 'lib/api'
+import shuffle from 'lodash/shuffle'
+import take from 'lodash/take'
+import Link from 'next/link'
 
 import Layout from 'components/layout'
 import MainSearch from 'components/main-search'
+import AsanaCard from 'components/asana-card'
+import VariationCard from 'components/variation-card'
 
-export default function Home({ asanas, tags }) {
+export default function Home({ asanas, tags, variations }) {
+  const postures = [...asanas, ...variations]
+  const [list, setList] = useState([])
+  useEffect(() => {
+    setList(take(shuffle(postures), 4))
+  }, [])
   return (
     <Layout>
       <div className="flex mt-8 flex-col items-center">
         <MainSearch asanas={asanas} tags={tags} />
+        <h4 className="text-sm font-semibold self-start pl-4 mb-0 text-gray-600">
+          Conheça novas posturas:
+        </h4>
+        <div className="flex flex-wrap w-full">
+          {list.map((asana) => {
+            const isVariation = !!asana.asana
+            return isVariation ? (
+              <VariationCard key={asana.id + asana.name} variation={asana} />
+            ) : (
+              <AsanaCard key={asana.id + asana.name} asana={asana} />
+            )
+          })}
+        </div>
+        <Link href="/lista-de-asanas">
+          <a className="text-sm font-semibold self-start pl-4 mt-0 mb-8">
+            Ver mais
+          </a>
+        </Link>
         <main className="md:w-7/12 md:ml-8">
-          <p>
-            Somos estudantes, praticantes e/ou professores do método{' '}
-            <em>Iyengar Yoga</em>, temos muitas anotações de cursos, aulas,
-            workshops e de nossas práticas pessoais. Para ter a possibilidade de
-            pesquisar esse material rapidamente, resolvemos desenvolver uma
-            ferramenta que nos ajude.
-          </p>
-          <p>
-            Com isso em mente, fizemos esta plataforma que tem o objetivo de
-            servir de material complementar dos estudos e como uma forma de
-            democratizar o conhecimento do método.
-          </p>
-          <blockquote>
-            A afirmação de Guruji &ldquo;dar não nos empobrece, reter não nos
-            enriquece&rdquo; não apenas deve ser compreendida por nós, mas
-            também praticada. <i>&minus; Geetaji</i>
-          </blockquote>
-          <p>
-            Também queremos que esse conhecimento seja acessível e
-            compartilhável, o que tende a ajudar na evolução do método sob uma
-            perspectiva científica. Guruji encarava o Yoga como uma ciência em
-            constante desenvolvimento.
-          </p>
           <blockquote>
             Eu desenvolvi os props para que as pessoas possam se beneficiar.
             Milhares estão se beneficiando e continuarão se beneficiando deles.
             Deus alguma vez registrou uma patente para sua criação? Então que
             direito eu, um mero mortal, tenho para fazer isso?{' '}
             <i>&minus; B.K.S. Iyengar</i>
-          </blockquote>
-          <p>
-            <strong>Importante:</strong> O conteúdo descrito nesta plataforma
-            deve ser usado como material de apoio. Ele não substitui a
-            orientação profissional e/ou as aulas presenciais. Também não
-            pretende ser tomado como correto já que é altamente embasado em
-            nossas próprias práticas pessoais.
-          </p>
-          <blockquote>
-            Que meu fim seja o seu começo <i>&minus; B.K.S. Iyengar</i>
           </blockquote>
         </main>
       </div>
