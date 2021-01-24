@@ -1,7 +1,7 @@
 export default function List({ items, title }) {
   if (!items) return null
 
-  const itemsArray = items.split('\n')
+  const itemsArray = items.trim().split('\n')
   return (
     <div>
       <h3>{title}</h3>
