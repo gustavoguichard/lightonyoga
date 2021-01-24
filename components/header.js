@@ -29,12 +29,14 @@ export default function Header() {
           <a>Glossário</a>
         </Link>
         {' • '}
-        <Link href="/movimentos-articulares">
-          <a>Movimentos articulares</a>
+        <Link href="/conheca-os-props">
+          <a>
+            Conheça os <em>Props</em>
+          </a>
         </Link>
         {' • '}
-        <Link href="/quem-somos">
-          <a>Quem somos</a>
+        <Link href="/movimentos-articulares">
+          <a>Movimentos articulares</a>
         </Link>
       </p>
       {/* <a

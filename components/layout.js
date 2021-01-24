@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import Header from 'components/header'
+import Footer from 'components/footer'
 
 export default function Layout({ title, subtitle, children }) {
   return (
@@ -25,18 +26,7 @@ export default function Layout({ title, subtitle, children }) {
         )}
         {children}
       </article>
-      <footer className="flex justify-center py-4 px-6 border-gray-100 border-t-4">
-        <a
-          target="_blank"
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-        >
-          <img
-            className="mb-0"
-            src="/creative-commons.png"
-            alt="Creative Commons Attribution"
-          />
-        </a>
-      </footer>
+      <Footer />
     </>
   )
 }
