@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { join } from 'lib/utils'
+
 import Img from 'components/img'
 
 export default function Card({ title, slug, subtitle, tagline, pose }) {
@@ -10,7 +12,7 @@ export default function Card({ title, slug, subtitle, tagline, pose }) {
           <Img
             className="w-full mb-2 card-img"
             src={pose.picture}
-            alt={[title, subtitle].filter((a) => a).join(' - ')}
+            alt={join([title, subtitle], ' - ')}
           />
           <div className="px-4 py-2">
             {subtitle && (
