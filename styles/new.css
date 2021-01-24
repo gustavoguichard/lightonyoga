@@ -36,6 +36,7 @@
   }
 } */
 * {
+  font-family: var(--nc-font-sans);
   margin: 0;
   padding: 0;
 }
