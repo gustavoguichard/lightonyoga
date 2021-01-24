@@ -7,7 +7,7 @@ import Layout from 'components/layout'
 export default function Asana({ families }) {
   return (
     <Layout title="Famílias das posturas">
-      <ul className="list-disc">
+      <ul className="list-disc pl-5">
         {families.map((family) => (
           <li key={family.id}>
             <Link href={`/familia/${family.slug}`}>

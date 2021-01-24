@@ -16,7 +16,7 @@ export default function Asana({ movements }) {
         {map(movements, (collection, joint) => (
           <div key={joint} className="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
             <h3>{joint}</h3>
-            <ul className="list-disc">
+            <ul className="list-disc pl-5">
               {map(collection, ({ id, name, slug }) => (
                 <li key={id}>
                   <Link href={`/anatomia/${slug}`}>

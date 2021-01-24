@@ -12,7 +12,7 @@ export default function Glossary({ words }) {
       subtitle="Algumas traduções de palavras em Sânscrito"
     >
       <div className="md:flex">
-        <ul className="list-disc">
+        <ul className="list-disc pl-5">
           {words.map(({ id, name, slug, translation }) => (
             <li key={id} className="mt-0">
               <Link href={`/glossario/${slug}`}>

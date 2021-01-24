@@ -10,7 +10,7 @@ export default function TheProps({ tags }) {
     <Layout
       title={
         <span>
-          Conheça os <em>Props</em>
+          Lista de <em>Props</em>
         </span>
       }
     >
@@ -21,7 +21,14 @@ export default function TheProps({ tags }) {
           Para conhecer e ver cada <em>prop</em> na prática, navegue pelos links
           abaixo.
         </p>
-        <ul className="list-disc">
+        <blockquote>
+          Eu desenvolvi os props para que as pessoas possam se beneficiar.
+          Milhares estão se beneficiando e continuarão se beneficiando deles.
+          Deus alguma vez registrou uma patente para sua criação? Então que
+          direito eu, um mero mortal, tenho para fazer isso?{' '}
+          <i>&minus; B.K.S. Iyengar</i>
+        </blockquote>
+        <ul className="list-disc pl-5">
           {tags.map(({ id, name, slug }) => (
             <li key={id} className="mt-0">
               <Link href={`/tag/${slug}`}>

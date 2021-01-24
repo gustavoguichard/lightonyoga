@@ -29,9 +29,9 @@ export default function Header() {
           <a>Glossário</a>
         </Link>
         {' • '}
-        <Link href="/conheca-os-props">
+        <Link href="/lista-de-props">
           <a>
-            Conheça os <em>Props</em>
+            Lista de <em>Props</em>
           </a>
         </Link>
         {' • '}
