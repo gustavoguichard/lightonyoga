@@ -15,7 +15,7 @@ export default function Layout({ pageTitle, title, subtitle, seo, children }) {
   const headTitle = join([reactToString(pageTitle || title), SITE_TITLE], ' | ')
   return (
     <>
-      <SEO title={headTitle} {...{ ...seo, openGraph: { url } }} />
+      <SEO title={headTitle} {...{ ...seo, openGraph: { ...seo?.openGraph, url } }} />
       <Header />
       <article className="flex-grow max-w-screen-xl pt-0 px-6 py-2">
         {title && (
