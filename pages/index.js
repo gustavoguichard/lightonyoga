@@ -41,37 +41,26 @@ export default function Home({ asanas, tags, variations, words }) {
             Ver mais
           </a>
         </Link>
-        <div className="md:flex">
-          {word && (
-            <aside className="md:w-5/12">
-              <h5 className="text-sm font-semibold text-gray-600">
-                Aprenda uma nova expressão em Sânscrito:
-              </h5>
-              <blockquote className="border-gray-200 text-gray-700 mb-0 bg-white">
-                <p className="mb-0">
-                  <Link href={`/glossario/${word.slug}`}>
-                    <a className="text-semibold">
-                      <em>{startCase(word.name)}</em>
-                    </a>
-                  </Link>
-                  : {word.translation}
-                </p>
-                <Link href="/glossario">
-                  <a className="text-sm">ver mais no glossário</a>
+        {word && (
+          <aside className="md:w-5/12 self-start">
+            <h5 className="text-sm font-semibold text-gray-600">
+              Aprenda uma nova expressão em Sânscrito:
+            </h5>
+            <blockquote className="text-gray-700 mb-0 bg-white">
+              <p className="mb-0">
+                <Link href={`/glossario/${word.slug}`}>
+                  <a className="text-semibold">
+                    <em>{startCase(word.name)}</em>
+                  </a>
                 </Link>
-              </blockquote>
-            </aside>
-          )}
-          <main className="md:w-7/12 md:ml-8">
-            <blockquote>
-              Eu desenvolvi os props para que as pessoas possam se beneficiar.
-              Milhares estão se beneficiando e continuarão se beneficiando
-              deles. Deus alguma vez registrou uma patente para sua criação?
-              Então que direito eu, um mero mortal, tenho para fazer isso?{' '}
-              <i>&minus; B.K.S. Iyengar</i>
+                : {word.translation}
+              </p>
+              <Link href="/glossario">
+                <a className="text-sm">ver mais no glossário</a>
+              </Link>
             </blockquote>
-          </main>
-        </div>
+          </aside>
+        )}
       </div>
     </Layout>
   )
