@@ -12,7 +12,7 @@ export default function Layout({ pageTitle, title, subtitle, children }) {
   return (
     <>
       <Header />
-      <article className="max-w-screen-xl pt-0 px-6 py-2">
+      <article className="flex-grow max-w-screen-xl pt-0 px-6 py-2">
         <Head>
           <title>{headTitle}</title>
           <link rel="icon" href="/favicon.png" />
