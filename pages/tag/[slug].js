@@ -9,8 +9,8 @@ export default function Asana({ tag, variations }) {
   return (
     <Layout
       subtitle={upperFirst(tag?.category)}
-      title={`Tag: ${tag?.name}`}
-      pageTitle={tag?.name}
+      pageTitle={`Tag: ${tag?.name}`}
+      title={tag?.name}
     >
       <div className="md:flex w-full">
         <VariationsList variations={variations} />

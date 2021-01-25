@@ -2,6 +2,7 @@ import forEach from 'lodash/forEach'
 import { SitemapStream, streamToPromise } from 'sitemap'
 
 import api from 'lib/api'
+import { SITE_URL } from 'lib/constants'
 
 const pages = {
   'lista-de-asanas': ['weekly', 0.8],
@@ -17,7 +18,7 @@ const Sitemap = ({ xml }) => xml
 export async function getServerSideProps({ res }) {
   try {
     const smStream = new SitemapStream({
-      hostname: 'https://luznoyoga.com.br/',
+      hostname: SITE_URL,
       cacheTime: 600000,
     })
 

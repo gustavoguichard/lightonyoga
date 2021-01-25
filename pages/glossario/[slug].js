@@ -9,8 +9,8 @@ import AsanaList from 'components/asana-list'
 export default function GlossaryWord({ word, asanas }) {
   return (
     <Layout
-      title={`${upperFirst(word?.name)} | Glossário`}
-      pageTitle={
+      pageTitle={`${upperFirst(word?.name)} | Glossário`}
+      title={
         <>
           {upperFirst(word?.name)}
           <span className="ml-3 text-lg text-gray-600">

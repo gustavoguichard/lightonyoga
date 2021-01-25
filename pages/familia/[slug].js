@@ -8,8 +8,8 @@ import AsanaList from 'components/asana-list'
 export default function Asana({ family, asanas }) {
   return (
     <Layout
-      title={`${family?.name} - ${family?.translation}`}
-      pageTitle={family?.name}
+      pageTitle={`${family?.name} - ${family?.translation}`}
+      title={family?.name}
       subtitle={family?.translation}
     >
       <p className="text-xs mb-0">

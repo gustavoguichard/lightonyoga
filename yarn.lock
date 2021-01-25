@@ -3409,6 +3409,11 @@ react-tag-autocomplete@^6.1.0:
   resolved "https://registry.yarnpkg.com/react-tag-autocomplete/-/react-tag-autocomplete-6.1.0.tgz#9fb70149a69b33379013e5255bcd7ad97d8ec06b"
   integrity sha512-AMhVqxEEIrOfzH0A9XrpsTaLZCVYgjjxp3DSTuSvx91LBSFI6uYcKe38ltR/H/TQw4aytofVghQ1hR9sKpXRQA==
 
+react-to-string@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-to-string/-/react-to-string-0.1.1.tgz#c0a7a263c519d9a7c25f634cf0323c75e0e6d84a"
+  integrity sha512-iF+dmbl6qFmPhThzruJ3JUjpLhhtXxBBLR5dWGo1aGVeqesKJ70lK4ge6WM4rg+QWvZhyl4WPz5QeAysbQnj4w==
+
 react-use-form-state@^0.13.2:
   version "0.13.2"
   resolved "https://registry.yarnpkg.com/react-use-form-state/-/react-use-form-state-0.13.2.tgz#907327a2479b07e51fe4f58df93fc19767cf6261"

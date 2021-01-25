@@ -8,8 +8,7 @@ import Layout from 'components/layout'
 export default function TheProps({ tags }) {
   return (
     <Layout
-      title="Lista de Props"
-      pageTitle={
+      title={
         <span>
           Lista de <em>Props</em>
         </span>
