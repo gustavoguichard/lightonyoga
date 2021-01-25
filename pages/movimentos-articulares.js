@@ -11,7 +11,13 @@ import Layout from 'components/layout'
 
 export default function Asana({ movements }) {
   return (
-    <Layout title="Principais movimentos articulares">
+    <Layout
+      title="Principais movimentos articulares"
+      seo={{
+        description:
+          'Índice de movimentos articulares por parte do corpo. Entenda cada movimento articular vendo onde eles se aplicam na prática de Asanas.',
+      }}
+    >
       <div className="flex flex-wrap">
         {map(movements, (collection, joint) => (
           <div key={joint} className="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">

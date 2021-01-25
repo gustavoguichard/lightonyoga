@@ -15,11 +15,14 @@ export default function Card({ title, slug, subtitle, tagline, pose }) {
             alt={join([title, subtitle], ' - ')}
           />
           <div className="px-4 py-2">
-            {subtitle && (
-              <p className="m-0 text-xs font-semibold text-gray-700">{title}</p>
-            )}
-            <p className="text-sm font-semibold text-gray-800 leading-tight mb-0">
-              {subtitle || title}
+            <p className="text-sm font-semibold text-gray-700 leading-tight mb-0">
+              {subtitle ? (
+                <span>
+                  <em className="text-gray-500">{title}: </em>{subtitle}
+                </span>
+              ) : (
+                title
+              )}
             </p>
             {tagline && (
               <p className="text-sm mb-1 leading-tight mt-1 text-gray-600">

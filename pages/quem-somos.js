@@ -2,7 +2,13 @@ import Layout from 'components/layout'
 
 export default function About() {
   return (
-    <Layout title="Quem somos">
+    <Layout
+      title="Quem somos"
+      seo={{
+        description:
+          'Somos estudantes, praticantes e/ou professores do método Iyengar Yoga, temos muitas anotações de cursos, aulas, workshops e de nossas práticas pessoais. Para ter a possibilidade de pesquisar esse material rapidamente, resolvemos desenvolver uma ferramenta que nos ajude.',
+      }}
+    >
       <div className="flex mt-8 flex-col items-center">
         <main className="md:w-7/12 md:ml-8">
           <p>

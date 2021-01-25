@@ -6,7 +6,7 @@ import Layout from 'components/layout'
 
 export default function Asana({ families }) {
   return (
-    <Layout title="Famílias das posturas">
+    <Layout title="Famílias das posturas" seo={{ description: 'Conheça as famílias dos Asanas, sua tradução e os Asanas que compõe cada uma.' }}>
       <ul className="list-disc pl-5">
         {families.map((family) => (
           <li key={family.id}>

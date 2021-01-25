@@ -5,7 +5,13 @@ import AsanaList from 'components/asana-list'
 
 export default function AllAsanas({ asanas }) {
   return (
-    <Layout title="Lista de Asanas" subtitle="Por ordem alfabética">
+    <Layout
+      title="Lista de Asanas"
+      subtitle="Por ordem alfabética"
+      seo={{
+        description: 'Biblioteca de Asanas por ordem alfabética. Aqui você encontra as posturas clássicas e pode clicar em cada uma para aprender informações, ações, variações e curiosidades.',
+      }}
+    >
       <div className="md:flex">
         <AsanaList hideTitle asanas={asanas} />
       </div>

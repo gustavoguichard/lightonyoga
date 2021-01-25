@@ -21,6 +21,7 @@ class MyDocument extends Document {
             title="Sitemap"
             href="/sitemap.xml"
           />
+          <link rel="icon" href="/favicon.png" />
           <Analytics />
         </Head>
         <body>

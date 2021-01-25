@@ -10,7 +10,7 @@ import Layout from 'components/layout'
 
 export default function Glossary({ count, words }) {
   return (
-    <Layout title="Glossário Sânscrito" subtitle={`${count} verbetes do Yoga`}>
+    <Layout title="Glossário Sânscrito" subtitle={`${count} verbetes do Yoga`} seo={{ description: `Nosso glossário conta com ${count} verbetes do Yoga. Aprenda a traduzir os nomes dos Asanas e Pranayamas.` }}>
       <div className="flex flex-wrap">
         {map(words, (items, letter) => (
           <div key={letter} className="mb-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4">

@@ -13,6 +13,10 @@ export default function TheProps({ tags }) {
           Lista de <em>Props</em>
         </span>
       }
+      seo={{
+        description:
+          'Biblioteca de Props por ordem alfabética. Descubra o que são Props, para que servem e exemplos de cada prop em uso.',
+      }}
     >
       <div className="md:flex flex-grow">
         <div className="md:w-8/12 md:order-2">

@@ -18,7 +18,7 @@ const Sitemap = ({ xml }) => xml
 export async function getServerSideProps({ res }) {
   try {
     const smStream = new SitemapStream({
-      hostname: SITE_URL,
+      hostname: SITE_URL + '/',
       cacheTime: 600000,
     })
 
