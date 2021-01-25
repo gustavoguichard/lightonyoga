@@ -8,7 +8,7 @@ export default function Information({ asana }) {
     <>
       <Actions big name="Preparação" actions={asana.setup} />
       <Actions big name="Entrando na postura" actions={asana.entering} />
-      <h3>Na postura</h3>
+      <h3 className="mb-0 mt-2">Na postura</h3>
       <Actions name="Pés e pernas" actions={asana.legs} />
       <Actions name="Coxa, pelve e abdômen" actions={asana.core} />
       <Actions name="Costas, tronco e peito" actions={asana.trunk} />

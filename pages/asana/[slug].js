@@ -34,13 +34,7 @@ export default function AsanaPage({ asana }) {
           asana.name
         )
       }
-      subtitle={
-        <span className="ml-3 text-lg text-gray-600">
-          <span className="text-sm mr-2">/</span>
-          {asana.translation}
-          <span className="text-sm ml-2">/</span>
-        </span>
-      }
+      subtitle={asana.translation}
     >
       <div className="content">
         <MainContent
@@ -50,7 +44,7 @@ export default function AsanaPage({ asana }) {
         >
           {asana.content && (
             <div
-              className="text-xl"
+              className="text-lg leading-snug"
               dangerouslySetInnerHTML={{ __html: asana.content }}
             />
           )}

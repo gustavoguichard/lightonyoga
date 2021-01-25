@@ -13,11 +13,11 @@ export default function Layout({ pageTitle, title, subtitle, children }) {
           <link rel="icon" href="/favicon.png" />
         </Head>
         {title && (
-          <header className="mt-0 bg-gray-50 border-b-2 border-gray-100">
-            <h1 className="text-3xl md:text-4xl">
+          <header className="mt-0 py-4 bg-gray-50 border-b-2 border-gray-100">
+            <h1 className="text-2xl md:text-3xl text-gray-800">
               {pageTitle || title}
               {subtitle && (
-                <span className="block text-xl text-gray-500 mt-2 leading-snug">
+                <span className="block text-xl text-gray-500 mt-1 leading-snug">
                   {subtitle}
                 </span>
               )}

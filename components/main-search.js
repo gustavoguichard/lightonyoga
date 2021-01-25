@@ -65,7 +65,7 @@ export default function MainSearch({ asanas, tags }) {
     <div className="flex flex-col w-full sm:w-2/3 md:w-1/2 py-2 px-4 md:px-6 mb-8 bg-gray-50 border border-gray-200 rounded">
       <form className="flex flex-col reset-list" onSubmit={handleSubmit}>
         <h2 className="mb-2 text-xl text-center leading-snug text-gray-600 text-semibold">
-          Busque um <em>Asana</em>, Prop e/ou Condição
+          Busque um <em>Asana</em>, <em>Prop</em> e/ou Condição
         </h2>
         <ReactTags
           ref={reactTags}

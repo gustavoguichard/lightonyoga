@@ -79,7 +79,7 @@ export default function Search({ asanas, variations, tags }) {
           {!!search.tags?.length &&
             map(list, (variations, name) => (
               <div className="w-full" key={name}>
-                <h3>{name}</h3>
+                <h3 className="text-lg font-semibold text-gray-500">{name}</h3>
                 {variations.length ? (
                   <VariationsList variations={variations} />
                 ) : (

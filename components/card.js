@@ -8,7 +8,7 @@ export default function Card({ title, slug, subtitle, tagline, pose }) {
   return (
     <Link href={`/asana/${slug}`}>
       <a className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex">
-        <div className="flex w-full overflow-hidden flex-col rounded m-2 border-2 border-gray-100 hover:border-orange-500 bg-gray-50">
+        <div className="flex w-full overflow-hidden flex-col rounded my-2 sm:m-2 border-2 border-gray-100 hover:border-orange-500 bg-gray-50">
           <Img
             className="w-full mb-2 card-img"
             src={pose.picture}
@@ -18,7 +18,7 @@ export default function Card({ title, slug, subtitle, tagline, pose }) {
             {subtitle && (
               <p className="m-0 text-xs font-semibold text-gray-700">{title}</p>
             )}
-            <p className="text-sm font-semibold text-gray-900 leading-tight mb-0">
+            <p className="text-sm font-semibold text-gray-800 leading-tight mb-0">
               {subtitle || title}
             </p>
             {tagline && (
