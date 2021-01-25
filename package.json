@@ -22,6 +22,7 @@
     "react-intersection-observer": "^8.31.0",
     "react-tag-autocomplete": "^6.1.0",
     "react-use-form-state": "^0.13.2",
+    "sitemap": "^6.3.5",
     "tailwindcss": "^2.0.2",
     "tailwindcss-responsive-embed": "^1.0.0"
   }

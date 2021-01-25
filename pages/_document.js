@@ -15,6 +15,12 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.xz.style/serve/inter.css"
           />
+          <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="/sitemap.xml"
+          />
           <Analytics />
         </Head>
         <body>
