@@ -11,6 +11,7 @@ export default function Asana({ family, asanas }) {
       pageTitle={`${family?.name} - ${family?.translation}`}
       title={family?.name}
       subtitle={family?.translation}
+      seo={{ description: `Veja informações e lista de posturas da família de Asanas: ${family?.name} - ${family?.translation}.` }}
     >
       <p className="text-xs mb-0">
         Ver todas as{' '}

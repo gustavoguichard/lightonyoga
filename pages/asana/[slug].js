@@ -35,6 +35,19 @@ export default function AsanaPage({ asana }) {
         )
       }
       subtitle={asana.translation}
+      seo={{
+        description: `Aprenda as ações corretas para entrar, permanecer e sair de ${asana.name}. Veja as variações por nível e terapêuticas, tradução do nome, principais movimentos articulares, fotos, vídeos, curiosidades e muito mais informações`,
+        openGraph: {
+          images: [
+            {
+              url: asana?.picture,
+              width: 600,
+              height: 450,
+              alt: asana?.name,
+            },
+          ],
+        },
+      }}
     >
       <div className="content">
         <MainContent

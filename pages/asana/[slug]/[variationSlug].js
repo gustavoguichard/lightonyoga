@@ -11,9 +11,10 @@ export default function VariationPage({ variation }) {
     return 'Loading...'
   }
 
+  const fullTitle = `${variation.asana.name}: ${variation.name}`
   return (
     <Layout
-      pageTitle={`${variation.asana.name}: ${variation.name}`}
+      pageTitle={fullTitle}
       title={variation.asana.name}
       subtitle={
         <span className="font-semibold">
@@ -21,6 +22,19 @@ export default function VariationPage({ variation }) {
           {variation.name}
         </span>
       }
+      seo={{
+        description: `Aprenda as instruções da variação de ${fullTitle}. Instruções detalhadas e ilustradas por fotos e vídeos.`,
+        openGraph: {
+          images: [
+            {
+              url: variation?.picture,
+              width: 600,
+              height: 450,
+              alt: fullTitle,
+            },
+          ],
+        },
+      }}
     >
       <MainContent
         videos={variation.videos}
