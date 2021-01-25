@@ -1,5 +1,3 @@
-import upperFirst from 'lodash/upperFirst'
-
 import api from 'lib/api'
 
 import Layout from 'components/layout'
@@ -7,11 +5,13 @@ import VariationsList from 'components/variations-list'
 
 export default function Asana({ tag, variations }) {
   return (
-    <Layout
-      subtitle={upperFirst(tag?.category)}
-      pageTitle={`Tag: ${tag?.name}`}
-      title={tag?.name}
-    >
+    <Layout title={`Tag: ${tag?.name}`}>
+      {tag.content && (
+        <div className="max-w-3xl mb-4">
+          <h4>Descrição</h4>
+          <div dangerouslySetInnerHTML={{ __html: tag.content }} />
+        </div>
+      )}
       <div className="md:flex w-full">
         <VariationsList variations={variations} />
       </div>
