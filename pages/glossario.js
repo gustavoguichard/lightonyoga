@@ -7,10 +7,7 @@ import Layout from 'components/layout'
 
 export default function Glossary({ words }) {
   return (
-    <Layout
-      title="Glossário"
-      subtitle="Algumas traduções de palavras em Sânscrito"
-    >
+    <Layout title="Glossário">
       <div className="md:flex">
         <ul className="list-disc pl-5">
           {words.map(({ id, name, slug, translation }) => (
