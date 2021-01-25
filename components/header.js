@@ -26,7 +26,7 @@ export default function Header() {
         </Link>
         {' • '}
         <Link href="/glossario">
-          <a>Glossário</a>
+          <a>Glossário Sânscrito</a>
         </Link>
         {' • '}
         <Link href="/lista-de-props">
