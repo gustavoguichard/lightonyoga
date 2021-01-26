@@ -15,23 +15,28 @@ export default function Layout({ pageTitle, title, subtitle, seo, children }) {
   const headTitle = join([reactToString(pageTitle || title), SITE_TITLE], ' | ')
   return (
     <>
-      <SEO title={headTitle} {...{ ...seo, openGraph: { ...seo?.openGraph, url } }} />
+      <SEO
+        title={headTitle}
+        {...{ ...seo, openGraph: { ...seo?.openGraph, url } }}
+      />
       <Header />
-      <article className="flex-grow max-w-screen-xl pt-0 px-6 py-2">
-        {title && (
-          <header className="mt-0 py-4 bg-gray-50 border-b-2 border-gray-100">
-            <h1 className="text-2xl md:text-3xl text-gray-800">
-              {title}
-              {subtitle && (
-                <span className="block text-xl text-gray-500 mt-1 leading-snug">
-                  {subtitle}
-                </span>
-              )}
-            </h1>
-          </header>
-        )}
-        {children}
-      </article>
+      <div className="w-full flex flex-col flex-grow items-center">
+        <article className="flex-grow flex w-full flex-col align-center max-w-screen-2xl pt-0 px-6 py-2">
+          {title && (
+            <header className="mt-0 py-4 bg-gray-50 border-b-2 border-gray-100">
+              <h1 className="text-2xl md:text-3xl text-gray-800">
+                {title}
+                {subtitle && (
+                  <span className="block text-xl text-gray-500 mt-1 leading-snug">
+                    {subtitle}
+                  </span>
+                )}
+              </h1>
+            </header>
+          )}
+          {children}
+        </article>
+      </div>
       <Footer />
     </>
   )

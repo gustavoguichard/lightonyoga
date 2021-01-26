@@ -362,4 +362,9 @@ textarea {
 img {
   max-width: 100%;
 }
-/*# sourceMappingURL=/sm/4a51164882967d28a74fabce02685c18fa45a529b77514edc75d708f04dd08b9.map */
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
