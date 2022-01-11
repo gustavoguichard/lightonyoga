@@ -55,6 +55,7 @@ export default function Search({ asanas, variations, tags }) {
 
   useEffect(() => {
     handleChange(router.query)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query])
 
   return (

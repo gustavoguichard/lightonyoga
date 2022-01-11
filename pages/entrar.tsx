@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { useRouter } from 'next/router'
 import { useFormState } from 'react-use-form-state'
 
@@ -7,7 +8,7 @@ export default function Login() {
   const router = useRouter()
   const [{ values }, { email, password }] = useFormState()
 
-  const handleSubmit = (ev) => {
+  const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
     ev.preventDefault()
     if (values?.password === 'gurujibks') {
       session.login(router)
@@ -17,20 +18,20 @@ export default function Login() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="flex flex-col py-6 px-8 mb-12 bg-gray-50 border border-gray-200 rounded-lg">
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="flex flex-col px-8 py-6 mb-12 border border-gray-200 rounded-lg bg-gray-50">
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <p>
-            <label for="email">E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <br />
-            <input className="text-lg p-4" {...email('email')} />
+            <input className="p-4 text-lg" {...email('email')} />
           </p>
           <p>
-            <label for="password">Senha</label>
+            <label htmlFor="password">Senha</label>
             <br />
-            <input className="text-lg p-4" {...password('password')} />
+            <input className="p-4 text-lg" {...password('password')} />
           </p>
-          <button className="self-stretch p-4 text-xl mt-6 mx-2 text-center bg-blue-600">
+          <button className="self-stretch p-4 mx-2 mt-6 text-xl text-center bg-blue-600">
             Entrar
           </button>
         </form>

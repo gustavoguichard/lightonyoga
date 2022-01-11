@@ -1,10 +1,12 @@
+import Script from 'next/script'
+
 export default function Analytics() {
   return (
     <>
-      <script
-        async
+      <Script
+        strategy='afterInteractive'
         src="https://www.googletagmanager.com/gtag/js?id=G-DRD2D8ZVS0"
-      ></script>
+      />
       <script
         async
         dangerouslySetInnerHTML={{

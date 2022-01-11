@@ -1,10 +1,14 @@
-import { forwardRef } from 'react'
-
-import { classes } from 'lib/utils'
+import * as React from 'react'
+import { cx } from 'lib/utils'
 
 const Skeleton = ({ className, ...props }, ref) => {
-  const cx = classes(className, 'bg-gray-200 animate-pulse rounded')
-  return <div className={cx} ref={ref} {...props} />
+  return (
+    <div
+      className={cx(className, 'bg-gray-200 animate-pulse rounded')}
+      ref={ref}
+      {...props}
+    />
+  )
 }
 
-export default forwardRef(Skeleton)
+export default React.forwardRef(Skeleton)

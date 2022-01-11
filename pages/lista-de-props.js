@@ -19,7 +19,7 @@ export default function TheProps({ tags }) {
           'Biblioteca de Props por ordem alfabética. Descubra o que são Props, para que servem e exemplos de cada prop em uso.',
       }}
     >
-      <div className="md:flex flex-grow">
+      <div className="md:flex grow">
         <div className="md:w-8/12 md:order-2">
           <p>
             Após anos ensinando os asanas em sua forma clássica, sem nenhum tipo
@@ -49,11 +49,11 @@ export default function TheProps({ tags }) {
           </blockquote>
         </div>
         <div className="md:w-4/12">
-          <ul className="list-disc pl-5">
+          <ul className="pl-5 list-disc">
             {tags.map(({ id, name, slug }) => (
               <li key={id} className="mt-0">
                 <Link href={`/tag/${slug}`}>
-                  <a className="text-italic font-semibold">
+                  <a className="font-semibold text-italic">
                     {upperFirst(name)}
                   </a>
                 </Link>

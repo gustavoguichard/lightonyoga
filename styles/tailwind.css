@@ -1,8 +1,9 @@
 @tailwind base;
-
-.card-img {
-  min-height: 180px;
-}
-
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .card-img {
+    min-height: 180px;
+  }
+}

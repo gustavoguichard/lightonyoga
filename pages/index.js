@@ -18,12 +18,13 @@ export default function Home({ asanas, tags, variations, words }) {
   useEffect(() => {
     setList(take(shuffle(postures), 4))
     setWord(sample(words))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <Layout>
-      <div className="flex mt-8 flex-col items-center">
+      <div className="flex flex-col items-center mt-8">
         <MainSearch asanas={asanas} tags={tags} />
-        <h4 className="text-sm font-semibold text-gray-600 self-start px-4 mb-0">
+        <h4 className="self-start px-4 mb-0 text-sm font-semibold text-gray-600">
           Conheça novas posturas:
         </h4>
         <div className="flex flex-wrap w-full">
@@ -37,16 +38,16 @@ export default function Home({ asanas, tags, variations, words }) {
           })}
         </div>
         <Link href="/lista-de-asanas">
-          <a className="text-sm font-semibold self-start pl-4 mt-0 mb-8">
+          <a className="self-start pl-4 mt-0 mb-8 text-sm font-semibold">
             Ver mais
           </a>
         </Link>
         {word && (
-          <aside className="md:w-5/12 self-start">
+          <aside className="self-start md:w-5/12">
             <h5 className="text-sm font-semibold text-gray-600">
               Aprenda uma nova expressão em Sânscrito:
             </h5>
-            <blockquote className="text-gray-700 mb-0 bg-white">
+            <blockquote className="mb-0 text-gray-700 bg-white">
               <p className="mb-0">
                 <Link href={`/glossario/${word.slug}`}>
                   <a className="text-semibold">

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { useRouter } from 'next/router'
 import reactToString from 'react-to-string'
 
@@ -6,7 +7,9 @@ import { join } from 'lib/utils'
 
 import SEO from 'components/seo'
 import Header from 'components/header'
-import Footer from 'components/footer'
+import Skeleton from 'components/skeleton'
+
+const Footer = React.lazy(() => import('components/footer'))
 
 export default function Layout({ pageTitle, title, subtitle, seo, children }) {
   const { asPath } = useRouter()
@@ -20,14 +23,14 @@ export default function Layout({ pageTitle, title, subtitle, seo, children }) {
         {...{ ...seo, openGraph: { ...seo?.openGraph, url } }}
       />
       <Header />
-      <div className="w-full flex flex-col flex-grow items-center">
-        <article className="flex-grow flex w-full flex-col align-center max-w-screen-2xl pt-0 px-6 py-2">
+      <div className="flex flex-col items-center w-full grow">
+        <article className="flex flex-col w-full px-6 py-2 pt-0 grow align-center max-w-screen-2xl">
           {title && (
-            <header className="mt-0 py-4 bg-gray-50 border-b-2 border-gray-100">
-              <h1 className="text-2xl md:text-3xl text-gray-800">
+            <header className="py-4 mt-0 border-b-2 border-gray-100 bg-gray-50">
+              <h1 className="text-2xl text-gray-800 md:text-3xl">
                 {title}
                 {subtitle && (
-                  <span className="block text-xl text-gray-500 mt-1 leading-snug">
+                  <span className="block mt-1 text-xl leading-snug text-gray-500">
                     {subtitle}
                   </span>
                 )}
@@ -37,7 +40,9 @@ export default function Layout({ pageTitle, title, subtitle, seo, children }) {
           {children}
         </article>
       </div>
-      <Footer />
+      <React.Suspense fallback={<Skeleton />}>
+        <Footer />
+      </React.Suspense>
     </>
   )
 }
